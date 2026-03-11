@@ -1,0 +1,6 @@
+.env
+fred_env/
+__pycache__/
+*.pyc
+fred_data/*.db
+fred_data/
