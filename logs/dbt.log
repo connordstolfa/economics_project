@@ -1,0 +1,41 @@
+[0m19:28:58.090700 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 19:28:58.098614 | 35ee87b3-51bd-43c9-b703-e06b3c0c0274 ==============================
+[0m19:28:58.098614 [info ] [MainThread]: Running with dbt=1.11.7
+[0m19:28:58.100642 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'invocation_command': 'dbt init', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'use_colors': 'True', 'target_path': 'None', 'no_print': 'None', 'version_check': 'True', 'debug': 'False', 'empty': 'None', 'write_json': 'True', 'log_format': 'default', 'introspect': 'True', 'log_cache_events': 'False', 'indirect_selection': 'eager', 'printer_width': '80', 'warn_error': 'None', 'log_path': 'logs', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'profiles_dir': '/home/connor/.dbt', 'fail_fast': 'False', 'cache_selected_only': 'False'}
+[0m19:29:23.032464 [debug] [MainThread]: Starter project path: /home/connor/projects/economics_project/fred_env/lib/python3.12/site-packages/dbt/include/starter_project
+[0m19:29:23.040959 [info ] [MainThread]: 
+Your new dbt project "dbt_econ" was created!
+
+For more information on how to configure the profiles.yml file,
+please consult the dbt documentation here:
+
+  https://docs.getdbt.com/docs/configure-your-profile
+
+One more thing:
+
+Need help? Don't hesitate to reach out to us via GitHub issues or on Slack:
+
+  https://community.getdbt.com/
+
+Happy modeling!
+
+[0m19:29:23.042940 [info ] [MainThread]: Setting up your profile.
+[0m19:29:41.507658 [debug] [MainThread]: Resource report: {"command_name": "init", "command_success": true, "command_wall_clock_time": 41.62947, "process_in_blocks": "1000", "process_kernel_time": 0.308663, "process_mem_max_rss": "130644", "process_out_blocks": "80", "process_user_time": 2.597915}
+[0m19:29:41.509005 [debug] [MainThread]: Command `dbt init` succeeded at 19:29:41.508742 after 41.63 seconds
+[0m19:29:41.509935 [debug] [MainThread]: Flushing usage events
+[0m09:39:00.025650 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 09:39:00.036256 | 173eb43b-60df-4254-a9ec-f112dbd31bdb ==============================
+[0m09:39:00.036256 [info ] [MainThread]: Running with dbt=1.11.7
+[0m09:39:00.037060 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'profiles_dir': '/home/connor/.dbt', 'introspect': 'True', 'printer_width': '80', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'empty': 'False', 'static_parser': 'True', 'invocation_command': 'dbt run', 'debug': 'False', 'no_print': 'None', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'partial_parse': 'True', 'log_path': 'logs', 'target_path': 'None', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'indirect_selection': 'eager', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_format': 'default'}
+[0m09:39:00.037559 [error] [MainThread]: Encountered an error:
+Runtime Error
+  No dbt_project.yml found at expected path /home/connor/projects/economics_project/dbt_project.yml
+  Verify that each entry within packages.yml (and their transitive dependencies) contains a file named dbt_project.yml
+  
+[0m09:39:00.040361 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.079125986, "process_in_blocks": "73656", "process_kernel_time": 0.331074, "process_mem_max_rss": "99052", "process_out_blocks": "8", "process_user_time": 1.483702}
+[0m09:39:00.040885 [debug] [MainThread]: Command `dbt run` failed at 09:39:00.040775 after 0.08 seconds
+[0m09:39:00.041227 [debug] [MainThread]: Flushing usage events
