@@ -6,7 +6,7 @@
 -- List of indicators. Each indicator is stored in a dict with its name and table name.
 
 {% set indicators = [
-    {'name': 'unemployment', 'table': 'unemployment_rate'},
+    {'name': 'unemployment_rate', 'table': 'unemployment_rate'},
     {'name': 'cpi', 'table': 'consumer_price_index'},
     {'name': 'core_cpi', 'table': 'core_consumer_price_index'},
     {'name': 'pce', 'table': 'personal_consumption_expenditures_index'},

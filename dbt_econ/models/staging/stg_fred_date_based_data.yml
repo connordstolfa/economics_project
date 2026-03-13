@@ -1,0 +1,19 @@
+version: 2
+models:
+  - name: stg_fred_date_based_data
+    description: Standardized FRED data. This table serves as a repository for all FRED data that is indexed by date. The tables are unioned in long format and are separated at the intermediate layer.
+    columns:
+      - name: indicator_name
+        description: The name of the econokic indicator being pulled, like CPI or unemployment_rate.
+        tests:
+          - not_null
+          # - accepted_values:
+          #     values: ['unemployment_rate', 'cpi', 'core_cpi', 'pce', 'real_gdp', 'real_gdp_per_capita', 'real_income_per_capita', 'real_median_household_income']
+      - name: date
+        description: The date corresponding to the first day of the recorded observation.
+        tests:
+          - not_null
+      - name: value
+        description: The value recorded in FRED for the given period.
+      - name: processed_at
+        description: The time the program recorded that value.
