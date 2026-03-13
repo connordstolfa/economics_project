@@ -1,0 +1,14 @@
+version: 2
+
+sources:
+  - name: fred_raw
+    schema: raw
+    tables:
+      - name: unemployment_rate
+      - name: consumer_price_index
+      - name: core_consumer_price_index
+      - name: personal_consumption_expenditures_index
+      - name: real_gdp
+      - name: real_gdp_per_capita
+      - name: real_median_household_income
+      - name: real_income_per_capita

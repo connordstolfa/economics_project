@@ -17,7 +17,7 @@ def insert_fred_data(
         try:
             df = fred.ingest_series(series_id)
         except ValueError as e:
-            print(f"Error querying Series. Check the series name: {e}.")
+            print(f"Error querying Series {series_id}. Check the series name: {e}.")
         # Upsert that series.
         db.upsert_data(df, table_name=table_name)
 
@@ -30,9 +30,10 @@ series_to_pull = {
     "CPILFESL": "core_consumer_price_index",
     "PCEPI": "personal_consumption_expenditures_index",
     "GDPC1": "real_gdp",
-    "A939RX0Q048S": "real_gdp_per_capita",
+    "A939RX0Q048SBEA": "real_gdp_per_capita",
     "RPI": "real_income_per_capita",
-    "MAPAIN": "real_mean_household_income",
+    # "MAHOINUSA672N": "real_mean_household_income",
+    "MEHOINUSA672N": "real_median_household_income",
 }
 
 insert_fred_data(series_to_pull, db_path)
