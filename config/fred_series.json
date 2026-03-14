@@ -1,0 +1,42 @@
+[
+    {
+        "name": "unemployment_rate",
+        "table_name": "unemployment_rate",
+        "series_id": "UNRATE"
+    },
+    {
+        "name": "cpi",
+        "table_name": "consumer_price_index",
+        "series_id": "CPIAUCSL"
+    },
+    {
+        "name": "core_cpi",
+        "table_name": "core_consumer_price_index",
+        "series_id": "CPILFESL"
+    },
+    {
+        "name": "pce",
+        "table_name": "personal_consumption_expenditures_index",
+        "series_id": "PCEPI"
+    },
+    {
+        "name": "real_gdp",
+        "table_name": "real_gdp",
+        "series_id": "GDPC1"
+    },
+    {
+        "name": "real_gdp_per_capita",
+        "table_name": "real_gdp_per_capita",
+        "series_id": "A939RX0Q048SBEA"
+    },
+    {
+        "name": "real_income_per_capita",
+        "table_name": "real_income_per_capita",
+        "series_id": "RPI"
+    },
+    {
+        "name": "real_median_household_income",
+        "table_name": "real_median_household_income",
+        "series_id": "MEHOINUSA672N"
+    }
+]

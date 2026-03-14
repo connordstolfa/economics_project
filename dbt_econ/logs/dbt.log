@@ -1,0 +1,1690 @@
+[0m09:39:33.150517 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 09:39:33.158053 | 123cc389-c7fa-41f4-867e-6a466fe8ed07 ==============================
+[0m09:39:33.158053 [info ] [MainThread]: Running with dbt=1.11.7
+[0m09:39:33.159644 [debug] [MainThread]: running dbt with arguments {'send_anonymous_usage_stats': 'True', 'log_cache_events': 'False', 'indirect_selection': 'eager', 'no_print': 'None', 'version_check': 'True', 'use_colors': 'True', 'partial_parse': 'True', 'debug': 'False', 'printer_width': '80', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt run', 'log_path': '/home/connor/projects/economics_project/dbt_econ/logs', 'log_format': 'default', 'empty': 'False', 'write_json': 'True', 'profiles_dir': '/home/connor/.dbt', 'static_parser': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'target_path': 'None', 'use_experimental_parser': 'False', 'fail_fast': 'False', 'quiet': 'False'}
+[0m09:39:33.688592 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m09:39:33.774357 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m09:39:33.775216 [info ] [MainThread]: Unable to do partial parsing because saved manifest not found. Starting full parse.
+[0m09:39:35.132784 [debug] [MainThread]: Wrote artifact WritableManifest to /home/connor/projects/economics_project/dbt_econ/target/manifest.json
+[0m09:39:35.137003 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/connor/projects/economics_project/dbt_econ/target/semantic_manifest.json
+[0m09:39:35.168096 [info ] [MainThread]: Found 2 models, 4 data tests, 474 macros
+[0m09:39:35.170155 [info ] [MainThread]: 
+[0m09:39:35.170700 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m09:39:35.171038 [info ] [MainThread]: 
+[0m09:39:35.171527 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m09:39:35.176199 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_economics'
+[0m09:39:35.221208 [debug] [ThreadPool]: Using duckdb connection "list_economics"
+[0m09:39:35.221656 [debug] [ThreadPool]: On list_economics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "list_economics"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"economics"'
+    
+  
+  
+[0m09:39:35.221980 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m09:39:35.254010 [debug] [ThreadPool]: SQL status: OK in 0.032 seconds
+[0m09:39:35.255437 [debug] [ThreadPool]: On list_economics: Close
+[0m09:39:35.256269 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_economics, now create_economics_main)
+[0m09:39:35.256731 [debug] [ThreadPool]: Creating schema "database: "economics"
+schema: "main"
+"
+[0m09:39:35.262636 [debug] [ThreadPool]: Using duckdb connection "create_economics_main"
+[0m09:39:35.263037 [debug] [ThreadPool]: On create_economics_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "create_economics_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='economics'
+        and type='sqlite'
+    
+  
+[0m09:39:35.263329 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m09:39:35.267521 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m09:39:35.269215 [debug] [ThreadPool]: Using duckdb connection "create_economics_main"
+[0m09:39:35.269574 [debug] [ThreadPool]: On create_economics_main: BEGIN
+[0m09:39:35.270479 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m09:39:35.270775 [debug] [ThreadPool]: Using duckdb connection "create_economics_main"
+[0m09:39:35.271023 [debug] [ThreadPool]: On create_economics_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "create_economics_main"} */
+
+    
+    
+        create schema if not exists "economics"."main"
+    
+[0m09:39:35.271704 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m09:39:35.272498 [debug] [ThreadPool]: On create_economics_main: COMMIT
+[0m09:39:35.272806 [debug] [ThreadPool]: Using duckdb connection "create_economics_main"
+[0m09:39:35.273060 [debug] [ThreadPool]: On create_economics_main: COMMIT
+[0m09:39:35.273642 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m09:39:35.273951 [debug] [ThreadPool]: On create_economics_main: Close
+[0m09:39:35.275495 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_economics_main, now list_economics_main)
+[0m09:39:35.280524 [debug] [ThreadPool]: Using duckdb connection "list_economics_main"
+[0m09:39:35.280893 [debug] [ThreadPool]: On list_economics_main: BEGIN
+[0m09:39:35.281173 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m09:39:35.282063 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m09:39:35.282609 [debug] [ThreadPool]: Using duckdb connection "list_economics_main"
+[0m09:39:35.282884 [debug] [ThreadPool]: On list_economics_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "list_economics_main"} */
+select
+      'economics' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'economics'
+  
+[0m09:39:35.286919 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m09:39:35.288248 [debug] [ThreadPool]: On list_economics_main: ROLLBACK
+[0m09:39:35.290078 [debug] [ThreadPool]: Failed to rollback 'list_economics_main'
+[0m09:39:35.290465 [debug] [ThreadPool]: On list_economics_main: Close
+[0m09:39:35.291177 [debug] [MainThread]: Using duckdb connection "master"
+[0m09:39:35.291507 [debug] [MainThread]: On master: BEGIN
+[0m09:39:35.291780 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m09:39:35.292608 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m09:39:35.292936 [debug] [MainThread]: On master: COMMIT
+[0m09:39:35.293234 [debug] [MainThread]: Using duckdb connection "master"
+[0m09:39:35.293487 [debug] [MainThread]: On master: COMMIT
+[0m09:39:35.294434 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m09:39:35.294791 [debug] [MainThread]: On master: Close
+[0m09:39:35.299793 [debug] [Thread-1 (]: Began running node model.dbt_econ.my_first_dbt_model
+[0m09:39:35.300347 [info ] [Thread-1 (]: 1 of 2 START sql table model main.my_first_dbt_model ........................... [RUN]
+[0m09:39:35.300834 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_economics_main, now model.dbt_econ.my_first_dbt_model)
+[0m09:39:35.301190 [debug] [Thread-1 (]: Began compiling node model.dbt_econ.my_first_dbt_model
+[0m09:39:35.307422 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_econ.my_first_dbt_model"
+[0m09:39:35.309162 [debug] [Thread-1 (]: Began executing node model.dbt_econ.my_first_dbt_model
+[0m09:39:35.345180 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_econ.my_first_dbt_model"
+[0m09:39:35.346864 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.my_first_dbt_model"
+[0m09:39:35.347306 [debug] [Thread-1 (]: On model.dbt_econ.my_first_dbt_model: BEGIN
+[0m09:39:35.347640 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m09:39:35.348512 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m09:39:35.348859 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.my_first_dbt_model"
+[0m09:39:35.349174 [debug] [Thread-1 (]: On model.dbt_econ.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "model.dbt_econ.my_first_dbt_model"} */
+
+  
+    
+    
+
+    create  table
+      "economics"."main"."my_first_dbt_model__dbt_tmp"
+  
+    as (
+      /*
+    Welcome to your first dbt model!
+    Did you know that you can also configure models directly within SQL files?
+    This will override configurations stated in dbt_project.yml
+
+    Try changing "table" to "view" below
+*/
+
+
+
+with source_data as (
+
+    select 1 as id
+    union all
+    select null as id
+
+)
+
+select *
+from source_data
+
+/*
+    Uncomment the line below to remove records with null `id` values
+*/
+
+-- where id is not null
+    );
+  
+  
+[0m09:39:35.354799 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m09:39:35.360459 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.my_first_dbt_model"
+[0m09:39:35.360892 [debug] [Thread-1 (]: On model.dbt_econ.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "model.dbt_econ.my_first_dbt_model"} */
+alter table "economics"."main"."my_first_dbt_model__dbt_tmp" rename to "my_first_dbt_model"
+[0m09:39:35.361936 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m09:39:35.375467 [debug] [Thread-1 (]: On model.dbt_econ.my_first_dbt_model: COMMIT
+[0m09:39:35.375971 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.my_first_dbt_model"
+[0m09:39:35.376339 [debug] [Thread-1 (]: On model.dbt_econ.my_first_dbt_model: COMMIT
+[0m09:39:35.385299 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m09:39:35.390867 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.my_first_dbt_model"
+[0m09:39:35.391297 [debug] [Thread-1 (]: On model.dbt_econ.my_first_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "model.dbt_econ.my_first_dbt_model"} */
+
+      drop table if exists "economics"."main"."my_first_dbt_model__dbt_backup" cascade
+    
+[0m09:39:35.392204 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m09:39:35.394534 [debug] [Thread-1 (]: On model.dbt_econ.my_first_dbt_model: Close
+[0m09:39:35.397649 [info ] [Thread-1 (]: 1 of 2 OK created sql table model main.my_first_dbt_model ...................... [[32mOK[0m in 0.09s]
+[0m09:39:35.398320 [debug] [Thread-1 (]: Finished running node model.dbt_econ.my_first_dbt_model
+[0m09:39:35.399623 [debug] [Thread-1 (]: Began running node model.dbt_econ.my_second_dbt_model
+[0m09:39:35.400257 [info ] [Thread-1 (]: 2 of 2 START sql view model main.my_second_dbt_model ........................... [RUN]
+[0m09:39:35.400718 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_econ.my_first_dbt_model, now model.dbt_econ.my_second_dbt_model)
+[0m09:39:35.401048 [debug] [Thread-1 (]: Began compiling node model.dbt_econ.my_second_dbt_model
+[0m09:39:35.403365 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_econ.my_second_dbt_model"
+[0m09:39:35.403884 [debug] [Thread-1 (]: Began executing node model.dbt_econ.my_second_dbt_model
+[0m09:39:35.423649 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_econ.my_second_dbt_model"
+[0m09:39:35.424516 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.my_second_dbt_model"
+[0m09:39:35.424909 [debug] [Thread-1 (]: On model.dbt_econ.my_second_dbt_model: BEGIN
+[0m09:39:35.425214 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m09:39:35.426270 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m09:39:35.426647 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.my_second_dbt_model"
+[0m09:39:35.426964 [debug] [Thread-1 (]: On model.dbt_econ.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "model.dbt_econ.my_second_dbt_model"} */
+
+  
+  create view "economics"."main"."my_second_dbt_model__dbt_tmp" as (
+    -- Use the `ref` function to select from other models
+
+select *
+from "economics"."main"."my_first_dbt_model"
+where id = 1
+  );
+
+[0m09:39:35.428104 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m09:39:35.430744 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.my_second_dbt_model"
+[0m09:39:35.431126 [debug] [Thread-1 (]: On model.dbt_econ.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "model.dbt_econ.my_second_dbt_model"} */
+alter view "economics"."main"."my_second_dbt_model__dbt_tmp" rename to "my_second_dbt_model"
+[0m09:39:35.432043 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m09:39:35.433224 [debug] [Thread-1 (]: On model.dbt_econ.my_second_dbt_model: COMMIT
+[0m09:39:35.433567 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.my_second_dbt_model"
+[0m09:39:35.434247 [debug] [Thread-1 (]: On model.dbt_econ.my_second_dbt_model: COMMIT
+[0m09:39:35.439466 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m09:39:35.441886 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.my_second_dbt_model"
+[0m09:39:35.442352 [debug] [Thread-1 (]: On model.dbt_econ.my_second_dbt_model: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "model.dbt_econ.my_second_dbt_model"} */
+
+      drop view if exists "economics"."main"."my_second_dbt_model__dbt_backup" cascade
+    
+[0m09:39:35.443481 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m09:39:35.444896 [debug] [Thread-1 (]: On model.dbt_econ.my_second_dbt_model: Close
+[0m09:39:35.445664 [info ] [Thread-1 (]: 2 of 2 OK created sql view model main.my_second_dbt_model ...................... [[32mOK[0m in 0.04s]
+[0m09:39:35.446258 [debug] [Thread-1 (]: Finished running node model.dbt_econ.my_second_dbt_model
+[0m09:39:35.448231 [debug] [MainThread]: Using duckdb connection "master"
+[0m09:39:35.448605 [debug] [MainThread]: On master: BEGIN
+[0m09:39:35.448897 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m09:39:35.449735 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m09:39:35.450136 [debug] [MainThread]: On master: COMMIT
+[0m09:39:35.450526 [debug] [MainThread]: Using duckdb connection "master"
+[0m09:39:35.450809 [debug] [MainThread]: On master: COMMIT
+[0m09:39:35.451654 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m09:39:35.451998 [debug] [MainThread]: On master: Close
+[0m09:39:35.452409 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m09:39:35.452668 [debug] [MainThread]: Connection 'model.dbt_econ.my_second_dbt_model' was properly closed.
+[0m09:39:35.452937 [info ] [MainThread]: 
+[0m09:39:35.453292 [info ] [MainThread]: Finished running 1 table model, 1 view model in 0 hours 0 minutes and 0.28 seconds (0.28s).
+[0m09:39:35.454011 [debug] [MainThread]: Command end result
+[0m09:39:35.480733 [debug] [MainThread]: Wrote artifact WritableManifest to /home/connor/projects/economics_project/dbt_econ/target/manifest.json
+[0m09:39:35.483007 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/connor/projects/economics_project/dbt_econ/target/semantic_manifest.json
+[0m09:39:35.490060 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/connor/projects/economics_project/dbt_econ/target/run_results.json
+[0m09:39:35.490534 [info ] [MainThread]: 
+[0m09:39:35.490936 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m09:39:35.491251 [info ] [MainThread]: 
+[0m09:39:35.491569 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m09:39:35.492506 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 2.4195673, "process_in_blocks": "81168", "process_kernel_time": 0.365767, "process_mem_max_rss": "155884", "process_out_blocks": "3080", "process_user_time": 3.458887}
+[0m09:39:35.492952 [debug] [MainThread]: Command `dbt run` succeeded at 09:39:35.492858 after 2.42 seconds
+[0m09:39:35.493414 [debug] [MainThread]: Flushing usage events
+[0m09:40:16.215448 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 09:40:16.220477 | 6b0e8cc9-05dd-4ef8-874d-eb351414ed55 ==============================
+[0m09:40:16.220477 [info ] [MainThread]: Running with dbt=1.11.7
+[0m09:40:16.221080 [debug] [MainThread]: running dbt with arguments {'fail_fast': 'False', 'target_path': 'None', 'log_format': 'default', 'partial_parse': 'True', 'write_json': 'True', 'warn_error': 'None', 'no_print': 'None', 'invocation_command': 'dbt debug', 'quiet': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'profiles_dir': '/home/connor/.dbt', 'log_cache_events': 'False', 'indirect_selection': 'eager', 'cache_selected_only': 'False', 'log_path': '/home/connor/projects/economics_project/dbt_econ/logs', 'empty': 'None', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'debug': 'False', 'printer_width': '80', 'introspect': 'True'}
+[0m09:40:16.240568 [info ] [MainThread]: dbt version: 1.11.7
+[0m09:40:16.241386 [info ] [MainThread]: python version: 3.12.3
+[0m09:40:16.243085 [info ] [MainThread]: python path: /home/connor/projects/economics_project/fred_env/bin/python3
+[0m09:40:16.243474 [info ] [MainThread]: os info: Linux-6.6.87.2-microsoft-standard-WSL2-x86_64-with-glibc2.39
+[0m09:40:16.358044 [info ] [MainThread]: Using profiles dir at /home/connor/.dbt
+[0m09:40:16.358626 [info ] [MainThread]: Using profiles.yml file at /home/connor/.dbt/profiles.yml
+[0m09:40:16.358978 [info ] [MainThread]: Using dbt_project.yml file at /home/connor/projects/economics_project/dbt_econ/dbt_project.yml
+[0m09:40:16.360214 [info ] [MainThread]: adapter type: duckdb
+[0m09:40:16.360618 [info ] [MainThread]: adapter version: 1.10.1
+[0m09:40:16.466133 [info ] [MainThread]: Configuration:
+[0m09:40:16.466701 [info ] [MainThread]:   profiles.yml file [[32mOK found and valid[0m]
+[0m09:40:16.467050 [info ] [MainThread]:   dbt_project.yml file [[32mOK found and valid[0m]
+[0m09:40:16.467322 [info ] [MainThread]: Required dependencies:
+[0m09:40:16.467619 [debug] [MainThread]: Executing "git --help"
+[0m09:40:16.471472 [debug] [MainThread]: STDOUT: "b"usage: git [-v | --version] [-h | --help] [-C <path>] [-c <name>=<value>]\n           [--exec-path[=<path>]] [--html-path] [--man-path] [--info-path]\n           [-p | --paginate | -P | --no-pager] [--no-replace-objects] [--bare]\n           [--git-dir=<path>] [--work-tree=<path>] [--namespace=<name>]\n           [--config-env=<name>=<envvar>] <command> [<args>]\n\nThese are common Git commands used in various situations:\n\nstart a working area (see also: git help tutorial)\n   clone     Clone a repository into a new directory\n   init      Create an empty Git repository or reinitialize an existing one\n\nwork on the current change (see also: git help everyday)\n   add       Add file contents to the index\n   mv        Move or rename a file, a directory, or a symlink\n   restore   Restore working tree files\n   rm        Remove files from the working tree and from the index\n\nexamine the history and state (see also: git help revisions)\n   bisect    Use binary search to find the commit that introduced a bug\n   diff      Show changes between commits, commit and working tree, etc\n   grep      Print lines matching a pattern\n   log       Show commit logs\n   show      Show various types of objects\n   status    Show the working tree status\n\ngrow, mark and tweak your common history\n   branch    List, create, or delete branches\n   commit    Record changes to the repository\n   merge     Join two or more development histories together\n   rebase    Reapply commits on top of another base tip\n   reset     Reset current HEAD to the specified state\n   switch    Switch branches\n   tag       Create, list, delete or verify a tag object signed with GPG\n\ncollaborate (see also: git help workflows)\n   fetch     Download objects and refs from another repository\n   pull      Fetch from and integrate with another repository or a local branch\n   push      Update remote refs along with associated objects\n\n'git help -a' and 'git help -g' list available subcommands and some\nconcept guides. See 'git help <command>' or 'git help <concept>'\nto read about a specific subcommand or concept.\nSee 'git help git' for an overview of the system.\n""
+[0m09:40:16.471957 [debug] [MainThread]: STDERR: "b''"
+[0m09:40:16.472389 [info ] [MainThread]:  - git [[32mOK found[0m]
+
+[0m09:40:16.472805 [info ] [MainThread]: Connection:
+[0m09:40:16.473141 [info ] [MainThread]:   database: economics
+[0m09:40:16.473451 [info ] [MainThread]:   schema: main
+[0m09:40:16.473947 [info ] [MainThread]:   path: /home/connor/projects/economics_project/fred_data/economics.db
+[0m09:40:16.474429 [info ] [MainThread]:   config_options: None
+[0m09:40:16.474733 [info ] [MainThread]:   extensions: None
+[0m09:40:16.475101 [info ] [MainThread]:   settings: {}
+[0m09:40:16.475802 [info ] [MainThread]:   external_root: .
+[0m09:40:16.476141 [info ] [MainThread]:   use_credential_provider: None
+[0m09:40:16.476423 [info ] [MainThread]:   attach: None
+[0m09:40:16.476686 [info ] [MainThread]:   filesystems: None
+[0m09:40:16.476950 [info ] [MainThread]:   remote: None
+[0m09:40:16.477219 [info ] [MainThread]:   plugins: None
+[0m09:40:16.477479 [info ] [MainThread]:   disable_transactions: False
+[0m09:40:16.477924 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m09:40:16.536386 [debug] [MainThread]: Acquiring new duckdb connection 'debug'
+[0m09:40:16.555189 [debug] [MainThread]: Using duckdb connection "debug"
+[0m09:40:16.555649 [debug] [MainThread]: On debug: select 1 as id
+[0m09:40:16.555959 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m09:40:16.568786 [debug] [MainThread]: SQL status: OK in 0.013 seconds
+[0m09:40:16.569765 [debug] [MainThread]: On debug: Close
+[0m09:40:16.570166 [info ] [MainThread]:   Connection test: [[32mOK connection ok[0m]
+
+[0m09:40:16.570662 [info ] [MainThread]: [32mAll checks passed![0m
+[0m09:40:16.571549 [debug] [MainThread]: Resource report: {"command_name": "debug", "command_success": true, "command_wall_clock_time": 0.40877768, "process_in_blocks": "96", "process_kernel_time": 0.207473, "process_mem_max_rss": "143152", "process_out_blocks": "24", "process_user_time": 1.576001}
+[0m09:40:16.571973 [debug] [MainThread]: Command `dbt debug` succeeded at 09:40:16.571878 after 0.41 seconds
+[0m09:40:16.572275 [debug] [MainThread]: Connection 'debug' was properly closed.
+[0m09:40:16.572573 [debug] [MainThread]: Flushing usage events
+[0m16:50:42.921825 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 16:50:42.930968 | a221edcb-1de6-4c2a-8665-149d387fa614 ==============================
+[0m16:50:42.930968 [info ] [MainThread]: Running with dbt=1.11.7
+[0m16:50:42.932132 [debug] [MainThread]: running dbt with arguments {'log_path': '/home/connor/projects/economics_project/dbt_econ/logs', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'target_path': 'None', 'introspect': 'True', 'debug': 'False', 'indirect_selection': 'eager', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'invocation_command': 'dbt compile --select stg_fred_date_based_data', 'no_print': 'None', 'warn_error': 'None', 'log_cache_events': 'False', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_format': 'default', 'quiet': 'False', 'use_colors': 'True', 'partial_parse': 'True', 'static_parser': 'True', 'version_check': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/connor/.dbt', 'printer_width': '80'}
+[0m16:50:43.384344 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m16:50:43.461372 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m16:50:43.597698 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 2 files added, 0 files changed.
+[0m16:50:43.598415 [debug] [MainThread]: Partial parsing: added file: dbt_econ://models/staging/sources.yml
+[0m16:50:43.598820 [debug] [MainThread]: Partial parsing: added file: dbt_econ://models/staging/stg_fred_date_based_data.sql
+[0m16:50:43.787670 [error] [MainThread]: Encountered an error:
+Compilation Error in model stg_fred_date_based_data (models/staging/stg_fred_date_based_data.sql)
+  expected token ',', got ':'
+    line 9
+      {'name': 'unemployment': 'table': 'unemployment_rate'},
+[0m16:50:43.789957 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 0.92252266, "process_in_blocks": "136200", "process_kernel_time": 0.357644, "process_mem_max_rss": "140832", "process_out_blocks": "16", "process_user_time": 2.064583}
+[0m16:50:43.790513 [debug] [MainThread]: Command `dbt compile` failed at 16:50:43.790402 after 0.92 seconds
+[0m16:50:43.790888 [debug] [MainThread]: Flushing usage events
+[0m16:50:58.675231 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 16:50:58.681210 | 026f3cf6-f4cf-46df-8b1c-47217cdee3bf ==============================
+[0m16:50:58.681210 [info ] [MainThread]: Running with dbt=1.11.7
+[0m16:50:58.682198 [debug] [MainThread]: running dbt with arguments {'fail_fast': 'False', 'profiles_dir': '/home/connor/.dbt', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'empty': 'False', 'indirect_selection': 'eager', 'log_format': 'default', 'target_path': 'None', 'quiet': 'False', 'warn_error': 'None', 'invocation_command': 'dbt compile --select stg_fred_date_based_data', 'use_experimental_parser': 'False', 'debug': 'False', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'printer_width': '80', 'no_print': 'None', 'write_json': 'True', 'partial_parse': 'True', 'log_path': '/home/connor/projects/economics_project/dbt_econ/logs', 'use_colors': 'True', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m16:50:58.996425 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m16:50:59.120708 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m16:50:59.216972 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 2 files added, 0 files changed.
+[0m16:50:59.217723 [debug] [MainThread]: Partial parsing: added file: dbt_econ://models/staging/sources.yml
+[0m16:50:59.218164 [debug] [MainThread]: Partial parsing: added file: dbt_econ://models/staging/stg_fred_date_based_data.sql
+[0m16:50:59.688011 [debug] [MainThread]: Wrote artifact WritableManifest to /home/connor/projects/economics_project/dbt_econ/target/manifest.json
+[0m16:50:59.691105 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/connor/projects/economics_project/dbt_econ/target/semantic_manifest.json
+[0m16:50:59.731326 [info ] [MainThread]: Found 3 models, 4 data tests, 7 sources, 474 macros
+[0m16:50:59.735472 [info ] [MainThread]: 
+[0m16:50:59.736344 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m16:50:59.736843 [info ] [MainThread]: 
+[0m16:50:59.737510 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m16:50:59.743400 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_economics_main'
+[0m16:50:59.875295 [debug] [ThreadPool]: Using duckdb connection "list_economics_main"
+[0m16:50:59.875894 [debug] [ThreadPool]: On list_economics_main: BEGIN
+[0m16:50:59.876414 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:50:59.904617 [debug] [ThreadPool]: SQL status: OK in 0.028 seconds
+[0m16:50:59.905181 [debug] [ThreadPool]: Using duckdb connection "list_economics_main"
+[0m16:50:59.905550 [debug] [ThreadPool]: On list_economics_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "list_economics_main"} */
+select
+      'economics' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'economics'
+  
+[0m16:50:59.916449 [debug] [ThreadPool]: SQL status: OK in 0.010 seconds
+[0m16:50:59.918739 [debug] [ThreadPool]: On list_economics_main: ROLLBACK
+[0m16:50:59.920636 [debug] [ThreadPool]: Failed to rollback 'list_economics_main'
+[0m16:50:59.921053 [debug] [ThreadPool]: On list_economics_main: Close
+[0m16:50:59.926863 [debug] [Thread-1 (]: Began running node model.dbt_econ.stg_fred_date_based_data
+[0m16:50:59.927452 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_economics_main, now model.dbt_econ.stg_fred_date_based_data)
+[0m16:50:59.927857 [debug] [Thread-1 (]: Began compiling node model.dbt_econ.stg_fred_date_based_data
+[0m16:50:59.938000 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_econ.stg_fred_date_based_data"
+[0m16:50:59.940814 [debug] [Thread-1 (]: Began executing node model.dbt_econ.stg_fred_date_based_data
+[0m16:50:59.941620 [debug] [Thread-1 (]: Finished running node model.dbt_econ.stg_fred_date_based_data
+[0m16:50:59.943447 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:50:59.943791 [debug] [MainThread]: Connection 'model.dbt_econ.stg_fred_date_based_data' was properly closed.
+[0m16:50:59.944444 [debug] [MainThread]: Command end result
+[0m16:50:59.964207 [debug] [MainThread]: Wrote artifact WritableManifest to /home/connor/projects/economics_project/dbt_econ/target/manifest.json
+[0m16:50:59.966226 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/connor/projects/economics_project/dbt_econ/target/semantic_manifest.json
+[0m16:50:59.972507 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/connor/projects/economics_project/dbt_econ/target/run_results.json
+[0m16:50:59.973007 [info ] [MainThread]: Compiled node 'stg_fred_date_based_data' is:
+
+
+-- Jinja will loop through each raw FRED table.
+-- List of indicators. Each indicator is stored in a dict with its name and table name.
+
+
+
+with unified_data as (
+    -- Now loop through the tables.
+    
+        select
+            'unemployment' as indicator_name,
+            *
+        from "economics"."raw"."unemployment_rate"
+    
+        union all
+    
+    
+        select
+            'cpi' as indicator_name,
+            *
+        from "economics"."raw"."cpi"
+    
+        union all
+    
+    
+        select
+            'core_cpi' as indicator_name,
+            *
+        from "economics"."raw"."core_cpi"
+    
+        union all
+    
+    
+        select
+            'pce' as indicator_name,
+            *
+        from "economics"."raw"."pce"
+    
+        union all
+    
+    
+        select
+            'gdp_real' as indicator_name,
+            *
+        from "economics"."raw"."gdp_real"
+    
+        union all
+    
+    
+        select
+            'gdp_per_capita' as indicator_name,
+            *
+        from "economics"."raw"."gdp_per_capita"
+    
+        union all
+    
+    
+        select
+            'income_real' as indicator_name,
+            *
+        from "economics"."raw"."income_real"
+    
+    
+)
+
+select *
+from unified_data
+[0m16:50:59.974388 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 1.3551142, "process_in_blocks": "9536", "process_kernel_time": 0.299566, "process_mem_max_rss": "153920", "process_out_blocks": "3120", "process_user_time": 2.659165}
+[0m16:50:59.975012 [debug] [MainThread]: Command `dbt compile` succeeded at 16:50:59.974900 after 1.36 seconds
+[0m16:50:59.975383 [debug] [MainThread]: Flushing usage events
+[0m16:51:14.608340 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 16:51:14.614394 | 10eeeeb7-39ff-4537-9b0d-18e1d1864060 ==============================
+[0m16:51:14.614394 [info ] [MainThread]: Running with dbt=1.11.7
+[0m16:51:14.615012 [debug] [MainThread]: running dbt with arguments {'target_path': 'None', 'printer_width': '80', 'no_print': 'None', 'indirect_selection': 'eager', 'static_parser': 'True', 'partial_parse': 'True', 'send_anonymous_usage_stats': 'True', 'use_experimental_parser': 'False', 'invocation_command': 'dbt run --select stg_fred_date_based_data', 'warn_error': 'None', 'introspect': 'True', 'profiles_dir': '/home/connor/.dbt', 'empty': 'False', 'debug': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'cache_selected_only': 'False', 'log_format': 'default', 'version_check': 'True', 'log_cache_events': 'False', 'quiet': 'False', 'fail_fast': 'False', 'use_colors': 'True', 'write_json': 'True', 'log_path': '/home/connor/projects/economics_project/dbt_econ/logs'}
+[0m16:51:14.899210 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m16:51:14.966320 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m16:51:15.063500 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:51:15.063970 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m16:51:15.064260 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:51:15.178796 [debug] [MainThread]: Wrote artifact WritableManifest to /home/connor/projects/economics_project/dbt_econ/target/manifest.json
+[0m16:51:15.180494 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/connor/projects/economics_project/dbt_econ/target/semantic_manifest.json
+[0m16:51:15.194126 [info ] [MainThread]: Found 3 models, 4 data tests, 7 sources, 474 macros
+[0m16:51:15.197734 [info ] [MainThread]: 
+[0m16:51:15.198271 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m16:51:15.198598 [info ] [MainThread]: 
+[0m16:51:15.199070 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m16:51:15.200152 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_economics'
+[0m16:51:15.238400 [debug] [ThreadPool]: Using duckdb connection "list_economics"
+[0m16:51:15.238884 [debug] [ThreadPool]: On list_economics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "list_economics"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"economics"'
+    
+  
+  
+[0m16:51:15.239294 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:51:15.254464 [debug] [ThreadPool]: SQL status: OK in 0.015 seconds
+[0m16:51:15.255888 [debug] [ThreadPool]: On list_economics: Close
+[0m16:51:15.256890 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_economics, now create_economics_main)
+[0m16:51:15.257493 [debug] [ThreadPool]: Creating schema "database: "economics"
+schema: "main"
+"
+[0m16:51:15.263725 [debug] [ThreadPool]: Using duckdb connection "create_economics_main"
+[0m16:51:15.264143 [debug] [ThreadPool]: On create_economics_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "create_economics_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='economics'
+        and type='sqlite'
+    
+  
+[0m16:51:15.264444 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:51:15.267891 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m16:51:15.269119 [debug] [ThreadPool]: Using duckdb connection "create_economics_main"
+[0m16:51:15.269466 [debug] [ThreadPool]: On create_economics_main: BEGIN
+[0m16:51:15.270158 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m16:51:15.270433 [debug] [ThreadPool]: Using duckdb connection "create_economics_main"
+[0m16:51:15.270665 [debug] [ThreadPool]: On create_economics_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "create_economics_main"} */
+
+    
+    
+        create schema if not exists "economics"."main"
+    
+[0m16:51:15.271546 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m16:51:15.272549 [debug] [ThreadPool]: On create_economics_main: COMMIT
+[0m16:51:15.272945 [debug] [ThreadPool]: Using duckdb connection "create_economics_main"
+[0m16:51:15.273346 [debug] [ThreadPool]: On create_economics_main: COMMIT
+[0m16:51:15.274219 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m16:51:15.274583 [debug] [ThreadPool]: On create_economics_main: Close
+[0m16:51:15.280747 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_economics_main, now list_economics_main)
+[0m16:51:15.285783 [debug] [ThreadPool]: Using duckdb connection "list_economics_main"
+[0m16:51:15.286134 [debug] [ThreadPool]: On list_economics_main: BEGIN
+[0m16:51:15.286402 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:51:15.287538 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m16:51:15.287972 [debug] [ThreadPool]: Using duckdb connection "list_economics_main"
+[0m16:51:15.288256 [debug] [ThreadPool]: On list_economics_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "list_economics_main"} */
+select
+      'economics' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'economics'
+  
+[0m16:51:15.292049 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m16:51:15.293653 [debug] [ThreadPool]: On list_economics_main: ROLLBACK
+[0m16:51:15.294687 [debug] [ThreadPool]: Failed to rollback 'list_economics_main'
+[0m16:51:15.295007 [debug] [ThreadPool]: On list_economics_main: Close
+[0m16:51:15.296076 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:51:15.296372 [debug] [MainThread]: On master: BEGIN
+[0m16:51:15.296620 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:51:15.297390 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m16:51:15.297718 [debug] [MainThread]: On master: COMMIT
+[0m16:51:15.297991 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:51:15.298238 [debug] [MainThread]: On master: COMMIT
+[0m16:51:15.298879 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m16:51:15.299187 [debug] [MainThread]: On master: Close
+[0m16:51:15.302080 [debug] [Thread-1 (]: Began running node model.dbt_econ.stg_fred_date_based_data
+[0m16:51:15.302744 [info ] [Thread-1 (]: 1 of 1 START sql table model main.stg_fred_date_based_data ..................... [RUN]
+[0m16:51:15.303196 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_economics_main, now model.dbt_econ.stg_fred_date_based_data)
+[0m16:51:15.303537 [debug] [Thread-1 (]: Began compiling node model.dbt_econ.stg_fred_date_based_data
+[0m16:51:15.312483 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_econ.stg_fred_date_based_data"
+[0m16:51:15.313828 [debug] [Thread-1 (]: Began executing node model.dbt_econ.stg_fred_date_based_data
+[0m16:51:15.350260 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_econ.stg_fred_date_based_data"
+[0m16:51:15.352447 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.stg_fred_date_based_data"
+[0m16:51:15.352859 [debug] [Thread-1 (]: On model.dbt_econ.stg_fred_date_based_data: BEGIN
+[0m16:51:15.353200 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:51:15.354499 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:51:15.354932 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.stg_fred_date_based_data"
+[0m16:51:15.355303 [debug] [Thread-1 (]: On model.dbt_econ.stg_fred_date_based_data: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "model.dbt_econ.stg_fred_date_based_data"} */
+
+  
+    
+    
+
+    create  table
+      "economics"."main"."stg_fred_date_based_data__dbt_tmp"
+  
+    as (
+      
+
+-- Jinja will loop through each raw FRED table.
+-- List of indicators. Each indicator is stored in a dict with its name and table name.
+
+
+
+with unified_data as (
+    -- Now loop through the tables.
+    
+        select
+            'unemployment' as indicator_name,
+            *
+        from "economics"."raw"."unemployment_rate"
+    
+        union all
+    
+    
+        select
+            'cpi' as indicator_name,
+            *
+        from "economics"."raw"."cpi"
+    
+        union all
+    
+    
+        select
+            'core_cpi' as indicator_name,
+            *
+        from "economics"."raw"."core_cpi"
+    
+        union all
+    
+    
+        select
+            'pce' as indicator_name,
+            *
+        from "economics"."raw"."pce"
+    
+        union all
+    
+    
+        select
+            'gdp_real' as indicator_name,
+            *
+        from "economics"."raw"."gdp_real"
+    
+        union all
+    
+    
+        select
+            'gdp_per_capita' as indicator_name,
+            *
+        from "economics"."raw"."gdp_per_capita"
+    
+        union all
+    
+    
+        select
+            'income_real' as indicator_name,
+            *
+        from "economics"."raw"."income_real"
+    
+    
+)
+
+select *
+from unified_data
+    );
+  
+  
+[0m16:51:15.370942 [debug] [Thread-1 (]: DuckDB adapter: duckdb error: Catalog Error: Table with name cpi does not exist!
+Did you mean "consumer_price_index"?
+
+LINE 32:         from "economics"."raw"."cpi"
+                      ^
+[0m16:51:15.371665 [debug] [Thread-1 (]: DuckDB adapter: Error running SQL: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "model.dbt_econ.stg_fred_date_based_data"} */
+
+  
+    
+    
+
+    create  table
+      "economics"."main"."stg_fred_date_based_data__dbt_tmp"
+  
+    as (
+      
+
+-- Jinja will loop through each raw FRED table.
+-- List of indicators. Each indicator is stored in a dict with its name and table name.
+
+
+
+with unified_data as (
+    -- Now loop through the tables.
+    
+        select
+            'unemployment' as indicator_name,
+            *
+        from "economics"."raw"."unemployment_rate"
+    
+        union all
+    
+    
+        select
+            'cpi' as indicator_name,
+            *
+        from "economics"."raw"."cpi"
+    
+        union all
+    
+    
+        select
+            'core_cpi' as indicator_name,
+            *
+        from "economics"."raw"."core_cpi"
+    
+        union all
+    
+    
+        select
+            'pce' as indicator_name,
+            *
+        from "economics"."raw"."pce"
+    
+        union all
+    
+    
+        select
+            'gdp_real' as indicator_name,
+            *
+        from "economics"."raw"."gdp_real"
+    
+        union all
+    
+    
+        select
+            'gdp_per_capita' as indicator_name,
+            *
+        from "economics"."raw"."gdp_per_capita"
+    
+        union all
+    
+    
+        select
+            'income_real' as indicator_name,
+            *
+        from "economics"."raw"."income_real"
+    
+    
+)
+
+select *
+from unified_data
+    );
+  
+  
+[0m16:51:15.372095 [debug] [Thread-1 (]: DuckDB adapter: Rolling back transaction.
+[0m16:51:15.372456 [debug] [Thread-1 (]: On model.dbt_econ.stg_fred_date_based_data: ROLLBACK
+[0m16:51:15.375292 [debug] [Thread-1 (]: Failed to rollback 'model.dbt_econ.stg_fred_date_based_data'
+[0m16:51:15.375840 [debug] [Thread-1 (]: On model.dbt_econ.stg_fred_date_based_data: Close
+[0m16:51:15.383986 [debug] [Thread-1 (]: Runtime Error in model stg_fred_date_based_data (models/staging/stg_fred_date_based_data.sql)
+  Catalog Error: Table with name cpi does not exist!
+  Did you mean "consumer_price_index"?
+  
+  LINE 32:         from "economics"."raw"."cpi"
+                        ^
+[0m16:51:15.386342 [error] [Thread-1 (]: 1 of 1 ERROR creating sql table model main.stg_fred_date_based_data ............ [[31mERROR[0m in 0.08s]
+[0m16:51:15.386977 [debug] [Thread-1 (]: Finished running node model.dbt_econ.stg_fred_date_based_data
+[0m16:51:15.387583 [debug] [Thread-4 (]: Marking all children of 'model.dbt_econ.stg_fred_date_based_data' to be skipped because of status 'error'.  Reason: Runtime Error in model stg_fred_date_based_data (models/staging/stg_fred_date_based_data.sql)
+  Catalog Error: Table with name cpi does not exist!
+  Did you mean "consumer_price_index"?
+  
+  LINE 32:         from "economics"."raw"."cpi"
+                        ^.
+[0m16:51:15.389802 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:51:15.390152 [debug] [MainThread]: On master: BEGIN
+[0m16:51:15.390421 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:51:15.391356 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m16:51:15.391657 [debug] [MainThread]: On master: COMMIT
+[0m16:51:15.391924 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:51:15.392181 [debug] [MainThread]: On master: COMMIT
+[0m16:51:15.392958 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m16:51:15.393388 [debug] [MainThread]: On master: Close
+[0m16:51:15.393808 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:51:15.394113 [debug] [MainThread]: Connection 'model.dbt_econ.stg_fred_date_based_data' was properly closed.
+[0m16:51:15.394418 [info ] [MainThread]: 
+[0m16:51:15.394780 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 0.20 seconds (0.20s).
+[0m16:51:15.395390 [debug] [MainThread]: Command end result
+[0m16:51:15.418846 [debug] [MainThread]: Wrote artifact WritableManifest to /home/connor/projects/economics_project/dbt_econ/target/manifest.json
+[0m16:51:15.421977 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/connor/projects/economics_project/dbt_econ/target/semantic_manifest.json
+[0m16:51:15.428011 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/connor/projects/economics_project/dbt_econ/target/run_results.json
+[0m16:51:15.428447 [info ] [MainThread]: 
+[0m16:51:15.428870 [info ] [MainThread]: [31mCompleted with 1 error, 0 partial successes, and 0 warnings:[0m
+[0m16:51:15.429241 [info ] [MainThread]: 
+[0m16:51:15.429641 [error] [MainThread]: [31mFailure in model stg_fred_date_based_data (models/staging/stg_fred_date_based_data.sql)[0m
+[0m16:51:15.430003 [error] [MainThread]:   Runtime Error in model stg_fred_date_based_data (models/staging/stg_fred_date_based_data.sql)
+  Catalog Error: Table with name cpi does not exist!
+  Did you mean "consumer_price_index"?
+  
+  LINE 32:         from "economics"."raw"."cpi"
+                        ^
+[0m16:51:15.430295 [info ] [MainThread]: 
+[0m16:51:15.430625 [info ] [MainThread]:   compiled code at target/compiled/dbt_econ/models/staging/stg_fred_date_based_data.sql
+[0m16:51:15.430899 [info ] [MainThread]: 
+[0m16:51:15.431202 [info ] [MainThread]: Done. PASS=0 WARN=0 ERROR=1 SKIP=0 NO-OP=0 TOTAL=1
+[0m16:51:15.432082 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": false, "command_wall_clock_time": 0.8758352, "process_in_blocks": "7544", "process_kernel_time": 0.296534, "process_mem_max_rss": "154860", "process_out_blocks": "2128", "process_user_time": 2.059496}
+[0m16:51:15.432527 [debug] [MainThread]: Command `dbt run` failed at 16:51:15.432435 after 0.88 seconds
+[0m16:51:15.432871 [debug] [MainThread]: Flushing usage events
+[0m16:53:10.267436 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 16:53:10.272036 | 75463f72-df78-4428-ab00-8b84f67c2b7f ==============================
+[0m16:53:10.272036 [info ] [MainThread]: Running with dbt=1.11.7
+[0m16:53:10.272862 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'use_colors': 'True', 'version_check': 'True', 'static_parser': 'True', 'no_print': 'None', 'cache_selected_only': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'indirect_selection': 'eager', 'log_format': 'default', 'log_path': '/home/connor/projects/economics_project/dbt_econ/logs', 'write_json': 'True', 'printer_width': '80', 'quiet': 'False', 'fail_fast': 'False', 'debug': 'False', 'empty': 'False', 'profiles_dir': '/home/connor/.dbt', 'introspect': 'True', 'target_path': 'None', 'warn_error': 'None', 'send_anonymous_usage_stats': 'True', 'invocation_command': 'dbt compile --select stg_fred_date_based_data', 'use_experimental_parser': 'False', 'log_cache_events': 'False'}
+[0m16:53:10.546068 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m16:53:10.610253 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m16:53:10.707861 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m16:53:10.708526 [debug] [MainThread]: Partial parsing: updated file: dbt_econ://models/staging/stg_fred_date_based_data.sql
+[0m16:53:10.909159 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.dbt_econ.stg_fred_date_based_data' (models/staging/stg_fred_date_based_data.sql) depends on a source named 'fred_raw.consumer_price_index' which was not found
+[0m16:53:10.910339 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 0.6956378, "process_in_blocks": "0", "process_kernel_time": 0.187318, "process_mem_max_rss": "141548", "process_out_blocks": "16", "process_user_time": 1.991279}
+[0m16:53:10.910927 [debug] [MainThread]: Command `dbt compile` failed at 16:53:10.910789 after 0.70 seconds
+[0m16:53:10.911304 [debug] [MainThread]: Flushing usage events
+[0m16:57:24.305484 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 16:57:24.310130 | dfe52b80-7532-4738-843d-a372734f0a5b ==============================
+[0m16:57:24.310130 [info ] [MainThread]: Running with dbt=1.11.7
+[0m16:57:24.310758 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'send_anonymous_usage_stats': 'True', 'log_format': 'default', 'log_path': '/home/connor/projects/economics_project/dbt_econ/logs', 'printer_width': '80', 'debug': 'False', 'no_print': 'None', 'empty': 'False', 'profiles_dir': '/home/connor/.dbt', 'warn_error': 'None', 'use_colors': 'True', 'fail_fast': 'False', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True', 'static_parser': 'True', 'version_check': 'True', 'introspect': 'True', 'cache_selected_only': 'False', 'quiet': 'False', 'partial_parse': 'True', 'use_experimental_parser': 'False', 'target_path': 'None', 'invocation_command': 'dbt compile --select stg_fred_date_based_data'}
+[0m16:57:24.597527 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m16:57:24.659631 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m16:57:24.761661 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m16:57:24.762323 [debug] [MainThread]: Partial parsing: updated file: dbt_econ://models/staging/stg_fred_date_based_data.sql
+[0m16:57:24.972638 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.dbt_econ.stg_fred_date_based_data' (models/staging/stg_fred_date_based_data.sql) depends on a source named 'fred_raw.consumer_price_index' which was not found
+[0m16:57:24.973940 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 0.72209877, "process_in_blocks": "0", "process_kernel_time": 0.240489, "process_mem_max_rss": "141700", "process_out_blocks": "8", "process_user_time": 1.952447}
+[0m16:57:24.974499 [debug] [MainThread]: Command `dbt compile` failed at 16:57:24.974392 after 0.72 seconds
+[0m16:57:24.974935 [debug] [MainThread]: Flushing usage events
+[0m16:57:54.678798 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 16:57:54.683374 | cee0b593-9756-489f-97b3-0af0cafc3fca ==============================
+[0m16:57:54.683374 [info ] [MainThread]: Running with dbt=1.11.7
+[0m16:57:54.683991 [debug] [MainThread]: running dbt with arguments {'log_path': '/home/connor/projects/economics_project/dbt_econ/logs', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'warn_error': 'None', 'write_json': 'True', 'debug': 'False', 'cache_selected_only': 'False', 'empty': 'False', 'use_colors': 'True', 'partial_parse': 'True', 'quiet': 'False', 'log_format': 'default', 'profiles_dir': '/home/connor/.dbt', 'use_experimental_parser': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'invocation_command': 'dbt compile --select stg_fred_date_based_data', 'log_cache_events': 'False', 'no_print': 'None', 'version_check': 'True', 'introspect': 'True', 'target_path': 'None', 'indirect_selection': 'eager', 'printer_width': '80', 'static_parser': 'True'}
+[0m16:57:54.960754 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m16:57:55.027289 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m16:57:55.126654 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m16:57:55.127365 [debug] [MainThread]: Partial parsing: updated file: dbt_econ://models/staging/stg_fred_date_based_data.sql
+[0m16:57:55.329796 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.dbt_econ.stg_fred_date_based_data' (models/staging/stg_fred_date_based_data.sql) depends on a source named 'fred_raw.consumer_price_index' which was not found
+[0m16:57:55.330889 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 0.7035409, "process_in_blocks": "0", "process_kernel_time": 0.199224, "process_mem_max_rss": "141972", "process_out_blocks": "8", "process_user_time": 1.963783}
+[0m16:57:55.331412 [debug] [MainThread]: Command `dbt compile` failed at 16:57:55.331313 after 0.70 seconds
+[0m16:57:55.331839 [debug] [MainThread]: Flushing usage events
+[0m16:58:18.264970 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 16:58:18.269896 | 4a3ef300-1caa-44d6-8fb7-bae6c354a1b3 ==============================
+[0m16:58:18.269896 [info ] [MainThread]: Running with dbt=1.11.7
+[0m16:58:18.270766 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'write_json': 'True', 'log_cache_events': 'False', 'log_format': 'default', 'target_path': 'None', 'indirect_selection': 'eager', 'no_print': 'None', 'empty': 'False', 'partial_parse': 'True', 'profiles_dir': '/home/connor/.dbt', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_path': '/home/connor/projects/economics_project/dbt_econ/logs', 'send_anonymous_usage_stats': 'True', 'use_experimental_parser': 'False', 'static_parser': 'True', 'introspect': 'True', 'cache_selected_only': 'False', 'invocation_command': 'dbt compile --select stg_fred_date_based_data', 'fail_fast': 'False', 'debug': 'False', 'use_colors': 'True', 'warn_error': 'None', 'quiet': 'False', 'printer_width': '80'}
+[0m16:58:18.547528 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m16:58:18.613095 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m16:58:18.715997 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m16:58:18.716708 [debug] [MainThread]: Partial parsing: updated file: dbt_econ://models/staging/stg_fred_date_based_data.sql
+[0m16:58:18.915952 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.dbt_econ.stg_fred_date_based_data' (models/staging/stg_fred_date_based_data.sql) depends on a source named 'fred_raw.consumer_price_index' which was not found
+[0m16:58:18.917144 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 0.7045961, "process_in_blocks": "0", "process_kernel_time": 0.203768, "process_mem_max_rss": "141872", "process_out_blocks": "8", "process_user_time": 1.964331}
+[0m16:58:18.917672 [debug] [MainThread]: Command `dbt compile` failed at 16:58:18.917563 after 0.71 seconds
+[0m16:58:18.918047 [debug] [MainThread]: Flushing usage events
+[0m16:59:22.554205 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 16:59:22.558876 | b7f057f6-95f2-4030-a1b8-046c15cc0382 ==============================
+[0m16:59:22.558876 [info ] [MainThread]: Running with dbt=1.11.7
+[0m16:59:22.559502 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'log_path': '/home/connor/projects/economics_project/dbt_econ/logs', 'indirect_selection': 'eager', 'target_path': 'None', 'log_cache_events': 'False', 'profiles_dir': '/home/connor/.dbt', 'warn_error': 'None', 'log_format': 'default', 'use_colors': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'no_print': 'None', 'invocation_command': 'dbt compile --select stg_fred_date_based_data', 'use_experimental_parser': 'False', 'printer_width': '80', 'write_json': 'True', 'empty': 'False', 'introspect': 'True', 'fail_fast': 'False', 'debug': 'False', 'cache_selected_only': 'False', 'send_anonymous_usage_stats': 'True', 'quiet': 'False', 'version_check': 'True', 'partial_parse': 'True'}
+[0m16:59:22.845084 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m16:59:22.911496 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m16:59:23.009337 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m16:59:23.010033 [debug] [MainThread]: Partial parsing: updated file: dbt_econ://models/staging/stg_fred_date_based_data.sql
+[0m16:59:23.208215 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.dbt_econ.stg_fred_date_based_data' (models/staging/stg_fred_date_based_data.sql) depends on a source named 'fred_raw.consumer_price_index' which was not found
+[0m16:59:23.209299 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 0.70978063, "process_in_blocks": "0", "process_kernel_time": 0.228442, "process_mem_max_rss": "141904", "process_out_blocks": "8", "process_user_time": 1.953997}
+[0m16:59:23.209786 [debug] [MainThread]: Command `dbt compile` failed at 16:59:23.209685 after 0.71 seconds
+[0m16:59:23.210132 [debug] [MainThread]: Flushing usage events
+[0m17:00:36.098922 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 17:00:36.104350 | b92dccd9-5b0f-4f25-b30a-5183352bf146 ==============================
+[0m17:00:36.104350 [info ] [MainThread]: Running with dbt=1.11.7
+[0m17:00:36.105010 [debug] [MainThread]: running dbt with arguments {'target_path': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/home/connor/projects/economics_project/dbt_econ/logs', 'log_cache_events': 'False', 'write_json': 'True', 'use_experimental_parser': 'False', 'invocation_command': 'dbt compile --select stg_fred_date_based_data', 'partial_parse': 'True', 'printer_width': '80', 'no_print': 'None', 'introspect': 'True', 'indirect_selection': 'eager', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'empty': 'False', 'fail_fast': 'False', 'static_parser': 'True', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_format': 'default', 'profiles_dir': '/home/connor/.dbt', 'warn_error': 'None', 'cache_selected_only': 'False'}
+[0m17:00:36.400571 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m17:00:36.465281 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m17:00:36.568939 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m17:00:36.569812 [debug] [MainThread]: Partial parsing: updated file: dbt_econ://models/staging/sources.yml
+[0m17:00:36.570234 [debug] [MainThread]: Partial parsing: updated file: dbt_econ://models/staging/stg_fred_date_based_data.sql
+[0m17:00:36.898328 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.dbt_econ.stg_fred_date_based_data' (models/staging/stg_fred_date_based_data.sql) depends on a source named 'fred_raw.real_income_per_capita' which was not found
+[0m17:00:36.899817 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 0.86308867, "process_in_blocks": "0", "process_kernel_time": 0.246057, "process_mem_max_rss": "143368", "process_out_blocks": "16", "process_user_time": 2.181708}
+[0m17:00:36.900364 [debug] [MainThread]: Command `dbt compile` failed at 17:00:36.900260 after 0.86 seconds
+[0m17:00:36.900727 [debug] [MainThread]: Flushing usage events
+[0m17:01:12.213111 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 17:01:12.218789 | b5b539ad-8627-4cde-95dc-e9f983ae6cd3 ==============================
+[0m17:01:12.218789 [info ] [MainThread]: Running with dbt=1.11.7
+[0m17:01:12.219528 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'use_experimental_parser': 'False', 'indirect_selection': 'eager', 'profiles_dir': '/home/connor/.dbt', 'empty': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'no_print': 'None', 'debug': 'False', 'introspect': 'True', 'use_colors': 'True', 'printer_width': '80', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None', 'cache_selected_only': 'False', 'log_cache_events': 'False', 'version_check': 'True', 'quiet': 'False', 'write_json': 'True', 'static_parser': 'True', 'fail_fast': 'False', 'log_path': '/home/connor/projects/economics_project/dbt_econ/logs', 'target_path': 'None', 'invocation_command': 'dbt compile --select stg_fred_date_based_data', 'log_format': 'default'}
+[0m17:01:12.535588 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m17:01:12.613517 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m17:01:12.726344 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m17:01:12.727424 [debug] [MainThread]: Partial parsing: updated file: dbt_econ://models/staging/sources.yml
+[0m17:01:12.727857 [debug] [MainThread]: Partial parsing: updated file: dbt_econ://models/staging/stg_fred_date_based_data.sql
+[0m17:01:13.070653 [error] [MainThread]: Encountered an error:
+Compilation Error
+  Model 'model.dbt_econ.stg_fred_date_based_data' (models/staging/stg_fred_date_based_data.sql) depends on a source named 'fred_raw.real_median_household_income' which was not found
+[0m17:01:13.072445 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 0.91656446, "process_in_blocks": "0", "process_kernel_time": 0.272622, "process_mem_max_rss": "143520", "process_out_blocks": "8", "process_user_time": 2.266426}
+[0m17:01:13.073227 [debug] [MainThread]: Command `dbt compile` failed at 17:01:13.073065 after 0.92 seconds
+[0m17:01:13.073691 [debug] [MainThread]: Flushing usage events
+[0m17:02:04.338386 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 17:02:04.343333 | 9885687d-0e2d-4e73-8d29-63f60596c2a5 ==============================
+[0m17:02:04.343333 [info ] [MainThread]: Running with dbt=1.11.7
+[0m17:02:04.343909 [debug] [MainThread]: running dbt with arguments {'empty': 'False', 'introspect': 'True', 'profiles_dir': '/home/connor/.dbt', 'target_path': 'None', 'log_path': '/home/connor/projects/economics_project/dbt_econ/logs', 'invocation_command': 'dbt compile --select stg_fred_date_based_data', 'version_check': 'True', 'indirect_selection': 'eager', 'log_format': 'default', 'quiet': 'False', 'printer_width': '80', 'use_colors': 'True', 'warn_error': 'None', 'fail_fast': 'False', 'use_experimental_parser': 'False', 'write_json': 'True', 'send_anonymous_usage_stats': 'True', 'log_cache_events': 'False', 'debug': 'False', 'no_print': 'None', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True', 'cache_selected_only': 'False'}
+[0m17:02:04.625364 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m17:02:04.691909 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m17:02:04.798181 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m17:02:04.799074 [debug] [MainThread]: Partial parsing: updated file: dbt_econ://models/staging/sources.yml
+[0m17:02:04.799455 [debug] [MainThread]: Partial parsing: updated file: dbt_econ://models/staging/stg_fred_date_based_data.sql
+[0m17:02:05.229224 [debug] [MainThread]: Wrote artifact WritableManifest to /home/connor/projects/economics_project/dbt_econ/target/manifest.json
+[0m17:02:05.231015 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/connor/projects/economics_project/dbt_econ/target/semantic_manifest.json
+[0m17:02:05.242849 [info ] [MainThread]: Found 3 models, 4 data tests, 8 sources, 474 macros
+[0m17:02:05.244495 [info ] [MainThread]: 
+[0m17:02:05.244983 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m17:02:05.245350 [info ] [MainThread]: 
+[0m17:02:05.245827 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m17:02:05.250295 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_economics_main'
+[0m17:02:05.352886 [debug] [ThreadPool]: Using duckdb connection "list_economics_main"
+[0m17:02:05.353462 [debug] [ThreadPool]: On list_economics_main: BEGIN
+[0m17:02:05.353925 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:02:05.368806 [debug] [ThreadPool]: SQL status: OK in 0.015 seconds
+[0m17:02:05.369342 [debug] [ThreadPool]: Using duckdb connection "list_economics_main"
+[0m17:02:05.369720 [debug] [ThreadPool]: On list_economics_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "list_economics_main"} */
+select
+      'economics' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'economics'
+  
+[0m17:02:05.373861 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m17:02:05.375678 [debug] [ThreadPool]: On list_economics_main: ROLLBACK
+[0m17:02:05.376704 [debug] [ThreadPool]: Failed to rollback 'list_economics_main'
+[0m17:02:05.377026 [debug] [ThreadPool]: On list_economics_main: Close
+[0m17:02:05.381696 [debug] [Thread-1 (]: Began running node model.dbt_econ.stg_fred_date_based_data
+[0m17:02:05.382324 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_economics_main, now model.dbt_econ.stg_fred_date_based_data)
+[0m17:02:05.382746 [debug] [Thread-1 (]: Began compiling node model.dbt_econ.stg_fred_date_based_data
+[0m17:02:05.392461 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_econ.stg_fred_date_based_data"
+[0m17:02:05.393282 [debug] [Thread-1 (]: Began executing node model.dbt_econ.stg_fred_date_based_data
+[0m17:02:05.393996 [debug] [Thread-1 (]: Finished running node model.dbt_econ.stg_fred_date_based_data
+[0m17:02:05.395815 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:02:05.396181 [debug] [MainThread]: Connection 'model.dbt_econ.stg_fred_date_based_data' was properly closed.
+[0m17:02:05.396838 [debug] [MainThread]: Command end result
+[0m17:02:05.414149 [debug] [MainThread]: Wrote artifact WritableManifest to /home/connor/projects/economics_project/dbt_econ/target/manifest.json
+[0m17:02:05.415786 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/connor/projects/economics_project/dbt_econ/target/semantic_manifest.json
+[0m17:02:05.421500 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/connor/projects/economics_project/dbt_econ/target/run_results.json
+[0m17:02:05.421934 [info ] [MainThread]: Compiled node 'stg_fred_date_based_data' is:
+
+
+-- Jinja will loop through each raw FRED table.
+-- List of indicators. Each indicator is stored in a dict with its name and table name.
+
+
+
+with unified_data as (
+    -- Now loop through the tables.
+    
+        select
+            'unemployment' as indicator_name,
+            *
+        from "economics"."raw"."unemployment_rate"
+    
+        union all
+    
+    
+        select
+            'cpi' as indicator_name,
+            *
+        from "economics"."raw"."consumer_price_index"
+    
+        union all
+    
+    
+        select
+            'core_cpi' as indicator_name,
+            *
+        from "economics"."raw"."core_consumer_price_index"
+    
+        union all
+    
+    
+        select
+            'pce' as indicator_name,
+            *
+        from "economics"."raw"."personal_consumption_expenditures_index"
+    
+        union all
+    
+    
+        select
+            'real_gdp' as indicator_name,
+            *
+        from "economics"."raw"."real_gdp"
+    
+        union all
+    
+    
+        select
+            'real_gdp_per_capita' as indicator_name,
+            *
+        from "economics"."raw"."real_gdp_per_capita"
+    
+        union all
+    
+    
+        select
+            'real_income_per_capita' as indicator_name,
+            *
+        from "economics"."raw"."real_income_per_capita"
+    
+        union all
+    
+    
+        select
+            'real_median_household_income' as indicator_name,
+            *
+        from "economics"."raw"."real_median_household_income"
+    
+    
+)
+
+select *
+from unified_data
+[0m17:02:05.422934 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 1.1457781, "process_in_blocks": "0", "process_kernel_time": 0.241273, "process_mem_max_rss": "154372", "process_out_blocks": "3136", "process_user_time": 2.40456}
+[0m17:02:05.423394 [debug] [MainThread]: Command `dbt compile` succeeded at 17:02:05.423299 after 1.15 seconds
+[0m17:02:05.423703 [debug] [MainThread]: Flushing usage events
+[0m17:02:14.063309 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 17:02:14.067793 | dc0190bf-e362-485d-a54f-d531588e7997 ==============================
+[0m17:02:14.067793 [info ] [MainThread]: Running with dbt=1.11.7
+[0m17:02:14.068416 [debug] [MainThread]: running dbt with arguments {'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'send_anonymous_usage_stats': 'True', 'printer_width': '80', 'partial_parse': 'True', 'log_path': '/home/connor/projects/economics_project/dbt_econ/logs', 'version_check': 'True', 'no_print': 'None', 'profiles_dir': '/home/connor/.dbt', 'write_json': 'True', 'fail_fast': 'False', 'warn_error': 'None', 'empty': 'False', 'static_parser': 'True', 'log_format': 'default', 'introspect': 'True', 'debug': 'False', 'invocation_command': 'dbt run --select stg_fred_date_based_data', 'target_path': 'None', 'use_colors': 'True', 'use_experimental_parser': 'False', 'quiet': 'False', 'log_cache_events': 'False', 'cache_selected_only': 'False', 'indirect_selection': 'eager'}
+[0m17:02:14.341096 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m17:02:14.408999 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m17:02:14.511422 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m17:02:14.511897 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m17:02:14.512222 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m17:02:14.628147 [debug] [MainThread]: Wrote artifact WritableManifest to /home/connor/projects/economics_project/dbt_econ/target/manifest.json
+[0m17:02:14.629918 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/connor/projects/economics_project/dbt_econ/target/semantic_manifest.json
+[0m17:02:14.644025 [info ] [MainThread]: Found 3 models, 4 data tests, 8 sources, 474 macros
+[0m17:02:14.645914 [info ] [MainThread]: 
+[0m17:02:14.647581 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m17:02:14.648037 [info ] [MainThread]: 
+[0m17:02:14.648635 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m17:02:14.649924 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_economics'
+[0m17:02:14.688836 [debug] [ThreadPool]: Using duckdb connection "list_economics"
+[0m17:02:14.689363 [debug] [ThreadPool]: On list_economics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "list_economics"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"economics"'
+    
+  
+  
+[0m17:02:14.689703 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:02:14.705888 [debug] [ThreadPool]: SQL status: OK in 0.016 seconds
+[0m17:02:14.707558 [debug] [ThreadPool]: On list_economics: Close
+[0m17:02:14.708540 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_economics, now create_economics_main)
+[0m17:02:14.709052 [debug] [ThreadPool]: Creating schema "database: "economics"
+schema: "main"
+"
+[0m17:02:14.715429 [debug] [ThreadPool]: Using duckdb connection "create_economics_main"
+[0m17:02:14.715908 [debug] [ThreadPool]: On create_economics_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "create_economics_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='economics'
+        and type='sqlite'
+    
+  
+[0m17:02:14.716204 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:02:14.718060 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m17:02:14.719630 [debug] [ThreadPool]: Using duckdb connection "create_economics_main"
+[0m17:02:14.720020 [debug] [ThreadPool]: On create_economics_main: BEGIN
+[0m17:02:14.720751 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m17:02:14.721067 [debug] [ThreadPool]: Using duckdb connection "create_economics_main"
+[0m17:02:14.721333 [debug] [ThreadPool]: On create_economics_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "create_economics_main"} */
+
+    
+    
+        create schema if not exists "economics"."main"
+    
+[0m17:02:14.722215 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m17:02:14.723087 [debug] [ThreadPool]: On create_economics_main: COMMIT
+[0m17:02:14.723411 [debug] [ThreadPool]: Using duckdb connection "create_economics_main"
+[0m17:02:14.723676 [debug] [ThreadPool]: On create_economics_main: COMMIT
+[0m17:02:14.724621 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m17:02:14.725236 [debug] [ThreadPool]: On create_economics_main: Close
+[0m17:02:14.730727 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_economics_main, now list_economics_main)
+[0m17:02:14.736167 [debug] [ThreadPool]: Using duckdb connection "list_economics_main"
+[0m17:02:14.736716 [debug] [ThreadPool]: On list_economics_main: BEGIN
+[0m17:02:14.737021 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m17:02:14.737949 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m17:02:14.738418 [debug] [ThreadPool]: Using duckdb connection "list_economics_main"
+[0m17:02:14.738741 [debug] [ThreadPool]: On list_economics_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "list_economics_main"} */
+select
+      'economics' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'economics'
+  
+[0m17:02:14.742122 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m17:02:14.743413 [debug] [ThreadPool]: On list_economics_main: ROLLBACK
+[0m17:02:14.744381 [debug] [ThreadPool]: Failed to rollback 'list_economics_main'
+[0m17:02:14.744705 [debug] [ThreadPool]: On list_economics_main: Close
+[0m17:02:14.745882 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:02:14.746204 [debug] [MainThread]: On master: BEGIN
+[0m17:02:14.746473 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:02:14.747283 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m17:02:14.747624 [debug] [MainThread]: On master: COMMIT
+[0m17:02:14.747912 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:02:14.748171 [debug] [MainThread]: On master: COMMIT
+[0m17:02:14.748836 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:02:14.749169 [debug] [MainThread]: On master: Close
+[0m17:02:14.752524 [debug] [Thread-1 (]: Began running node model.dbt_econ.stg_fred_date_based_data
+[0m17:02:14.753090 [info ] [Thread-1 (]: 1 of 1 START sql table model main.stg_fred_date_based_data ..................... [RUN]
+[0m17:02:14.753554 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_economics_main, now model.dbt_econ.stg_fred_date_based_data)
+[0m17:02:14.753894 [debug] [Thread-1 (]: Began compiling node model.dbt_econ.stg_fred_date_based_data
+[0m17:02:14.763411 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_econ.stg_fred_date_based_data"
+[0m17:02:14.764607 [debug] [Thread-1 (]: Began executing node model.dbt_econ.stg_fred_date_based_data
+[0m17:02:14.798395 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_econ.stg_fred_date_based_data"
+[0m17:02:14.799397 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.stg_fred_date_based_data"
+[0m17:02:14.799868 [debug] [Thread-1 (]: On model.dbt_econ.stg_fred_date_based_data: BEGIN
+[0m17:02:14.800213 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:02:14.801269 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m17:02:14.801680 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.stg_fred_date_based_data"
+[0m17:02:14.802037 [debug] [Thread-1 (]: On model.dbt_econ.stg_fred_date_based_data: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "model.dbt_econ.stg_fred_date_based_data"} */
+
+  
+    
+    
+
+    create  table
+      "economics"."main"."stg_fred_date_based_data__dbt_tmp"
+  
+    as (
+      
+
+-- Jinja will loop through each raw FRED table.
+-- List of indicators. Each indicator is stored in a dict with its name and table name.
+
+
+
+with unified_data as (
+    -- Now loop through the tables.
+    
+        select
+            'unemployment' as indicator_name,
+            *
+        from "economics"."raw"."unemployment_rate"
+    
+        union all
+    
+    
+        select
+            'cpi' as indicator_name,
+            *
+        from "economics"."raw"."consumer_price_index"
+    
+        union all
+    
+    
+        select
+            'core_cpi' as indicator_name,
+            *
+        from "economics"."raw"."core_consumer_price_index"
+    
+        union all
+    
+    
+        select
+            'pce' as indicator_name,
+            *
+        from "economics"."raw"."personal_consumption_expenditures_index"
+    
+        union all
+    
+    
+        select
+            'real_gdp' as indicator_name,
+            *
+        from "economics"."raw"."real_gdp"
+    
+        union all
+    
+    
+        select
+            'real_gdp_per_capita' as indicator_name,
+            *
+        from "economics"."raw"."real_gdp_per_capita"
+    
+        union all
+    
+    
+        select
+            'real_income_per_capita' as indicator_name,
+            *
+        from "economics"."raw"."real_income_per_capita"
+    
+        union all
+    
+    
+        select
+            'real_median_household_income' as indicator_name,
+            *
+        from "economics"."raw"."real_median_household_income"
+    
+    
+)
+
+select *
+from unified_data
+    );
+  
+  
+[0m17:02:14.810504 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m17:02:14.817328 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.stg_fred_date_based_data"
+[0m17:02:14.818223 [debug] [Thread-1 (]: On model.dbt_econ.stg_fred_date_based_data: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "model.dbt_econ.stg_fred_date_based_data"} */
+alter table "economics"."main"."stg_fred_date_based_data__dbt_tmp" rename to "stg_fred_date_based_data"
+[0m17:02:14.819595 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m17:02:14.831696 [debug] [Thread-1 (]: On model.dbt_econ.stg_fred_date_based_data: COMMIT
+[0m17:02:14.832191 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.stg_fred_date_based_data"
+[0m17:02:14.832521 [debug] [Thread-1 (]: On model.dbt_econ.stg_fred_date_based_data: COMMIT
+[0m17:02:14.839388 [debug] [Thread-1 (]: SQL status: OK in 0.006 seconds
+[0m17:02:14.844941 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.stg_fred_date_based_data"
+[0m17:02:14.845396 [debug] [Thread-1 (]: On model.dbt_econ.stg_fred_date_based_data: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "model.dbt_econ.stg_fred_date_based_data"} */
+
+      drop table if exists "economics"."main"."stg_fred_date_based_data__dbt_backup" cascade
+    
+[0m17:02:14.846332 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m17:02:14.848636 [debug] [Thread-1 (]: On model.dbt_econ.stg_fred_date_based_data: Close
+[0m17:02:14.850778 [info ] [Thread-1 (]: 1 of 1 OK created sql table model main.stg_fred_date_based_data ................ [[32mOK[0m in 0.10s]
+[0m17:02:14.851405 [debug] [Thread-1 (]: Finished running node model.dbt_econ.stg_fred_date_based_data
+[0m17:02:14.853341 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:02:14.853685 [debug] [MainThread]: On master: BEGIN
+[0m17:02:14.853966 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:02:14.854800 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m17:02:14.855122 [debug] [MainThread]: On master: COMMIT
+[0m17:02:14.855391 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:02:14.855631 [debug] [MainThread]: On master: COMMIT
+[0m17:02:14.856190 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:02:14.856507 [debug] [MainThread]: On master: Close
+[0m17:02:14.856862 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:02:14.857109 [debug] [MainThread]: Connection 'model.dbt_econ.stg_fred_date_based_data' was properly closed.
+[0m17:02:14.857377 [info ] [MainThread]: 
+[0m17:02:14.857686 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 0.21 seconds (0.21s).
+[0m17:02:14.858290 [debug] [MainThread]: Command end result
+[0m17:02:14.879585 [debug] [MainThread]: Wrote artifact WritableManifest to /home/connor/projects/economics_project/dbt_econ/target/manifest.json
+[0m17:02:14.882320 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/connor/projects/economics_project/dbt_econ/target/semantic_manifest.json
+[0m17:02:14.888038 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/connor/projects/economics_project/dbt_econ/target/run_results.json
+[0m17:02:14.888501 [info ] [MainThread]: 
+[0m17:02:14.888970 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:02:14.889316 [info ] [MainThread]: 
+[0m17:02:14.889672 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m17:02:14.890692 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 0.8799534, "process_in_blocks": "8", "process_kernel_time": 0.228613, "process_mem_max_rss": "156856", "process_out_blocks": "2488", "process_user_time": 2.143248}
+[0m17:02:14.891443 [debug] [MainThread]: Command `dbt run` succeeded at 17:02:14.891109 after 0.88 seconds
+[0m17:02:14.892107 [debug] [MainThread]: Flushing usage events
+[0m17:13:03.013020 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 17:13:03.018460 | 1b4f8990-9d72-4b09-9c62-3994978f66ea ==============================
+[0m17:13:03.018460 [info ] [MainThread]: Running with dbt=1.11.7
+[0m17:13:03.019109 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'warn_error': 'None', 'empty': 'None', 'target_path': 'None', 'fail_fast': 'False', 'debug': 'False', 'log_path': '/home/connor/projects/economics_project/dbt_econ/logs', 'send_anonymous_usage_stats': 'True', 'log_cache_events': 'False', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'introspect': 'True', 'use_colors': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'profiles_dir': '/home/connor/.dbt', 'indirect_selection': 'eager', 'printer_width': '80', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt test --select stg_fred_date_based_data', 'cache_selected_only': 'False', 'version_check': 'True', 'write_json': 'True'}
+[0m17:13:03.311486 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m17:13:03.377702 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m17:13:03.481595 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 1 files added, 1 files changed.
+[0m17:13:03.482361 [debug] [MainThread]: Partial parsing: added file: dbt_econ://models/staging/stg_fred_date_based_data.yml
+[0m17:13:03.482800 [debug] [MainThread]: Partial parsing: updated file: dbt_econ://models/staging/stg_fred_date_based_data.sql
+[0m17:13:03.970606 [debug] [MainThread]: Wrote artifact WritableManifest to /home/connor/projects/economics_project/dbt_econ/target/manifest.json
+[0m17:13:03.972388 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/connor/projects/economics_project/dbt_econ/target/semantic_manifest.json
+[0m17:13:04.068900 [info ] [MainThread]: Found 3 models, 6 data tests, 8 sources, 474 macros
+[0m17:13:04.070760 [info ] [MainThread]: 
+[0m17:13:04.071293 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m17:13:04.071687 [info ] [MainThread]: 
+[0m17:13:04.072297 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m17:13:04.077295 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_economics_main'
+[0m17:13:04.118513 [debug] [ThreadPool]: Using duckdb connection "list_economics_main"
+[0m17:13:04.119045 [debug] [ThreadPool]: On list_economics_main: BEGIN
+[0m17:13:04.119376 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m17:13:04.135349 [debug] [ThreadPool]: SQL status: OK in 0.016 seconds
+[0m17:13:04.135893 [debug] [ThreadPool]: Using duckdb connection "list_economics_main"
+[0m17:13:04.136314 [debug] [ThreadPool]: On list_economics_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "list_economics_main"} */
+select
+      'economics' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'economics'
+  
+[0m17:13:04.140504 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m17:13:04.142138 [debug] [ThreadPool]: On list_economics_main: ROLLBACK
+[0m17:13:04.143152 [debug] [ThreadPool]: Failed to rollback 'list_economics_main'
+[0m17:13:04.143490 [debug] [ThreadPool]: On list_economics_main: Close
+[0m17:13:04.144867 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:13:04.145195 [debug] [MainThread]: On master: BEGIN
+[0m17:13:04.145496 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m17:13:04.146386 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m17:13:04.146702 [debug] [MainThread]: On master: COMMIT
+[0m17:13:04.146978 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:13:04.147225 [debug] [MainThread]: On master: COMMIT
+[0m17:13:04.147821 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:13:04.148179 [debug] [MainThread]: On master: Close
+[0m17:13:04.151521 [debug] [Thread-1 (]: Began running node test.dbt_econ.not_null_stg_fred_date_based_data_date.52ab336380
+[0m17:13:04.151987 [info ] [Thread-1 (]: 1 of 2 START test not_null_stg_fred_date_based_data_date ....................... [RUN]
+[0m17:13:04.152529 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_economics_main, now test.dbt_econ.not_null_stg_fred_date_based_data_date.52ab336380)
+[0m17:13:04.152873 [debug] [Thread-1 (]: Began compiling node test.dbt_econ.not_null_stg_fred_date_based_data_date.52ab336380
+[0m17:13:04.172037 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_econ.not_null_stg_fred_date_based_data_date.52ab336380"
+[0m17:13:04.173493 [debug] [Thread-1 (]: Began executing node test.dbt_econ.not_null_stg_fred_date_based_data_date.52ab336380
+[0m17:13:04.191052 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_econ.not_null_stg_fred_date_based_data_date.52ab336380"
+[0m17:13:04.192323 [debug] [Thread-1 (]: Using duckdb connection "test.dbt_econ.not_null_stg_fred_date_based_data_date.52ab336380"
+[0m17:13:04.192745 [debug] [Thread-1 (]: On test.dbt_econ.not_null_stg_fred_date_based_data_date.52ab336380: BEGIN
+[0m17:13:04.193065 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:13:04.194371 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m17:13:04.194757 [debug] [Thread-1 (]: Using duckdb connection "test.dbt_econ.not_null_stg_fred_date_based_data_date.52ab336380"
+[0m17:13:04.195128 [debug] [Thread-1 (]: On test.dbt_econ.not_null_stg_fred_date_based_data_date.52ab336380: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "test.dbt_econ.not_null_stg_fred_date_based_data_date.52ab336380"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select date
+from "economics"."main"."stg_fred_date_based_data"
+where date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:13:04.199868 [debug] [Thread-1 (]: SQL status: OK in 0.004 seconds
+[0m17:13:04.203900 [debug] [Thread-1 (]: On test.dbt_econ.not_null_stg_fred_date_based_data_date.52ab336380: ROLLBACK
+[0m17:13:04.204779 [debug] [Thread-1 (]: Failed to rollback 'test.dbt_econ.not_null_stg_fred_date_based_data_date.52ab336380'
+[0m17:13:04.205144 [debug] [Thread-1 (]: On test.dbt_econ.not_null_stg_fred_date_based_data_date.52ab336380: Close
+[0m17:13:04.205827 [info ] [Thread-1 (]: 1 of 2 PASS not_null_stg_fred_date_based_data_date ............................. [[32mPASS[0m in 0.05s]
+[0m17:13:04.206365 [debug] [Thread-1 (]: Finished running node test.dbt_econ.not_null_stg_fred_date_based_data_date.52ab336380
+[0m17:13:04.206749 [debug] [Thread-1 (]: Began running node test.dbt_econ.not_null_stg_fred_date_based_data_indicator_name.0f86ae0da6
+[0m17:13:04.207249 [info ] [Thread-1 (]: 2 of 2 START test not_null_stg_fred_date_based_data_indicator_name ............. [RUN]
+[0m17:13:04.207700 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_econ.not_null_stg_fred_date_based_data_date.52ab336380, now test.dbt_econ.not_null_stg_fred_date_based_data_indicator_name.0f86ae0da6)
+[0m17:13:04.208021 [debug] [Thread-1 (]: Began compiling node test.dbt_econ.not_null_stg_fred_date_based_data_indicator_name.0f86ae0da6
+[0m17:13:04.211605 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_econ.not_null_stg_fred_date_based_data_indicator_name.0f86ae0da6"
+[0m17:13:04.212466 [debug] [Thread-1 (]: Began executing node test.dbt_econ.not_null_stg_fred_date_based_data_indicator_name.0f86ae0da6
+[0m17:13:04.214999 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_econ.not_null_stg_fred_date_based_data_indicator_name.0f86ae0da6"
+[0m17:13:04.216935 [debug] [Thread-1 (]: Using duckdb connection "test.dbt_econ.not_null_stg_fred_date_based_data_indicator_name.0f86ae0da6"
+[0m17:13:04.217352 [debug] [Thread-1 (]: On test.dbt_econ.not_null_stg_fred_date_based_data_indicator_name.0f86ae0da6: BEGIN
+[0m17:13:04.217679 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m17:13:04.218774 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m17:13:04.219159 [debug] [Thread-1 (]: Using duckdb connection "test.dbt_econ.not_null_stg_fred_date_based_data_indicator_name.0f86ae0da6"
+[0m17:13:04.219510 [debug] [Thread-1 (]: On test.dbt_econ.not_null_stg_fred_date_based_data_indicator_name.0f86ae0da6: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "test.dbt_econ.not_null_stg_fred_date_based_data_indicator_name.0f86ae0da6"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select indicator_name
+from "economics"."main"."stg_fred_date_based_data"
+where indicator_name is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m17:13:04.221221 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m17:13:04.222849 [debug] [Thread-1 (]: On test.dbt_econ.not_null_stg_fred_date_based_data_indicator_name.0f86ae0da6: ROLLBACK
+[0m17:13:04.223688 [debug] [Thread-1 (]: Failed to rollback 'test.dbt_econ.not_null_stg_fred_date_based_data_indicator_name.0f86ae0da6'
+[0m17:13:04.224135 [debug] [Thread-1 (]: On test.dbt_econ.not_null_stg_fred_date_based_data_indicator_name.0f86ae0da6: Close
+[0m17:13:04.224819 [info ] [Thread-1 (]: 2 of 2 PASS not_null_stg_fred_date_based_data_indicator_name ................... [[32mPASS[0m in 0.02s]
+[0m17:13:04.225394 [debug] [Thread-1 (]: Finished running node test.dbt_econ.not_null_stg_fred_date_based_data_indicator_name.0f86ae0da6
+[0m17:13:04.227382 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:13:04.227732 [debug] [MainThread]: On master: BEGIN
+[0m17:13:04.228025 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m17:13:04.228986 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m17:13:04.229327 [debug] [MainThread]: On master: COMMIT
+[0m17:13:04.229617 [debug] [MainThread]: Using duckdb connection "master"
+[0m17:13:04.229867 [debug] [MainThread]: On master: COMMIT
+[0m17:13:04.230506 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m17:13:04.230907 [debug] [MainThread]: On master: Close
+[0m17:13:04.231327 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m17:13:04.231613 [debug] [MainThread]: Connection 'test.dbt_econ.not_null_stg_fred_date_based_data_indicator_name.0f86ae0da6' was properly closed.
+[0m17:13:04.231948 [info ] [MainThread]: 
+[0m17:13:04.232381 [info ] [MainThread]: Finished running 2 data tests in 0 hours 0 minutes and 0.16 seconds (0.16s).
+[0m17:13:04.233146 [debug] [MainThread]: Command end result
+[0m17:13:04.259591 [debug] [MainThread]: Wrote artifact WritableManifest to /home/connor/projects/economics_project/dbt_econ/target/manifest.json
+[0m17:13:04.261666 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/connor/projects/economics_project/dbt_econ/target/semantic_manifest.json
+[0m17:13:04.268363 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/connor/projects/economics_project/dbt_econ/target/run_results.json
+[0m17:13:04.268805 [info ] [MainThread]: 
+[0m17:13:04.269203 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m17:13:04.269519 [info ] [MainThread]: 
+[0m17:13:04.269913 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m17:13:04.270864 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 1.3141924, "process_in_blocks": "1744", "process_kernel_time": 0.300962, "process_mem_max_rss": "156456", "process_out_blocks": "3192", "process_user_time": 2.594782}
+[0m17:13:04.271483 [debug] [MainThread]: Command `dbt test` succeeded at 17:13:04.271377 after 1.31 seconds
+[0m17:13:04.271860 [debug] [MainThread]: Flushing usage events
+[0m16:55:26.399101 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 16:55:26.415849 | 7032dfef-b31b-45b0-8eaa-5d0c8c88ecfc ==============================
+[0m16:55:26.415849 [info ] [MainThread]: Running with dbt=1.11.7
+[0m16:55:26.417611 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'log_format': 'default', 'send_anonymous_usage_stats': 'True', 'empty': 'False', 'partial_parse': 'True', 'quiet': 'False', 'use_experimental_parser': 'False', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'use_colors': 'True', 'debug': 'False', 'introspect': 'True', 'static_parser': 'True', 'write_json': 'True', 'cache_selected_only': 'False', 'indirect_selection': 'eager', 'target_path': 'None', 'printer_width': '80', 'invocation_command': 'dbt run --select stg_fred_based_data', 'warn_error': 'None', 'log_path': '/home/connor/projects/economics_project/dbt_econ/logs', 'profiles_dir': '/home/connor/.dbt', 'no_print': 'None'}
+[0m16:55:26.983548 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m16:55:27.112034 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m16:55:27.386862 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:55:27.387670 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m16:55:27.388228 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:55:27.580622 [debug] [MainThread]: Wrote artifact WritableManifest to /home/connor/projects/economics_project/dbt_econ/target/manifest.json
+[0m16:55:27.593604 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/connor/projects/economics_project/dbt_econ/target/semantic_manifest.json
+[0m16:55:27.657532 [info ] [MainThread]: Found 3 models, 6 data tests, 8 sources, 474 macros
+[0m16:55:27.659144 [warn ] [MainThread]: The selection criterion 'stg_fred_based_data' does not match any enabled nodes
+[0m16:55:27.661365 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m16:55:27.665012 [debug] [MainThread]: Command end result
+[0m16:55:27.705470 [debug] [MainThread]: Wrote artifact WritableManifest to /home/connor/projects/economics_project/dbt_econ/target/manifest.json
+[0m16:55:27.709208 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/connor/projects/economics_project/dbt_econ/target/semantic_manifest.json
+[0m16:55:27.714490 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/connor/projects/economics_project/dbt_econ/target/run_results.json
+[0m16:55:27.717788 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.4265187, "process_in_blocks": "60760", "process_kernel_time": 0.739914, "process_mem_max_rss": "140800", "process_out_blocks": "2136", "process_user_time": 3.666505}
+[0m16:55:27.718916 [debug] [MainThread]: Command `dbt run` succeeded at 16:55:27.718609 after 1.43 seconds
+[0m16:55:27.719757 [debug] [MainThread]: Flushing usage events
+[0m16:55:38.293774 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 16:55:38.302620 | 9fecd13b-3ab3-4572-9c34-3f1a68958bb9 ==============================
+[0m16:55:38.302620 [info ] [MainThread]: Running with dbt=1.11.7
+[0m16:55:38.303745 [debug] [MainThread]: running dbt with arguments {'write_json': 'True', 'quiet': 'False', 'introspect': 'True', 'partial_parse': 'True', 'no_print': 'None', 'empty': 'False', 'invocation_command': 'dbt run --select stg_fred_date_based_data', 'cache_selected_only': 'False', 'log_path': '/home/connor/projects/economics_project/dbt_econ/logs', 'fail_fast': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'profiles_dir': '/home/connor/.dbt', 'target_path': 'None', 'use_experimental_parser': 'False', 'version_check': 'True', 'log_format': 'default', 'log_cache_events': 'False', 'indirect_selection': 'eager', 'debug': 'False', 'static_parser': 'True', 'use_colors': 'True', 'printer_width': '80', 'send_anonymous_usage_stats': 'True', 'warn_error': 'None'}
+[0m16:55:38.726824 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m16:55:38.824477 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m16:55:38.994337 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m16:55:38.995142 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m16:55:38.995697 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m16:55:39.200356 [debug] [MainThread]: Wrote artifact WritableManifest to /home/connor/projects/economics_project/dbt_econ/target/manifest.json
+[0m16:55:39.203371 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/connor/projects/economics_project/dbt_econ/target/semantic_manifest.json
+[0m16:55:39.222605 [info ] [MainThread]: Found 3 models, 6 data tests, 8 sources, 474 macros
+[0m16:55:39.224977 [info ] [MainThread]: 
+[0m16:55:39.225657 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m16:55:39.226127 [info ] [MainThread]: 
+[0m16:55:39.226948 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m16:55:39.229004 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_economics'
+[0m16:55:39.300640 [debug] [ThreadPool]: Using duckdb connection "list_economics"
+[0m16:55:39.301421 [debug] [ThreadPool]: On list_economics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "list_economics"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"economics"'
+    
+  
+  
+[0m16:55:39.301926 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m16:55:39.336556 [debug] [ThreadPool]: SQL status: OK in 0.034 seconds
+[0m16:55:39.339304 [debug] [ThreadPool]: On list_economics: Close
+[0m16:55:39.340857 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_economics, now create_economics_main)
+[0m16:55:39.341621 [debug] [ThreadPool]: Creating schema "database: "economics"
+schema: "main"
+"
+[0m16:55:39.352113 [debug] [ThreadPool]: Using duckdb connection "create_economics_main"
+[0m16:55:39.352726 [debug] [ThreadPool]: On create_economics_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "create_economics_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='economics'
+        and type='sqlite'
+    
+  
+[0m16:55:39.353140 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:55:39.355547 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m16:55:39.357292 [debug] [ThreadPool]: Using duckdb connection "create_economics_main"
+[0m16:55:39.357727 [debug] [ThreadPool]: On create_economics_main: BEGIN
+[0m16:55:39.358806 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m16:55:39.359264 [debug] [ThreadPool]: Using duckdb connection "create_economics_main"
+[0m16:55:39.359679 [debug] [ThreadPool]: On create_economics_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "create_economics_main"} */
+
+    
+    
+        create schema if not exists "economics"."main"
+    
+[0m16:55:39.361117 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m16:55:39.362793 [debug] [ThreadPool]: On create_economics_main: COMMIT
+[0m16:55:39.363365 [debug] [ThreadPool]: Using duckdb connection "create_economics_main"
+[0m16:55:39.363833 [debug] [ThreadPool]: On create_economics_main: COMMIT
+[0m16:55:39.364896 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m16:55:39.365580 [debug] [ThreadPool]: On create_economics_main: Close
+[0m16:55:39.374920 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_economics_main, now list_economics_main)
+[0m16:55:39.383225 [debug] [ThreadPool]: Using duckdb connection "list_economics_main"
+[0m16:55:39.383905 [debug] [ThreadPool]: On list_economics_main: BEGIN
+[0m16:55:39.384315 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m16:55:39.385951 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m16:55:39.386846 [debug] [ThreadPool]: Using duckdb connection "list_economics_main"
+[0m16:55:39.387337 [debug] [ThreadPool]: On list_economics_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "list_economics_main"} */
+select
+      'economics' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'economics'
+  
+[0m16:55:39.395331 [debug] [ThreadPool]: SQL status: OK in 0.007 seconds
+[0m16:55:39.398227 [debug] [ThreadPool]: On list_economics_main: ROLLBACK
+[0m16:55:39.402191 [debug] [ThreadPool]: Failed to rollback 'list_economics_main'
+[0m16:55:39.402819 [debug] [ThreadPool]: On list_economics_main: Close
+[0m16:55:39.405012 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:55:39.405492 [debug] [MainThread]: On master: BEGIN
+[0m16:55:39.405862 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m16:55:39.407404 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m16:55:39.407929 [debug] [MainThread]: On master: COMMIT
+[0m16:55:39.408415 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:55:39.408842 [debug] [MainThread]: On master: COMMIT
+[0m16:55:39.410023 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m16:55:39.410779 [debug] [MainThread]: On master: Close
+[0m16:55:39.419724 [debug] [Thread-1 (]: Began running node model.dbt_econ.stg_fred_date_based_data
+[0m16:55:39.420648 [info ] [Thread-1 (]: 1 of 1 START sql table model main.stg_fred_date_based_data ..................... [RUN]
+[0m16:55:39.421557 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_economics_main, now model.dbt_econ.stg_fred_date_based_data)
+[0m16:55:39.422068 [debug] [Thread-1 (]: Began compiling node model.dbt_econ.stg_fred_date_based_data
+[0m16:55:39.437051 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_econ.stg_fred_date_based_data"
+[0m16:55:39.438394 [debug] [Thread-1 (]: Began executing node model.dbt_econ.stg_fred_date_based_data
+[0m16:55:39.495850 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_econ.stg_fred_date_based_data"
+[0m16:55:39.497237 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.stg_fred_date_based_data"
+[0m16:55:39.497814 [debug] [Thread-1 (]: On model.dbt_econ.stg_fred_date_based_data: BEGIN
+[0m16:55:39.498371 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m16:55:39.500265 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m16:55:39.501202 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.stg_fred_date_based_data"
+[0m16:55:39.501907 [debug] [Thread-1 (]: On model.dbt_econ.stg_fred_date_based_data: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "model.dbt_econ.stg_fred_date_based_data"} */
+
+  
+    
+    
+
+    create  table
+      "economics"."main"."stg_fred_date_based_data__dbt_tmp"
+  
+    as (
+      
+
+-- Jinja will loop through each raw FRED table.
+-- List of indicators. Each indicator is stored in a dict with its name and table name.
+
+
+
+with unified_data as (
+    -- Now loop through the tables.
+    
+        select
+            'unemployment_rate' as indicator_name,
+            *
+        from "economics"."raw"."unemployment_rate"
+    
+        union all
+    
+    
+        select
+            'cpi' as indicator_name,
+            *
+        from "economics"."raw"."consumer_price_index"
+    
+        union all
+    
+    
+        select
+            'core_cpi' as indicator_name,
+            *
+        from "economics"."raw"."core_consumer_price_index"
+    
+        union all
+    
+    
+        select
+            'pce' as indicator_name,
+            *
+        from "economics"."raw"."personal_consumption_expenditures_index"
+    
+        union all
+    
+    
+        select
+            'real_gdp' as indicator_name,
+            *
+        from "economics"."raw"."real_gdp"
+    
+        union all
+    
+    
+        select
+            'real_gdp_per_capita' as indicator_name,
+            *
+        from "economics"."raw"."real_gdp_per_capita"
+    
+        union all
+    
+    
+        select
+            'real_income_per_capita' as indicator_name,
+            *
+        from "economics"."raw"."real_income_per_capita"
+    
+        union all
+    
+    
+        select
+            'real_median_household_income' as indicator_name,
+            *
+        from "economics"."raw"."real_median_household_income"
+    
+    
+)
+
+select *
+from unified_data
+    );
+  
+  
+[0m16:55:39.516350 [debug] [Thread-1 (]: SQL status: OK in 0.014 seconds
+[0m16:55:39.524933 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.stg_fred_date_based_data"
+[0m16:55:39.525724 [debug] [Thread-1 (]: On model.dbt_econ.stg_fred_date_based_data: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "model.dbt_econ.stg_fred_date_based_data"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'stg_fred_date_based_data'
+  
+[0m16:55:39.528224 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m16:55:39.530129 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.stg_fred_date_based_data"
+[0m16:55:39.530725 [debug] [Thread-1 (]: On model.dbt_econ.stg_fred_date_based_data: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "model.dbt_econ.stg_fred_date_based_data"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'stg_fred_date_based_data'
+  
+[0m16:55:39.533278 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m16:55:39.542371 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.stg_fred_date_based_data"
+[0m16:55:39.543044 [debug] [Thread-1 (]: On model.dbt_econ.stg_fred_date_based_data: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "model.dbt_econ.stg_fred_date_based_data"} */
+alter table "economics"."main"."stg_fred_date_based_data" rename to "stg_fred_date_based_data__dbt_backup"
+[0m16:55:39.546695 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m16:55:39.550532 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.stg_fred_date_based_data"
+[0m16:55:39.551056 [debug] [Thread-1 (]: On model.dbt_econ.stg_fred_date_based_data: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "model.dbt_econ.stg_fred_date_based_data"} */
+alter table "economics"."main"."stg_fred_date_based_data__dbt_tmp" rename to "stg_fred_date_based_data"
+[0m16:55:39.552284 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m16:55:39.572553 [debug] [Thread-1 (]: On model.dbt_econ.stg_fred_date_based_data: COMMIT
+[0m16:55:39.573757 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.stg_fred_date_based_data"
+[0m16:55:39.574798 [debug] [Thread-1 (]: On model.dbt_econ.stg_fred_date_based_data: COMMIT
+[0m16:55:39.584763 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m16:55:39.593737 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.stg_fred_date_based_data"
+[0m16:55:39.594492 [debug] [Thread-1 (]: On model.dbt_econ.stg_fred_date_based_data: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "model.dbt_econ.stg_fred_date_based_data"} */
+
+      drop table if exists "economics"."main"."stg_fred_date_based_data__dbt_backup" cascade
+    
+[0m16:55:39.601140 [debug] [Thread-1 (]: SQL status: OK in 0.006 seconds
+[0m16:55:39.605389 [debug] [Thread-1 (]: On model.dbt_econ.stg_fred_date_based_data: Close
+[0m16:55:39.609925 [info ] [Thread-1 (]: 1 of 1 OK created sql table model main.stg_fred_date_based_data ................ [[32mOK[0m in 0.18s]
+[0m16:55:39.611184 [debug] [Thread-1 (]: Finished running node model.dbt_econ.stg_fred_date_based_data
+[0m16:55:39.613491 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:55:39.614026 [debug] [MainThread]: On master: BEGIN
+[0m16:55:39.614720 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m16:55:39.616610 [debug] [MainThread]: SQL status: OK in 0.002 seconds
+[0m16:55:39.617321 [debug] [MainThread]: On master: COMMIT
+[0m16:55:39.617957 [debug] [MainThread]: Using duckdb connection "master"
+[0m16:55:39.618654 [debug] [MainThread]: On master: COMMIT
+[0m16:55:39.620129 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m16:55:39.620803 [debug] [MainThread]: On master: Close
+[0m16:55:39.621747 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m16:55:39.622415 [debug] [MainThread]: Connection 'model.dbt_econ.stg_fred_date_based_data' was properly closed.
+[0m16:55:39.623092 [info ] [MainThread]: 
+[0m16:55:39.623841 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 0.40 seconds (0.40s).
+[0m16:55:39.624843 [debug] [MainThread]: Command end result
+[0m16:55:39.672411 [debug] [MainThread]: Wrote artifact WritableManifest to /home/connor/projects/economics_project/dbt_econ/target/manifest.json
+[0m16:55:39.675290 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/connor/projects/economics_project/dbt_econ/target/semantic_manifest.json
+[0m16:55:39.684629 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/connor/projects/economics_project/dbt_econ/target/run_results.json
+[0m16:55:39.685282 [info ] [MainThread]: 
+[0m16:55:39.685896 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m16:55:39.686572 [info ] [MainThread]: 
+[0m16:55:39.687407 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m16:55:39.688939 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.4737884, "process_in_blocks": "3360", "process_kernel_time": 0.46904, "process_mem_max_rss": "157188", "process_out_blocks": "2552", "process_user_time": 3.579071}
+[0m16:55:39.689647 [debug] [MainThread]: Command `dbt run` succeeded at 16:55:39.689497 after 1.47 seconds
+[0m16:55:39.690222 [debug] [MainThread]: Flushing usage events
