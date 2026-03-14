@@ -18,10 +18,10 @@ def insert_fred_data(
             # Call the Fred API and get the series you pass.
         try:
             df = fred.ingest_series(nested_dict["series_id"])
+            # Upsert that series.
+            db.upsert_data(df, table_name=nested_dict["table_name"])
         except ValueError as e:
             print(f"Error querying Series {nested_dict["series_id"]}. Check the series name: {e}.")
-        # Upsert that series.
-        db.upsert_data(df, table_name=nested_dict["table_name"])
 
 
 db_path = "/home/connor/projects/economics_project/fred_data/economics.db"

@@ -3,8 +3,10 @@ import os
 import yaml
 
 # This file auto-generates a sources.yml file for my associated DBT project. 
-# fred_series.json contains the appropriate file configuration. The function defined here will keep my dbt project up to date automatically.
-# I want to note that at the time I created this, I'm only dealing with date indexed FRED data. Working with a differnet index may necessiate new files
+# fred_series.json contains the appropriate file configuration.
+# The function defined here will keep my dbt project up to date automatically.
+# I want to note that at the time I created this, I'm only dealing with date indexed FRED data.
+# Working with a differnet index may necessiate new files
 
 def generate_sources_file():
     # Gemini did most of the formatting below.
@@ -21,7 +23,7 @@ def generate_sources_file():
             {
                 "name": "fred_raw",
                 "description": "Raw economic data ingested from the FRED API.",
-                "database": "main",  # DuckDB default database
+                "schema": "raw",
                 "schema": "raw",     # The schema where your Python script dumps data
                 "tables": [
                     {

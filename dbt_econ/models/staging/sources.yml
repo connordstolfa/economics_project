@@ -5,7 +5,6 @@ version: 2
 sources:
 - name: fred_raw
   description: Raw economic data ingested from the FRED API.
-  database: main
   schema: raw
   tables:
   - name: unemployment_rate
