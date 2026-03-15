@@ -10,7 +10,9 @@ class DuckClient:
     def query_db(self, sql, params=None):
         """Method for querying duckdb"""
         with duckdb.connect(self.db_path) as con:
-            return con.execute(sql, params).df()
+            query_results = con.execute(sql, params).df()
+            con.close()
+            return query_results
         
     def upsert_data(self, df, table_name):
         """This function checks if a table exists for a give data point.
@@ -29,3 +31,4 @@ class DuckClient:
                     """)
             # Run the upsert function.
             con.execute( f"INSERT OR REPLACE INTO raw.{table_name} SELECT * FROM df")
+            con.close()

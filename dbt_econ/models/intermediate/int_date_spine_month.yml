@@ -1,0 +1,10 @@
+version: 2
+models:
+  - name: int_date_spine_month
+    description: This model creates a date spine for every month between 1/1/1920 (The decade the Great Depression started) and the present date. There is one row per month.
+    columns:
+      - name: date_month
+        description: The first day of the month.
+        tests:
+          - unique
+          - not_null
