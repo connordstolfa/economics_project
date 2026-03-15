@@ -4329,3 +4329,1491 @@ alter table "economics"."main"."stg_fred_date_based_data__dbt_tmp" rename to "st
 [0m17:37:29.526141 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.5447927, "process_in_blocks": "0", "process_kernel_time": 0.479793, "process_mem_max_rss": "156928", "process_out_blocks": "2664", "process_user_time": 3.935147}
 [0m17:37:29.526841 [debug] [MainThread]: Command `dbt run` succeeded at 17:37:29.526693 after 1.55 seconds
 [0m17:37:29.527342 [debug] [MainThread]: Flushing usage events
+[0m14:59:48.427295 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 14:59:48.437664 | 423754a4-91d3-4cf5-8eb3-97b1a5e377a6 ==============================
+[0m14:59:48.437664 [info ] [MainThread]: Running with dbt=1.11.7
+[0m14:59:48.439217 [debug] [MainThread]: running dbt with arguments {'use_experimental_parser': 'False', 'log_path': '/home/connor/projects/economics_project/dbt_econ/logs', 'printer_width': '80', 'write_json': 'True', 'empty': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'no_print': 'None', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'fail_fast': 'False', 'partial_parse': 'True', 'debug': 'False', 'target_path': 'None', 'static_parser': 'True', 'introspect': 'True', 'version_check': 'True', 'indirect_selection': 'eager', 'warn_error': 'None', 'cache_selected_only': 'False', 'quiet': 'False', 'log_format': 'default', 'log_cache_events': 'False', 'invocation_command': 'dbt ', 'profiles_dir': '/home/connor/.dbt'}
+[0m14:59:48.768052 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m14:59:48.770998 [info ] [MainThread]: Warning: No packages were found in packages.yml
+[0m14:59:48.779202 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 0.47536138, "process_in_blocks": "472", "process_kernel_time": 0.457069, "process_mem_max_rss": "102016", "process_out_blocks": "16", "process_user_time": 2.525908}
+[0m14:59:48.780376 [debug] [MainThread]: Command `cli deps` succeeded at 14:59:48.780173 after 0.48 seconds
+[0m14:59:48.780945 [debug] [MainThread]: Flushing usage events
+[0m15:21:26.044860 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 15:21:26.053122 | 81d0ee98-2c10-4d2a-9b12-457d4782c5be ==============================
+[0m15:21:26.053122 [info ] [MainThread]: Running with dbt=1.11.7
+[0m15:21:26.054492 [debug] [MainThread]: running dbt with arguments {'static_parser': 'True', 'indirect_selection': 'eager', 'log_format': 'default', 'target_path': 'None', 'log_path': '/home/connor/projects/economics_project/dbt_econ/logs', 'empty': 'None', 'log_cache_events': 'False', 'quiet': 'False', 'profiles_dir': '/home/connor/.dbt', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'printer_width': '80', 'invocation_command': 'dbt deps', 'introspect': 'True', 'no_print': 'None', 'use_experimental_parser': 'False', 'write_json': 'True', 'debug': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'version_check': 'True', 'cache_selected_only': 'False', 'warn_error': 'None'}
+[0m15:21:26.273642 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-4w4120qf'
+[0m15:21:26.274888 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m15:21:26.503261 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m15:21:26.507286 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m15:21:27.973360 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m15:21:27.998248 [info ] [MainThread]: Updating lock file in file path: /home/connor/projects/economics_project/dbt_econ/package-lock.yml
+[0m15:21:28.023048 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-82monvgv'
+[0m15:21:28.032939 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m15:21:28.388183 [info ] [MainThread]: Installed from version 1.1.1
+[0m15:21:28.389045 [info ] [MainThread]: Updated version available: 1.3.3
+[0m15:21:28.390097 [info ] [MainThread]: 
+[0m15:21:28.390985 [info ] [MainThread]: Updates available for packages: ['dbt-labs/dbt_utils']                 
+Update your versions in packages.yml, then run dbt deps
+[0m15:21:28.393799 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 2.4333165, "process_in_blocks": "1192", "process_kernel_time": 0.344401, "process_mem_max_rss": "104168", "process_out_blocks": "2232", "process_user_time": 2.603037}
+[0m15:21:28.395131 [debug] [MainThread]: Command `dbt deps` succeeded at 15:21:28.394867 after 2.44 seconds
+[0m15:21:28.395857 [debug] [MainThread]: Flushing usage events
+[0m15:22:11.956362 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 15:22:11.965091 | 6ccb2a40-6f79-46a8-b1ac-97218a45abe8 ==============================
+[0m15:22:11.965091 [info ] [MainThread]: Running with dbt=1.11.7
+[0m15:22:11.966150 [debug] [MainThread]: running dbt with arguments {'log_cache_events': 'False', 'no_print': 'None', 'target_path': 'None', 'write_json': 'True', 'static_parser': 'True', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'warn_error': 'None', 'fail_fast': 'False', 'quiet': 'False', 'empty': 'None', 'log_path': '/home/connor/projects/economics_project/dbt_econ/logs', 'cache_selected_only': 'False', 'use_experimental_parser': 'False', 'partial_parse': 'True', 'version_check': 'True', 'use_colors': 'True', 'printer_width': '80', 'invocation_command': 'dbt deps', 'introspect': 'True', 'indirect_selection': 'eager', 'send_anonymous_usage_stats': 'True', 'debug': 'False', 'profiles_dir': '/home/connor/.dbt'}
+[0m15:22:12.231623 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-mr3grimj'
+[0m15:22:12.232605 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m15:22:12.421302 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m15:22:12.425387 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m15:22:12.604516 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m15:22:12.620907 [info ] [MainThread]: Updating lock file in file path: /home/connor/projects/economics_project/dbt_econ/package-lock.yml
+[0m15:22:12.646331 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-0g6n9ri5'
+[0m15:22:12.652001 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m15:22:13.044952 [info ] [MainThread]: Installed from version 1.3.3
+[0m15:22:13.045821 [info ] [MainThread]: Up to date!
+[0m15:22:13.048014 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 1.1913745, "process_in_blocks": "0", "process_kernel_time": 0.428314, "process_mem_max_rss": "104144", "process_out_blocks": "2304", "process_user_time": 2.754021}
+[0m15:22:13.048745 [debug] [MainThread]: Command `dbt deps` succeeded at 15:22:13.048582 after 1.19 seconds
+[0m15:22:13.049193 [debug] [MainThread]: Flushing usage events
+[0m15:26:29.210129 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 15:26:29.219118 | a3d2db3d-ebb2-4318-b4e1-d32eb34d607b ==============================
+[0m15:26:29.219118 [info ] [MainThread]: Running with dbt=1.11.7
+[0m15:26:29.220411 [debug] [MainThread]: running dbt with arguments {'partial_parse': 'True', 'use_colors': 'True', 'introspect': 'True', 'cache_selected_only': 'False', 'write_json': 'True', 'debug': 'False', 'log_cache_events': 'False', 'profiles_dir': '/home/connor/.dbt', 'log_format': 'default', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'warn_error': 'None', 'empty': 'None', 'log_path': '/home/connor/projects/economics_project/dbt_econ/logs', 'indirect_selection': 'eager', 'printer_width': '80', 'no_print': 'None', 'target_path': 'None', 'invocation_command': 'dbt deps', 'version_check': 'True', 'quiet': 'False', 'send_anonymous_usage_stats': 'True', 'static_parser': 'True', 'fail_fast': 'False', 'use_experimental_parser': 'False'}
+[0m15:26:29.462287 [debug] [MainThread]: Set downloads directory='/tmp/dbt-downloads-hzhp6aoj'
+[0m15:26:29.463181 [debug] [MainThread]: Making package index registry request: GET https://hub.getdbt.com/api/v1/index.json
+[0m15:26:29.660422 [debug] [MainThread]: Response from registry index: GET https://hub.getdbt.com/api/v1/index.json 200
+[0m15:26:29.665078 [debug] [MainThread]: Making package registry request: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json
+[0m15:26:29.841960 [debug] [MainThread]: Response from registry: GET https://hub.getdbt.com/api/v1/dbt-labs/dbt_utils.json 200
+[0m15:26:29.853170 [info ] [MainThread]: Installing dbt-labs/dbt_utils
+[0m15:26:30.212941 [info ] [MainThread]: Installed from version 1.3.3
+[0m15:26:30.213777 [info ] [MainThread]: Up to date!
+[0m15:26:30.215748 [debug] [MainThread]: Resource report: {"command_name": "deps", "command_success": true, "command_wall_clock_time": 1.1013398, "process_in_blocks": "0", "process_kernel_time": 0.297388, "process_mem_max_rss": "103932", "process_out_blocks": "2296", "process_user_time": 2.592102}
+[0m15:26:30.216476 [debug] [MainThread]: Command `dbt deps` succeeded at 15:26:30.216329 after 1.10 seconds
+[0m15:26:30.216933 [debug] [MainThread]: Flushing usage events
+[0m15:28:25.041981 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 15:28:25.050129 | 746803c5-f031-4481-ae22-0cac2a98a64e ==============================
+[0m15:28:25.050129 [info ] [MainThread]: Running with dbt=1.11.7
+[0m15:28:25.051515 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'profiles_dir': '/home/connor/.dbt', 'cache_selected_only': 'False', 'warn_error': 'None', 'indirect_selection': 'eager', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'use_experimental_parser': 'False', 'partial_parse': 'True', 'log_format': 'default', 'log_cache_events': 'False', 'invocation_command': 'dbt compile --select int_date_spine_month', 'no_print': 'None', 'log_path': '/home/connor/projects/economics_project/dbt_econ/logs', 'quiet': 'False', 'static_parser': 'True', 'target_path': 'None', 'write_json': 'True', 'debug': 'False', 'fail_fast': 'False', 'version_check': 'True', 'introspect': 'True', 'use_colors': 'True', 'send_anonymous_usage_stats': 'True', 'empty': 'False'}
+[0m15:28:25.556236 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m15:28:25.701463 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m15:28:25.875578 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m15:28:25.876385 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m15:28:25.877024 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m15:28:26.118670 [debug] [MainThread]: Wrote artifact WritableManifest to /home/connor/projects/economics_project/dbt_econ/target/manifest.json
+[0m15:28:26.132319 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/connor/projects/economics_project/dbt_econ/target/semantic_manifest.json
+[0m15:28:26.156051 [info ] [MainThread]: Found 5 models, 6 data tests, 8 sources, 590 macros
+[0m15:28:26.159493 [info ] [MainThread]: 
+[0m15:28:26.160782 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m15:28:26.161408 [info ] [MainThread]: 
+[0m15:28:26.162278 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m15:28:26.172596 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_economics_main'
+[0m15:28:26.236033 [debug] [ThreadPool]: Using duckdb connection "list_economics_main"
+[0m15:28:26.236890 [debug] [ThreadPool]: On list_economics_main: BEGIN
+[0m15:28:26.237504 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:28:26.260973 [debug] [ThreadPool]: SQL status: OK in 0.023 seconds
+[0m15:28:26.261790 [debug] [ThreadPool]: Using duckdb connection "list_economics_main"
+[0m15:28:26.262311 [debug] [ThreadPool]: On list_economics_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "list_economics_main"} */
+select
+      'economics' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'economics'
+  
+[0m15:28:26.283353 [debug] [ThreadPool]: SQL status: OK in 0.020 seconds
+[0m15:28:26.286025 [debug] [ThreadPool]: On list_economics_main: ROLLBACK
+[0m15:28:26.287813 [debug] [ThreadPool]: Failed to rollback 'list_economics_main'
+[0m15:28:26.288337 [debug] [ThreadPool]: On list_economics_main: Close
+[0m15:28:26.298063 [debug] [Thread-1 (]: Began running node model.dbt_econ.int_date_spine_month
+[0m15:28:26.299026 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_economics_main, now model.dbt_econ.int_date_spine_month)
+[0m15:28:26.299680 [debug] [Thread-1 (]: Began compiling node model.dbt_econ.int_date_spine_month
+[0m15:28:26.322036 [debug] [Thread-1 (]: Compilation Error in model int_date_spine_month (models/intermediate/int_date_spine_month.sql)
+  'dict object' has no attribute 'datespine'. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m15:28:26.323391 [debug] [Thread-1 (]: Finished running node model.dbt_econ.int_date_spine_month
+[0m15:28:26.324384 [debug] [Thread-4 (]: Marking all children of 'model.dbt_econ.int_date_spine_month' to be skipped because of status 'error'.  Reason: Compilation Error in model int_date_spine_month (models/intermediate/int_date_spine_month.sql)
+  'dict object' has no attribute 'datespine'. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps"..
+[0m15:28:26.326563 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:28:26.328249 [debug] [MainThread]: Connection 'model.dbt_econ.int_date_spine_month' was properly closed.
+[0m15:28:26.329422 [error] [MainThread]: Encountered an error:
+Runtime Error
+  Compilation Error in model int_date_spine_month (models/intermediate/int_date_spine_month.sql)
+    'dict object' has no attribute 'datespine'. This can happen when calling a macro that does not exist. Check for typos and/or install package dependencies with "dbt deps".
+[0m15:28:26.331347 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 1.3805946, "process_in_blocks": "1920", "process_kernel_time": 0.438179, "process_mem_max_rss": "150236", "process_out_blocks": "1360", "process_user_time": 3.343583}
+[0m15:28:26.332174 [debug] [MainThread]: Command `dbt compile` failed at 15:28:26.331952 after 1.38 seconds
+[0m15:28:26.332744 [debug] [MainThread]: Flushing usage events
+[0m15:29:11.769673 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 15:29:11.777454 | ca44b91b-7051-43b0-bf0a-2b252b8dcf0a ==============================
+[0m15:29:11.777454 [info ] [MainThread]: Running with dbt=1.11.7
+[0m15:29:11.778648 [debug] [MainThread]: running dbt with arguments {'empty': 'False', 'profiles_dir': '/home/connor/.dbt', 'warn_error': 'None', 'use_colors': 'True', 'introspect': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'write_json': 'True', 'partial_parse': 'True', 'indirect_selection': 'eager', 'static_parser': 'True', 'log_format': 'default', 'quiet': 'False', 'cache_selected_only': 'False', 'debug': 'False', 'printer_width': '80', 'fail_fast': 'False', 'invocation_command': 'dbt compile --select int_date_spine_month', 'target_path': 'None', 'send_anonymous_usage_stats': 'True', 'log_path': '/home/connor/projects/economics_project/dbt_econ/logs', 'log_cache_events': 'False', 'no_print': 'None', 'version_check': 'True', 'use_experimental_parser': 'False'}
+[0m15:29:12.235079 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m15:29:12.348093 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m15:29:12.506793 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 1 files changed.
+[0m15:29:12.507986 [debug] [MainThread]: Partial parsing: updated file: dbt_econ://models/intermediate/int_date_spine_month.sql
+[0m15:29:12.796267 [error] [MainThread]: Encountered an error:
+Compilation Error in model int_date_spine_month (models/intermediate/int_date_spine_month.sql)
+  macro 'dbt_macro__date_spine' takes no keyword argument 'date_part'
+[0m15:29:12.798184 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": false, "command_wall_clock_time": 1.114756, "process_in_blocks": "0", "process_kernel_time": 0.328068, "process_mem_max_rss": "141572", "process_out_blocks": "16", "process_user_time": 3.100651}
+[0m15:29:12.799052 [debug] [MainThread]: Command `dbt compile` failed at 15:29:12.798862 after 1.12 seconds
+[0m15:29:12.799658 [debug] [MainThread]: Flushing usage events
+[0m15:29:33.086150 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 15:29:33.093829 | c13786d1-dae5-45b4-b770-a8d0423c049d ==============================
+[0m15:29:33.093829 [info ] [MainThread]: Running with dbt=1.11.7
+[0m15:29:33.094980 [debug] [MainThread]: running dbt with arguments {'fail_fast': 'False', 'printer_width': '80', 'indirect_selection': 'eager', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_format': 'default', 'send_anonymous_usage_stats': 'True', 'cache_selected_only': 'False', 'empty': 'False', 'log_path': '/home/connor/projects/economics_project/dbt_econ/logs', 'static_parser': 'True', 'write_json': 'True', 'no_print': 'None', 'quiet': 'False', 'log_cache_events': 'False', 'partial_parse': 'True', 'warn_error': 'None', 'version_check': 'True', 'use_colors': 'True', 'introspect': 'True', 'profiles_dir': '/home/connor/.dbt', 'invocation_command': 'dbt compile --select int_date_spine_month', 'use_experimental_parser': 'False', 'debug': 'False'}
+[0m15:29:33.561169 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m15:29:33.675030 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m15:29:33.837238 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m15:29:33.837990 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m15:29:33.838755 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m15:29:34.060820 [debug] [MainThread]: Wrote artifact WritableManifest to /home/connor/projects/economics_project/dbt_econ/target/manifest.json
+[0m15:29:34.065695 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/connor/projects/economics_project/dbt_econ/target/semantic_manifest.json
+[0m15:29:34.087220 [info ] [MainThread]: Found 5 models, 6 data tests, 8 sources, 590 macros
+[0m15:29:34.090137 [info ] [MainThread]: 
+[0m15:29:34.091148 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m15:29:34.091682 [info ] [MainThread]: 
+[0m15:29:34.092611 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m15:29:34.102667 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_economics_main'
+[0m15:29:34.156152 [debug] [ThreadPool]: Using duckdb connection "list_economics_main"
+[0m15:29:34.156940 [debug] [ThreadPool]: On list_economics_main: BEGIN
+[0m15:29:34.157456 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:29:34.181215 [debug] [ThreadPool]: SQL status: OK in 0.024 seconds
+[0m15:29:34.182118 [debug] [ThreadPool]: Using duckdb connection "list_economics_main"
+[0m15:29:34.182832 [debug] [ThreadPool]: On list_economics_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "list_economics_main"} */
+select
+      'economics' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'economics'
+  
+[0m15:29:34.188378 [debug] [ThreadPool]: SQL status: OK in 0.005 seconds
+[0m15:29:34.191468 [debug] [ThreadPool]: On list_economics_main: ROLLBACK
+[0m15:29:34.192914 [debug] [ThreadPool]: Failed to rollback 'list_economics_main'
+[0m15:29:34.193468 [debug] [ThreadPool]: On list_economics_main: Close
+[0m15:29:34.199503 [debug] [Thread-1 (]: Began running node model.dbt_econ.int_date_spine_month
+[0m15:29:34.200449 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_economics_main, now model.dbt_econ.int_date_spine_month)
+[0m15:29:34.201068 [debug] [Thread-1 (]: Began compiling node model.dbt_econ.int_date_spine_month
+[0m15:29:34.234319 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.int_date_spine_month"
+[0m15:29:34.235572 [debug] [Thread-1 (]: On model.dbt_econ.int_date_spine_month: BEGIN
+[0m15:29:34.236448 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:29:34.238722 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m15:29:34.239539 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.int_date_spine_month"
+[0m15:29:34.240138 [debug] [Thread-1 (]: On model.dbt_econ.int_date_spine_month: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "model.dbt_econ.int_date_spine_month"} */
+
+
+        select 
+        (date_diff('month', cast('1920-01-01' as date)::timestamp, cast('2026-03-15' as date)::timestamp ))
+    
+[0m15:29:34.257219 [debug] [Thread-1 (]: SQL status: OK in 0.016 seconds
+[0m15:29:34.277763 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_econ.int_date_spine_month"
+[0m15:29:34.280174 [debug] [Thread-1 (]: Began executing node model.dbt_econ.int_date_spine_month
+[0m15:29:34.280965 [debug] [Thread-1 (]: On model.dbt_econ.int_date_spine_month: ROLLBACK
+[0m15:29:34.282293 [debug] [Thread-1 (]: Failed to rollback 'model.dbt_econ.int_date_spine_month'
+[0m15:29:34.282905 [debug] [Thread-1 (]: On model.dbt_econ.int_date_spine_month: Close
+[0m15:29:34.284066 [debug] [Thread-1 (]: Finished running node model.dbt_econ.int_date_spine_month
+[0m15:29:34.286542 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:29:34.287055 [debug] [MainThread]: Connection 'model.dbt_econ.int_date_spine_month' was properly closed.
+[0m15:29:34.287968 [debug] [MainThread]: Command end result
+[0m15:29:34.349315 [debug] [MainThread]: Wrote artifact WritableManifest to /home/connor/projects/economics_project/dbt_econ/target/manifest.json
+[0m15:29:34.354155 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/connor/projects/economics_project/dbt_econ/target/semantic_manifest.json
+[0m15:29:34.364776 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/connor/projects/economics_project/dbt_econ/target/run_results.json
+[0m15:29:34.365723 [info ] [MainThread]: Compiled node 'int_date_spine_month' is:
+
+
+-- 1920 is the decade the Great Depression started. Pulling data from all 1920 rather than 1929 so that I have data in the lead up to the Depression.
+
+-- Get the end date as the current date
+
+
+with month_spine as (
+    
+
+
+
+
+
+with rawdata as (
+
+    
+
+    
+
+    with p as (
+        select 0 as generated_number union all select 1
+    ), unioned as (
+
+    select
+
+    
+    p0.generated_number * power(2, 0)
+     + 
+    
+    p1.generated_number * power(2, 1)
+     + 
+    
+    p2.generated_number * power(2, 2)
+     + 
+    
+    p3.generated_number * power(2, 3)
+     + 
+    
+    p4.generated_number * power(2, 4)
+     + 
+    
+    p5.generated_number * power(2, 5)
+     + 
+    
+    p6.generated_number * power(2, 6)
+     + 
+    
+    p7.generated_number * power(2, 7)
+     + 
+    
+    p8.generated_number * power(2, 8)
+     + 
+    
+    p9.generated_number * power(2, 9)
+     + 
+    
+    p10.generated_number * power(2, 10)
+    
+    
+    + 1
+    as generated_number
+
+    from
+
+    
+    p as p0
+     cross join 
+    
+    p as p1
+     cross join 
+    
+    p as p2
+     cross join 
+    
+    p as p3
+     cross join 
+    
+    p as p4
+     cross join 
+    
+    p as p5
+     cross join 
+    
+    p as p6
+     cross join 
+    
+    p as p7
+     cross join 
+    
+    p as p8
+     cross join 
+    
+    p as p9
+     cross join 
+    
+    p as p10
+    
+    
+
+    )
+
+    select *
+    from unioned
+    where generated_number <= 1274
+    order by generated_number
+
+
+
+),
+
+all_periods as (
+
+    select (
+        
+
+    (cast('1920-01-01' as date) + cast(row_number() over (order by generated_number) - 1 as bigint) * interval 1 month)
+    ) as date_month
+    from rawdata
+
+),
+
+filtered as (
+
+    select *
+    from all_periods
+    where date_month <= cast('2026-03-15' as date)
+
+)
+
+select * from filtered
+
+
+)
+
+select *
+from month_spine
+[0m15:29:34.367996 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 1.3702754, "process_in_blocks": "512", "process_kernel_time": 0.459801, "process_mem_max_rss": "151700", "process_out_blocks": "2680", "process_user_time": 3.336508}
+[0m15:29:34.368985 [debug] [MainThread]: Command `dbt compile` succeeded at 15:29:34.368762 after 1.37 seconds
+[0m15:29:34.369629 [debug] [MainThread]: Flushing usage events
+[0m15:29:44.971844 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 15:29:44.983218 | d9578f2b-bfb7-4cde-84ff-7d95cd1e7c0a ==============================
+[0m15:29:44.983218 [info ] [MainThread]: Running with dbt=1.11.7
+[0m15:29:44.985912 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'log_format': 'default', 'quiet': 'False', 'no_print': 'None', 'warn_error': 'None', 'indirect_selection': 'eager', 'use_experimental_parser': 'False', 'static_parser': 'True', 'partial_parse': 'True', 'use_colors': 'True', 'fail_fast': 'False', 'empty': 'False', 'log_path': '/home/connor/projects/economics_project/dbt_econ/logs', 'introspect': 'True', 'version_check': 'True', 'send_anonymous_usage_stats': 'True', 'printer_width': '80', 'profiles_dir': '/home/connor/.dbt', 'target_path': 'None', 'invocation_command': 'dbt run --select int_date_spine_month', 'write_json': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'log_cache_events': 'False', 'cache_selected_only': 'False'}
+[0m15:29:45.493475 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m15:29:45.624894 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m15:29:45.786990 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m15:29:45.787712 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m15:29:45.788182 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m15:29:46.009191 [debug] [MainThread]: Wrote artifact WritableManifest to /home/connor/projects/economics_project/dbt_econ/target/manifest.json
+[0m15:29:46.013362 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/connor/projects/economics_project/dbt_econ/target/semantic_manifest.json
+[0m15:29:46.046267 [info ] [MainThread]: Found 5 models, 6 data tests, 8 sources, 590 macros
+[0m15:29:46.050342 [info ] [MainThread]: 
+[0m15:29:46.051950 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m15:29:46.052657 [info ] [MainThread]: 
+[0m15:29:46.053641 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m15:29:46.057102 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_economics'
+[0m15:29:46.122482 [debug] [ThreadPool]: Using duckdb connection "list_economics"
+[0m15:29:46.123270 [debug] [ThreadPool]: On list_economics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "list_economics"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"economics"'
+    
+  
+  
+[0m15:29:46.123760 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:29:46.145936 [debug] [ThreadPool]: SQL status: OK in 0.022 seconds
+[0m15:29:46.148447 [debug] [ThreadPool]: On list_economics: Close
+[0m15:29:46.149843 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_economics, now create_economics_main)
+[0m15:29:46.150903 [debug] [ThreadPool]: Creating schema "database: "economics"
+schema: "main"
+"
+[0m15:29:46.160104 [debug] [ThreadPool]: Using duckdb connection "create_economics_main"
+[0m15:29:46.160679 [debug] [ThreadPool]: On create_economics_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "create_economics_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='economics'
+        and type='sqlite'
+    
+  
+[0m15:29:46.161084 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:29:46.176159 [debug] [ThreadPool]: SQL status: OK in 0.015 seconds
+[0m15:29:46.178688 [debug] [ThreadPool]: Using duckdb connection "create_economics_main"
+[0m15:29:46.179419 [debug] [ThreadPool]: On create_economics_main: BEGIN
+[0m15:29:46.180892 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m15:29:46.181356 [debug] [ThreadPool]: Using duckdb connection "create_economics_main"
+[0m15:29:46.181853 [debug] [ThreadPool]: On create_economics_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "create_economics_main"} */
+
+    
+    
+        create schema if not exists "economics"."main"
+    
+[0m15:29:46.183774 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m15:29:46.185055 [debug] [ThreadPool]: On create_economics_main: COMMIT
+[0m15:29:46.185577 [debug] [ThreadPool]: Using duckdb connection "create_economics_main"
+[0m15:29:46.186044 [debug] [ThreadPool]: On create_economics_main: COMMIT
+[0m15:29:46.187659 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m15:29:46.188328 [debug] [ThreadPool]: On create_economics_main: Close
+[0m15:29:46.200010 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_economics_main, now list_economics_main)
+[0m15:29:46.208691 [debug] [ThreadPool]: Using duckdb connection "list_economics_main"
+[0m15:29:46.209328 [debug] [ThreadPool]: On list_economics_main: BEGIN
+[0m15:29:46.209746 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:29:46.211066 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m15:29:46.211538 [debug] [ThreadPool]: Using duckdb connection "list_economics_main"
+[0m15:29:46.211921 [debug] [ThreadPool]: On list_economics_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "list_economics_main"} */
+select
+      'economics' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'economics'
+  
+[0m15:29:46.217168 [debug] [ThreadPool]: SQL status: OK in 0.005 seconds
+[0m15:29:46.219236 [debug] [ThreadPool]: On list_economics_main: ROLLBACK
+[0m15:29:46.220616 [debug] [ThreadPool]: Failed to rollback 'list_economics_main'
+[0m15:29:46.221414 [debug] [ThreadPool]: On list_economics_main: Close
+[0m15:29:46.223501 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:29:46.224008 [debug] [MainThread]: On master: BEGIN
+[0m15:29:46.224408 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:29:46.225826 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m15:29:46.226298 [debug] [MainThread]: On master: COMMIT
+[0m15:29:46.226832 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:29:46.227351 [debug] [MainThread]: On master: COMMIT
+[0m15:29:46.228599 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m15:29:46.229091 [debug] [MainThread]: On master: Close
+[0m15:29:46.233079 [debug] [Thread-1 (]: Began running node model.dbt_econ.int_date_spine_month
+[0m15:29:46.233917 [info ] [Thread-1 (]: 1 of 1 START sql view model main.int_date_spine_month .......................... [RUN]
+[0m15:29:46.235122 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_economics_main, now model.dbt_econ.int_date_spine_month)
+[0m15:29:46.235693 [debug] [Thread-1 (]: Began compiling node model.dbt_econ.int_date_spine_month
+[0m15:29:46.280192 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.int_date_spine_month"
+[0m15:29:46.281062 [debug] [Thread-1 (]: On model.dbt_econ.int_date_spine_month: BEGIN
+[0m15:29:46.281613 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:29:46.287059 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m15:29:46.287927 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.int_date_spine_month"
+[0m15:29:46.288493 [debug] [Thread-1 (]: On model.dbt_econ.int_date_spine_month: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "model.dbt_econ.int_date_spine_month"} */
+
+
+        select 
+        (date_diff('month', cast('1920-01-01' as date)::timestamp, cast('2026-03-15' as date)::timestamp ))
+    
+[0m15:29:46.290169 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m15:29:46.313358 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_econ.int_date_spine_month"
+[0m15:29:46.314804 [debug] [Thread-1 (]: Began executing node model.dbt_econ.int_date_spine_month
+[0m15:29:46.382899 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_econ.int_date_spine_month"
+[0m15:29:46.388034 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.int_date_spine_month"
+[0m15:29:46.389157 [debug] [Thread-1 (]: On model.dbt_econ.int_date_spine_month: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "model.dbt_econ.int_date_spine_month"} */
+
+  
+  create view "economics"."main"."int_date_spine_month__dbt_tmp" as (
+    
+
+-- 1920 is the decade the Great Depression started. Pulling data from all 1920 rather than 1929 so that I have data in the lead up to the Depression.
+
+-- Get the end date as the current date
+
+
+with month_spine as (
+    
+
+
+
+
+
+with rawdata as (
+
+    
+
+    
+
+    with p as (
+        select 0 as generated_number union all select 1
+    ), unioned as (
+
+    select
+
+    
+    p0.generated_number * power(2, 0)
+     + 
+    
+    p1.generated_number * power(2, 1)
+     + 
+    
+    p2.generated_number * power(2, 2)
+     + 
+    
+    p3.generated_number * power(2, 3)
+     + 
+    
+    p4.generated_number * power(2, 4)
+     + 
+    
+    p5.generated_number * power(2, 5)
+     + 
+    
+    p6.generated_number * power(2, 6)
+     + 
+    
+    p7.generated_number * power(2, 7)
+     + 
+    
+    p8.generated_number * power(2, 8)
+     + 
+    
+    p9.generated_number * power(2, 9)
+     + 
+    
+    p10.generated_number * power(2, 10)
+    
+    
+    + 1
+    as generated_number
+
+    from
+
+    
+    p as p0
+     cross join 
+    
+    p as p1
+     cross join 
+    
+    p as p2
+     cross join 
+    
+    p as p3
+     cross join 
+    
+    p as p4
+     cross join 
+    
+    p as p5
+     cross join 
+    
+    p as p6
+     cross join 
+    
+    p as p7
+     cross join 
+    
+    p as p8
+     cross join 
+    
+    p as p9
+     cross join 
+    
+    p as p10
+    
+    
+
+    )
+
+    select *
+    from unioned
+    where generated_number <= 1274
+    order by generated_number
+
+
+
+),
+
+all_periods as (
+
+    select (
+        
+
+    (cast('1920-01-01' as date) + cast(row_number() over (order by generated_number) - 1 as bigint) * interval 1 month)
+    ) as date_month
+    from rawdata
+
+),
+
+filtered as (
+
+    select *
+    from all_periods
+    where date_month <= cast('2026-03-15' as date)
+
+)
+
+select * from filtered
+
+
+)
+
+select *
+from month_spine
+  );
+
+[0m15:29:46.399971 [debug] [Thread-1 (]: SQL status: OK in 0.010 seconds
+[0m15:29:46.414628 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.int_date_spine_month"
+[0m15:29:46.415581 [debug] [Thread-1 (]: On model.dbt_econ.int_date_spine_month: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "model.dbt_econ.int_date_spine_month"} */
+alter view "economics"."main"."int_date_spine_month__dbt_tmp" rename to "int_date_spine_month"
+[0m15:29:46.418517 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m15:29:46.434426 [debug] [Thread-1 (]: On model.dbt_econ.int_date_spine_month: COMMIT
+[0m15:29:46.435207 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.int_date_spine_month"
+[0m15:29:46.435740 [debug] [Thread-1 (]: On model.dbt_econ.int_date_spine_month: COMMIT
+[0m15:29:46.445901 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m15:29:46.458661 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.int_date_spine_month"
+[0m15:29:46.459653 [debug] [Thread-1 (]: On model.dbt_econ.int_date_spine_month: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "model.dbt_econ.int_date_spine_month"} */
+
+      drop view if exists "economics"."main"."int_date_spine_month__dbt_backup" cascade
+    
+[0m15:29:46.461483 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m15:29:46.465600 [debug] [Thread-1 (]: On model.dbt_econ.int_date_spine_month: Close
+[0m15:29:46.470824 [info ] [Thread-1 (]: 1 of 1 OK created sql view model main.int_date_spine_month ..................... [[32mOK[0m in 0.23s]
+[0m15:29:46.471846 [debug] [Thread-1 (]: Finished running node model.dbt_econ.int_date_spine_month
+[0m15:29:46.475259 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:29:46.475798 [debug] [MainThread]: On master: BEGIN
+[0m15:29:46.476216 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:29:46.477700 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m15:29:46.478201 [debug] [MainThread]: On master: COMMIT
+[0m15:29:46.478921 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:29:46.479355 [debug] [MainThread]: On master: COMMIT
+[0m15:29:46.480476 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m15:29:46.481019 [debug] [MainThread]: On master: Close
+[0m15:29:46.481695 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:29:46.482146 [debug] [MainThread]: Connection 'model.dbt_econ.int_date_spine_month' was properly closed.
+[0m15:29:46.482899 [info ] [MainThread]: 
+[0m15:29:46.483762 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.43 seconds (0.43s).
+[0m15:29:46.484967 [debug] [MainThread]: Command end result
+[0m15:29:46.585632 [debug] [MainThread]: Wrote artifact WritableManifest to /home/connor/projects/economics_project/dbt_econ/target/manifest.json
+[0m15:29:46.589847 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/connor/projects/economics_project/dbt_econ/target/semantic_manifest.json
+[0m15:29:46.600443 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/connor/projects/economics_project/dbt_econ/target/run_results.json
+[0m15:29:46.601138 [info ] [MainThread]: 
+[0m15:29:46.602407 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:29:46.603115 [info ] [MainThread]: 
+[0m15:29:46.603819 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m15:29:46.606224 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.731122, "process_in_blocks": "752", "process_kernel_time": 0.465759, "process_mem_max_rss": "153152", "process_out_blocks": "2720", "process_user_time": 3.622575}
+[0m15:29:46.607136 [debug] [MainThread]: Command `dbt run` succeeded at 15:29:46.606951 after 1.73 seconds
+[0m15:29:46.607688 [debug] [MainThread]: Flushing usage events
+[0m15:35:30.774913 [debug] [MainThread]: Got an exception trying to initialize tracking
+
+
+============================== 15:35:30.782238 | 8e29d823-63e0-4bab-abe1-275eb934ff5d ==============================
+[0m15:35:30.782238 [info ] [MainThread]: Running with dbt=1.11.7
+[0m15:35:30.783393 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'use_experimental_parser': 'False', 'log_path': '/home/connor/projects/economics_project/dbt_econ/logs', 'cache_selected_only': 'False', 'introspect': 'True', 'target_path': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'debug': 'False', 'profiles_dir': '/home/connor/.dbt', 'no_print': 'None', 'write_json': 'True', 'empty': 'False', 'quiet': 'False', 'send_anonymous_usage_stats': 'True', 'indirect_selection': 'eager', 'fail_fast': 'False', 'partial_parse': 'True', 'printer_width': '80', 'log_format': 'default', 'log_cache_events': 'False', 'invocation_command': 'dbt run --select int_date_spine_month', 'warn_error': 'None', 'use_colors': 'True', 'static_parser': 'True'}
+[0m15:35:31.227056 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m15:35:31.335839 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m15:35:31.506549 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m15:35:31.507308 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m15:35:31.507762 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m15:35:31.725094 [debug] [MainThread]: Wrote artifact WritableManifest to /home/connor/projects/economics_project/dbt_econ/target/manifest.json
+[0m15:35:31.730952 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/connor/projects/economics_project/dbt_econ/target/semantic_manifest.json
+[0m15:35:31.754504 [info ] [MainThread]: Found 5 models, 6 data tests, 8 sources, 590 macros
+[0m15:35:31.757255 [info ] [MainThread]: 
+[0m15:35:31.758069 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m15:35:31.758993 [info ] [MainThread]: 
+[0m15:35:31.759952 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m15:35:31.761923 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_economics'
+[0m15:35:31.815601 [debug] [ThreadPool]: Using duckdb connection "list_economics"
+[0m15:35:31.816369 [debug] [ThreadPool]: On list_economics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "list_economics"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"economics"'
+    
+  
+  
+[0m15:35:31.816904 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:35:31.842718 [debug] [ThreadPool]: SQL status: OK in 0.026 seconds
+[0m15:35:31.845128 [debug] [ThreadPool]: On list_economics: Close
+[0m15:35:31.846756 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_economics, now create_economics_main)
+[0m15:35:31.847646 [debug] [ThreadPool]: Creating schema "database: "economics"
+schema: "main"
+"
+[0m15:35:31.857662 [debug] [ThreadPool]: Using duckdb connection "create_economics_main"
+[0m15:35:31.858282 [debug] [ThreadPool]: On create_economics_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "create_economics_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='economics'
+        and type='sqlite'
+    
+  
+[0m15:35:31.859039 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:35:31.861623 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m15:35:31.863666 [debug] [ThreadPool]: Using duckdb connection "create_economics_main"
+[0m15:35:31.864212 [debug] [ThreadPool]: On create_economics_main: BEGIN
+[0m15:35:31.865715 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m15:35:31.866272 [debug] [ThreadPool]: Using duckdb connection "create_economics_main"
+[0m15:35:31.866945 [debug] [ThreadPool]: On create_economics_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "create_economics_main"} */
+
+    
+    
+        create schema if not exists "economics"."main"
+    
+[0m15:35:31.868276 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m15:35:31.869539 [debug] [ThreadPool]: On create_economics_main: COMMIT
+[0m15:35:31.870199 [debug] [ThreadPool]: Using duckdb connection "create_economics_main"
+[0m15:35:31.870809 [debug] [ThreadPool]: On create_economics_main: COMMIT
+[0m15:35:31.871655 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m15:35:31.872164 [debug] [ThreadPool]: On create_economics_main: Close
+[0m15:35:31.883849 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_economics_main, now list_economics_main)
+[0m15:35:31.892726 [debug] [ThreadPool]: Using duckdb connection "list_economics_main"
+[0m15:35:31.894500 [debug] [ThreadPool]: On list_economics_main: BEGIN
+[0m15:35:31.895762 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:35:31.898413 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m15:35:31.899201 [debug] [ThreadPool]: Using duckdb connection "list_economics_main"
+[0m15:35:31.899763 [debug] [ThreadPool]: On list_economics_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "list_economics_main"} */
+select
+      'economics' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'economics'
+  
+[0m15:35:31.906819 [debug] [ThreadPool]: SQL status: OK in 0.006 seconds
+[0m15:35:31.910139 [debug] [ThreadPool]: On list_economics_main: ROLLBACK
+[0m15:35:31.912087 [debug] [ThreadPool]: Failed to rollback 'list_economics_main'
+[0m15:35:31.912614 [debug] [ThreadPool]: On list_economics_main: Close
+[0m15:35:31.915771 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:35:31.916566 [debug] [MainThread]: On master: BEGIN
+[0m15:35:31.917131 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:35:31.918690 [debug] [MainThread]: SQL status: OK in 0.002 seconds
+[0m15:35:31.919217 [debug] [MainThread]: On master: COMMIT
+[0m15:35:31.919653 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:35:31.920060 [debug] [MainThread]: On master: COMMIT
+[0m15:35:31.920881 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m15:35:31.921337 [debug] [MainThread]: On master: Close
+[0m15:35:31.926733 [debug] [Thread-1 (]: Began running node model.dbt_econ.int_date_spine_month
+[0m15:35:31.927581 [info ] [Thread-1 (]: 1 of 1 START sql view model main.int_date_spine_month .......................... [RUN]
+[0m15:35:31.928339 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_economics_main, now model.dbt_econ.int_date_spine_month)
+[0m15:35:31.928830 [debug] [Thread-1 (]: Began compiling node model.dbt_econ.int_date_spine_month
+[0m15:35:31.966706 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.int_date_spine_month"
+[0m15:35:31.967650 [debug] [Thread-1 (]: On model.dbt_econ.int_date_spine_month: BEGIN
+[0m15:35:31.968214 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:35:31.969856 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m15:35:31.970478 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.int_date_spine_month"
+[0m15:35:31.970958 [debug] [Thread-1 (]: On model.dbt_econ.int_date_spine_month: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "model.dbt_econ.int_date_spine_month"} */
+
+
+        select 
+        (date_diff('month', cast('1920-01-01' as date)::timestamp, cast('2026-03-15' as date)::timestamp ))
+    
+[0m15:35:31.972697 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m15:35:31.991199 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_econ.int_date_spine_month"
+[0m15:35:31.992918 [debug] [Thread-1 (]: Began executing node model.dbt_econ.int_date_spine_month
+[0m15:35:32.036220 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_econ.int_date_spine_month"
+[0m15:35:32.037636 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.int_date_spine_month"
+[0m15:35:32.038480 [debug] [Thread-1 (]: On model.dbt_econ.int_date_spine_month: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "model.dbt_econ.int_date_spine_month"} */
+
+  
+  create view "economics"."main"."int_date_spine_month__dbt_tmp" as (
+    
+
+-- 1920 is the decade the Great Depression started. Pulling data from all 1920 rather than 1929 so that I have data in the lead up to the Depression.
+
+-- Get the end date as the current date
+
+
+with month_spine as (
+    
+
+
+
+
+
+with rawdata as (
+
+    
+
+    
+
+    with p as (
+        select 0 as generated_number union all select 1
+    ), unioned as (
+
+    select
+
+    
+    p0.generated_number * power(2, 0)
+     + 
+    
+    p1.generated_number * power(2, 1)
+     + 
+    
+    p2.generated_number * power(2, 2)
+     + 
+    
+    p3.generated_number * power(2, 3)
+     + 
+    
+    p4.generated_number * power(2, 4)
+     + 
+    
+    p5.generated_number * power(2, 5)
+     + 
+    
+    p6.generated_number * power(2, 6)
+     + 
+    
+    p7.generated_number * power(2, 7)
+     + 
+    
+    p8.generated_number * power(2, 8)
+     + 
+    
+    p9.generated_number * power(2, 9)
+     + 
+    
+    p10.generated_number * power(2, 10)
+    
+    
+    + 1
+    as generated_number
+
+    from
+
+    
+    p as p0
+     cross join 
+    
+    p as p1
+     cross join 
+    
+    p as p2
+     cross join 
+    
+    p as p3
+     cross join 
+    
+    p as p4
+     cross join 
+    
+    p as p5
+     cross join 
+    
+    p as p6
+     cross join 
+    
+    p as p7
+     cross join 
+    
+    p as p8
+     cross join 
+    
+    p as p9
+     cross join 
+    
+    p as p10
+    
+    
+
+    )
+
+    select *
+    from unioned
+    where generated_number <= 1274
+    order by generated_number
+
+
+
+),
+
+all_periods as (
+
+    select (
+        
+
+    (cast('1920-01-01' as date) + cast(row_number() over (order by generated_number) - 1 as bigint) * interval 1 month)
+    ) as date_month
+    from rawdata
+
+),
+
+filtered as (
+
+    select *
+    from all_periods
+    where date_month <= cast('2026-03-15' as date)
+
+)
+
+select * from filtered
+
+
+)
+
+select *
+from month_spine
+  );
+
+[0m15:35:32.044831 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m15:35:32.057739 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.int_date_spine_month"
+[0m15:35:32.059253 [debug] [Thread-1 (]: On model.dbt_econ.int_date_spine_month: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "model.dbt_econ.int_date_spine_month"} */
+alter view "economics"."main"."int_date_spine_month" rename to "int_date_spine_month__dbt_backup"
+[0m15:35:32.061318 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m15:35:32.065849 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.int_date_spine_month"
+[0m15:35:32.066572 [debug] [Thread-1 (]: On model.dbt_econ.int_date_spine_month: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "model.dbt_econ.int_date_spine_month"} */
+alter view "economics"."main"."int_date_spine_month__dbt_tmp" rename to "int_date_spine_month"
+[0m15:35:32.067867 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m15:35:32.084260 [debug] [Thread-1 (]: On model.dbt_econ.int_date_spine_month: COMMIT
+[0m15:35:32.085003 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.int_date_spine_month"
+[0m15:35:32.085492 [debug] [Thread-1 (]: On model.dbt_econ.int_date_spine_month: COMMIT
+[0m15:35:32.094273 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m15:35:32.103023 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.int_date_spine_month"
+[0m15:35:32.103928 [debug] [Thread-1 (]: On model.dbt_econ.int_date_spine_month: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "model.dbt_econ.int_date_spine_month"} */
+
+      drop view if exists "economics"."main"."int_date_spine_month__dbt_backup" cascade
+    
+[0m15:35:32.111138 [debug] [Thread-1 (]: SQL status: OK in 0.006 seconds
+[0m15:35:32.115749 [debug] [Thread-1 (]: On model.dbt_econ.int_date_spine_month: Close
+[0m15:35:32.119207 [info ] [Thread-1 (]: 1 of 1 OK created sql view model main.int_date_spine_month ..................... [[32mOK[0m in 0.19s]
+[0m15:35:32.120483 [debug] [Thread-1 (]: Finished running node model.dbt_econ.int_date_spine_month
+[0m15:35:32.123846 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:35:32.124436 [debug] [MainThread]: On master: BEGIN
+[0m15:35:32.125162 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:35:32.126891 [debug] [MainThread]: SQL status: OK in 0.002 seconds
+[0m15:35:32.127646 [debug] [MainThread]: On master: COMMIT
+[0m15:35:32.128346 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:35:32.129005 [debug] [MainThread]: On master: COMMIT
+[0m15:35:32.130357 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m15:35:32.131142 [debug] [MainThread]: On master: Close
+[0m15:35:32.132065 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:35:32.132755 [debug] [MainThread]: Connection 'model.dbt_econ.int_date_spine_month' was properly closed.
+[0m15:35:32.133523 [info ] [MainThread]: 
+[0m15:35:32.134717 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.37 seconds (0.37s).
+[0m15:35:32.136535 [debug] [MainThread]: Command end result
+[0m15:35:32.198819 [debug] [MainThread]: Wrote artifact WritableManifest to /home/connor/projects/economics_project/dbt_econ/target/manifest.json
+[0m15:35:32.203404 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/connor/projects/economics_project/dbt_econ/target/semantic_manifest.json
+[0m15:35:32.216098 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/connor/projects/economics_project/dbt_econ/target/run_results.json
+[0m15:35:32.216947 [info ] [MainThread]: 
+[0m15:35:32.217968 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:35:32.218941 [info ] [MainThread]: 
+[0m15:35:32.219801 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m15:35:32.221837 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.532032, "process_in_blocks": "0", "process_kernel_time": 0.44842, "process_mem_max_rss": "153620", "process_out_blocks": "2744", "process_user_time": 3.463245}
+[0m15:35:32.222826 [debug] [MainThread]: Command `dbt run` succeeded at 15:35:32.222615 after 1.53 seconds
+[0m15:35:32.223561 [debug] [MainThread]: Flushing usage events
+{"data":{"log_version":3,"version":"=2.0.0-preview.120"},"info":{"category":"","code":"A001","extra":{},"invocation_id":"019cf3a6-0515-7513-9fdf-770e4943c372","level":"info","msg":"Running with dbt-fusion=2.0.0-preview.120","name":"MainReportVersion","pid":69929,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:37:49.781170Z"}}
+{"data":{"args":{"debug":"false","invocation_command":"/home/connor/.local/bin/dbt show --format json --log-format json --show none --defer --inline select * from (\nwith month_spine as (\n    {{ dbt_utils.date_spine(\n        datepart=\"month\",\n        start_date=\"cast(\" ~ start_date ~ \" as date)\",\n        end_date=\"cast(\" ~ end_date ~ \" as date)\"\n    ) }}\n)\nSELECT * FROM month_spine\n) as __preview_sbq__ limit 1000 --select int_date_spine_month","log_format":"json","quiet":"false","write_json":"true"}},"info":{"category":"","code":"A002","extra":{},"invocation_id":"019cf3a6-0515-7513-9fdf-770e4943c372","level":"debug","msg":"running dbt-fusion with argumets {\"command\":\"show\",\"vars\":\"{}\",\"limit\":\"10\",\"select\":[\"fqn:int_date_spine_month\"],\"resource_types\":[\"model\",\"snapshot\",\"seed\",\"source\",\"analysis\"],\"debug\":false,\"log_format\":\"json\",\"quiet\":false,\"write_json\":true,\"write_catalog\":false}","name":"MainReportArgs","pid":69929,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:37:49.781291Z"}}
+{"data":{"msg":"dbt-fusion 2.0.0-preview.120"},"info":{"category":"","code":"","extra":{},"invocation_id":"019cf3a6-0515-7513-9fdf-770e4943c372","level":"info","msg":"dbt-fusion 2.0.0-preview.120","name":"Generic","pid":69929,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:37:49.794427Z"}}
+{"data":{"msg":"Loading ~/.dbt/profiles.yml"},"info":{"category":"","code":"","extra":{},"invocation_id":"019cf3a6-0515-7513-9fdf-770e4943c372","level":"info","msg":"Loading ~/.dbt/profiles.yml","name":"Generic","pid":69929,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:37:49.897043Z"}}
+{"data":{"artifact_path":"target/semantic_manifest.json","artifact_type":"ARTIFACT_TYPE_SEMANTIC_MANIFEST"},"info":{"category":"","code":"P001","extra":{},"invocation_id":"019cf3a6-0515-7513-9fdf-770e4943c372","level":"info","msg":"Artifact written to target/semantic_manifest.json","name":"ArtifactWritten","pid":69929,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:37:50.666744Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019cf3a6-0515-7513-9fdf-770e4943c372","level":"warn","msg":"warning: dbt1000: Detected unsafe introspection which may lead to non-deterministic static analysis. To suppress this warning, set static_analysis to 'unsafe' in the nodes' configuration. Learn more: https://docs.getdbt.com/docs/fusion/new-concepts. Nodes: 'model.dbt_econ.inline' (execute), 'model.dbt_econ.int_date_spine_month' (execute)","name":"Generic","pid":69929,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:37:51.135391Z"}}
+{"data":{"node_info":{"materialized":"ephemeral","node_checksum":"78bf09b87ab03540aa0aa026405308cf392981a034468ff1ac4333cae0e93f6d","node_finished_at":"","node_name":"inline","node_path":"target/inline_7c3fa8c7.sql","node_relation":{"alias":"inline","database":"economics","relation_name":"economics.main.inline","schema":"main"},"node_started_at":"2026-03-15T22:37:51.151657Z","node_status":"started","resource_type":"model","unique_id":"model.dbt_econ.inline"}},"info":{"category":"","code":"Q024","extra":{},"invocation_id":"019cf3a6-0515-7513-9fdf-770e4943c372","level":"debug","msg":"Began running node model.dbt_econ.inline","name":"NodeStart","pid":69929,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:37:51.151948Z"}}
+{"data":{"node_info":{"materialized":"ephemeral","node_checksum":"78bf09b87ab03540aa0aa026405308cf392981a034468ff1ac4333cae0e93f6d","node_finished_at":"","node_name":"inline","node_path":"target/inline_7c3fa8c7.sql","node_relation":{"alias":"inline","database":"economics","relation_name":"economics.main.inline","schema":"main"},"node_started_at":"2026-03-15T22:37:51.151657Z","node_status":"started","resource_type":"model","unique_id":"model.dbt_econ.inline"}},"info":{"category":"","code":"Q011","extra":{},"invocation_id":"019cf3a6-0515-7513-9fdf-770e4943c372","level":"info","msg":"Started model main.inline","name":"LogStartLine","pid":69929,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:37:51.152043Z"}}
+{"data":{"node_info":{"materialized":"ephemeral","node_checksum":"78bf09b87ab03540aa0aa026405308cf392981a034468ff1ac4333cae0e93f6d","node_finished_at":"","node_name":"inline","node_path":"target/inline_7c3fa8c7.sql","node_relation":{"alias":"inline","database":"economics","relation_name":"economics.main.inline","schema":"main"},"node_started_at":"2026-03-15T22:37:51.152093Z","node_status":"compiling","resource_type":"model","unique_id":"model.dbt_econ.inline"}},"info":{"category":"","code":"Q030","extra":{},"invocation_id":"019cf3a6-0515-7513-9fdf-770e4943c372","level":"debug","msg":"Started rendering model main.inline","name":"NodeCompiling","pid":69929,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:37:51.152124Z"}}
+{"data":{"node_info":{"unique_id":"model.dbt_econ.inline"},"sql":"/* {\"app\": \"dbt\", \"connection_name\": \"\", \"dbt_version\": \"2.0.0\", \"profile_name\": \"dbt_econ\", \"target_name\": \"dev\"} */\nselect \n        (date_diff('month', cast( as date)::timestamp, cast( as date)::timestamp ))"},"info":{"category":"","code":"E017","extra":{},"invocation_id":"019cf3a6-0515-7513-9fdf-770e4943c372","level":"debug","msg":"-- created_at: 2026-03-15T22:37:53.953147837+00:00\n-- finished_at: 2026-03-15T22:37:53.954715758+00:00\n-- elapsed: 1ms\n-- outcome: error\n-- error vendor code: -2147483648\n-- error message: Internal: Parser Error: syntax error at or near \"as\"\n\nLINE 3:         (date_diff('month', cast( as date)::timestamp, cast( as date)::timestamp ))\n                                          ^\n-- dialect: duckdb\n-- node_id: model.dbt_econ.inline\n-- query_id: not available\n-- desc: execute adapter call\n/* {\"app\": \"dbt\", \"connection_name\": \"\", \"dbt_version\": \"2.0.0\", \"profile_name\": \"dbt_econ\", \"target_name\": \"dev\"} */\nselect \n        (date_diff('month', cast( as date)::timestamp, cast( as date)::timestamp ));","name":"SQLQuery","pid":69929,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:37:53.954743Z"}}
+{"data":{"node_info":{"unique_id":"model.dbt_econ.inline"}},"info":{"category":"","code":"","extra":{},"invocation_id":"019cf3a6-0515-7513-9fdf-770e4943c372","level":"error","msg":"error: dbt1308: Parser Error: syntax error at or near \"as\"\n\nLINE 3:         (date_diff('month', cast( as date)::timestamp, cast( as date)::timestamp ))\n                                          ^\n(in target/inline_7c3fa8c7.sql:3:5)\n(in dbt_packages/dbt_utils/macros/sql/date_spine.sql:27:31)\n(in dbt_packages/dbt_utils/macros/sql/date_spine.sql:45:18)\n(in dbt_packages/dbt_utils/macros/sql/date_spine.sql:2:31)\n(in dbt_packages/dbt_utils/macros/sql/date_spine.sql:6:14)\n(in dbt_internal_packages/dbt-adapters/macros/etc/statement.sql:14:35)\n  --> target/inline_7c3fa8c7.sql:3:5","name":"Generic","pid":69929,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:37:54.973086Z"}}
+{"data":{"node_info":{"materialized":"ephemeral","node_checksum":"78bf09b87ab03540aa0aa026405308cf392981a034468ff1ac4333cae0e93f6d","node_finished_at":"","node_name":"inline","node_path":"target/inline_7c3fa8c7.sql","node_relation":{"alias":"inline","database":"economics","relation_name":"economics.main.inline","schema":"main"},"node_started_at":"2026-03-15T22:37:54.974310Z","node_status":"executing","resource_type":"model","unique_id":"model.dbt_econ.inline"}},"info":{"category":"","code":"Q031","extra":{},"invocation_id":"019cf3a6-0515-7513-9fdf-770e4943c372","level":"debug","msg":"Started running model main.inline","name":"NodeExecuting","pid":69929,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:37:54.974330Z"}}
+{"data":{"execution_time":3.8228394985198975,"node_info":{"materialized":"ephemeral","node_checksum":"78bf09b87ab03540aa0aa026405308cf392981a034468ff1ac4333cae0e93f6d","node_finished_at":"2026-03-15T22:37:54.974497Z","node_name":"inline","node_path":"target/inline_7c3fa8c7.sql","node_relation":{"alias":"inline","database":"economics","relation_name":"economics.main.inline","schema":"main"},"node_started_at":"2026-03-15T22:37:51.151657Z","node_status":"error","resource_type":"model","unique_id":"model.dbt_econ.inline"},"status":"error"},"info":{"category":"","code":"Q012","extra":{},"invocation_id":"019cf3a6-0515-7513-9fdf-770e4943c372","level":"info","msg":"    Failed [  3.82s] model main.inline (ephemeral)","name":"LogModelResult","pid":69929,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:37:54.974910Z"}}
+{"data":{"run_result":{"execution_time":3.8228394985198975,"status":"error"},"status":"error","unique_id":"model.dbt_econ.inline"},"info":{"category":"","code":"Z033","extra":{},"invocation_id":"019cf3a6-0515-7513-9fdf-770e4943c372","level":"debug","msg":"Marking children of model.dbt_econ.inline as skipped","name":"MarkSkippedChildren","pid":69929,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:37:54.975031Z"}}
+{"data":{"node_info":{"materialized":"ephemeral","node_checksum":"78bf09b87ab03540aa0aa026405308cf392981a034468ff1ac4333cae0e93f6d","node_finished_at":"2026-03-15T22:37:54.974497Z","node_name":"inline","node_path":"target/inline_7c3fa8c7.sql","node_relation":{"alias":"inline","database":"economics","relation_name":"economics.main.inline","schema":"main"},"node_started_at":"2026-03-15T22:37:51.151657Z","node_status":"error","resource_type":"model","unique_id":"model.dbt_econ.inline"},"run_result":{"execution_time":3.8228394985198975,"status":"error"}},"info":{"category":"","code":"Q025","extra":{},"invocation_id":"019cf3a6-0515-7513-9fdf-770e4943c372","level":"debug","msg":"Finished running node model.dbt_econ.inline","name":"NodeFinished","pid":69929,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:37:54.975026Z"}}
+{"data":{"artifact_path":"target/manifest.json","artifact_type":"WritableManifest"},"info":{"category":"","code":"P001","extra":{},"invocation_id":"019cf3a6-0515-7513-9fdf-770e4943c372","level":"info","msg":"Artifact written to target/manifest.json","name":"ArtifactWritten","pid":69929,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:37:55.009373Z"}}
+{"data":{"msg":"New version available 2.0.0-preview.154 (run `dbt system update`)"},"info":{"category":"","code":"","extra":{},"invocation_id":"019cf3a6-0515-7513-9fdf-770e4943c372","level":"info","msg":"New version available 2.0.0-preview.154 (run `dbt system update`)","name":"Generic","pid":69929,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:37:55.033533Z"}}
+{"data":{"completed_at":"2026-03-15T22:37:55.171433Z","elapsed":5.397204875946045,"success":false},"info":{"category":"","code":"Q039","extra":{},"invocation_id":"019cf3a6-0515-7513-9fdf-770e4943c372","level":"info","msg":"\n==================== Execution Summary =====================\nFinished 'show' with 1 warning and 1 error for target 'dev' [5.4s]","name":"CommandCompleted","pid":69929,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:37:55.171583Z"}}
+{"data":{"log_version":3,"version":"=2.0.0-preview.120"},"info":{"category":"","code":"A001","extra":{},"invocation_id":"019cf3a7-abc9-7143-84b5-a89963f4175b","level":"info","msg":"Running with dbt-fusion=2.0.0-preview.120","name":"MainReportVersion","pid":70209,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:39:37.935715Z"}}
+{"data":{"args":{"debug":"false","invocation_command":"/home/connor/.local/bin/dbt show --format json --log-format json --show none --defer --inline select * from (\nwith month_spine as (\n    {{ dbt_utils.date_spine(\n        datepart=\"month\",\n        start_date=start_date,\n        end_date=end_date\n    ) }}\n)\nSELECT * FROM month_spine\n) as __preview_sbq__ limit 1000 --select int_date_spine_month","log_format":"json","quiet":"false","write_json":"true"}},"info":{"category":"","code":"A002","extra":{},"invocation_id":"019cf3a7-abc9-7143-84b5-a89963f4175b","level":"debug","msg":"running dbt-fusion with argumets {\"command\":\"show\",\"vars\":\"{}\",\"limit\":\"10\",\"select\":[\"fqn:int_date_spine_month\"],\"resource_types\":[\"model\",\"snapshot\",\"seed\",\"source\",\"analysis\"],\"debug\":false,\"log_format\":\"json\",\"quiet\":false,\"write_json\":true,\"write_catalog\":false}","name":"MainReportArgs","pid":70209,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:39:37.935764Z"}}
+{"data":{"msg":"dbt-fusion 2.0.0-preview.120"},"info":{"category":"","code":"","extra":{},"invocation_id":"019cf3a7-abc9-7143-84b5-a89963f4175b","level":"info","msg":"dbt-fusion 2.0.0-preview.120","name":"Generic","pid":70209,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:39:37.935921Z"}}
+{"data":{"msg":"Loading ~/.dbt/profiles.yml"},"info":{"category":"","code":"","extra":{},"invocation_id":"019cf3a7-abc9-7143-84b5-a89963f4175b","level":"info","msg":"Loading ~/.dbt/profiles.yml","name":"Generic","pid":70209,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:39:37.939136Z"}}
+{"data":{"artifact_path":"target/semantic_manifest.json","artifact_type":"ARTIFACT_TYPE_SEMANTIC_MANIFEST"},"info":{"category":"","code":"P001","extra":{},"invocation_id":"019cf3a7-abc9-7143-84b5-a89963f4175b","level":"info","msg":"Artifact written to target/semantic_manifest.json","name":"ArtifactWritten","pid":70209,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:39:38.303663Z"}}
+{"data":{},"info":{"category":"","code":"","extra":{},"invocation_id":"019cf3a7-abc9-7143-84b5-a89963f4175b","level":"warn","msg":"warning: dbt1000: Detected unsafe introspection which may lead to non-deterministic static analysis. To suppress this warning, set static_analysis to 'unsafe' in the nodes' configuration. Learn more: https://docs.getdbt.com/docs/fusion/new-concepts. Nodes: 'model.dbt_econ.inline' (execute), 'model.dbt_econ.int_date_spine_month' (execute)","name":"Generic","pid":70209,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:39:38.596965Z"}}
+{"data":{"node_info":{"materialized":"ephemeral","node_checksum":"bdd2c61268e5891d204f48e4e06ce736ff6ca2d5bd6319318f03790abfc4884a","node_finished_at":"","node_name":"inline","node_path":"target/inline_40635c62.sql","node_relation":{"alias":"inline","database":"economics","relation_name":"economics.main.inline","schema":"main"},"node_started_at":"2026-03-15T22:39:38.597685Z","node_status":"started","resource_type":"model","unique_id":"model.dbt_econ.inline"}},"info":{"category":"","code":"Q024","extra":{},"invocation_id":"019cf3a7-abc9-7143-84b5-a89963f4175b","level":"debug","msg":"Began running node model.dbt_econ.inline","name":"NodeStart","pid":70209,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:39:38.597897Z"}}
+{"data":{"node_info":{"materialized":"ephemeral","node_checksum":"bdd2c61268e5891d204f48e4e06ce736ff6ca2d5bd6319318f03790abfc4884a","node_finished_at":"","node_name":"inline","node_path":"target/inline_40635c62.sql","node_relation":{"alias":"inline","database":"economics","relation_name":"economics.main.inline","schema":"main"},"node_started_at":"2026-03-15T22:39:38.597685Z","node_status":"started","resource_type":"model","unique_id":"model.dbt_econ.inline"}},"info":{"category":"","code":"Q011","extra":{},"invocation_id":"019cf3a7-abc9-7143-84b5-a89963f4175b","level":"info","msg":"Started model main.inline","name":"LogStartLine","pid":70209,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:39:38.597980Z"}}
+{"data":{"node_info":{"materialized":"ephemeral","node_checksum":"bdd2c61268e5891d204f48e4e06ce736ff6ca2d5bd6319318f03790abfc4884a","node_finished_at":"","node_name":"inline","node_path":"target/inline_40635c62.sql","node_relation":{"alias":"inline","database":"economics","relation_name":"economics.main.inline","schema":"main"},"node_started_at":"2026-03-15T22:39:38.598046Z","node_status":"compiling","resource_type":"model","unique_id":"model.dbt_econ.inline"}},"info":{"category":"","code":"Q030","extra":{},"invocation_id":"019cf3a7-abc9-7143-84b5-a89963f4175b","level":"debug","msg":"Started rendering model main.inline","name":"NodeCompiling","pid":70209,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:39:38.598071Z"}}
+{"data":{"node_info":{"unique_id":"model.dbt_econ.inline"},"sql":"/* {\"app\": \"dbt\", \"connection_name\": \"\", \"dbt_version\": \"2.0.0\", \"profile_name\": \"dbt_econ\", \"target_name\": \"dev\"} */\nselect \n        (date_diff('month', ::timestamp, ::timestamp ))"},"info":{"category":"","code":"E017","extra":{},"invocation_id":"019cf3a7-abc9-7143-84b5-a89963f4175b","level":"debug","msg":"-- created_at: 2026-03-15T22:39:38.657985016+00:00\n-- finished_at: 2026-03-15T22:39:38.659448104+00:00\n-- elapsed: 1ms\n-- outcome: error\n-- error vendor code: -2147483648\n-- error message: Internal: Parser Error: syntax error at or near \"::\"\n\nLINE 3:         (date_diff('month', ::timestamp, ::timestamp ))\n                                    ^\n-- dialect: duckdb\n-- node_id: model.dbt_econ.inline\n-- query_id: not available\n-- desc: execute adapter call\n/* {\"app\": \"dbt\", \"connection_name\": \"\", \"dbt_version\": \"2.0.0\", \"profile_name\": \"dbt_econ\", \"target_name\": \"dev\"} */\nselect \n        (date_diff('month', ::timestamp, ::timestamp ));","name":"SQLQuery","pid":70209,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:39:38.659504Z"}}
+{"data":{"node_info":{"unique_id":"model.dbt_econ.inline"}},"info":{"category":"","code":"","extra":{},"invocation_id":"019cf3a7-abc9-7143-84b5-a89963f4175b","level":"error","msg":"error: dbt1308: Parser Error: syntax error at or near \"::\"\n\nLINE 3:         (date_diff('month', ::timestamp, ::timestamp ))\n                                    ^\n(in target/inline_40635c62.sql:3:5)\n(in dbt_packages/dbt_utils/macros/sql/date_spine.sql:27:31)\n(in dbt_packages/dbt_utils/macros/sql/date_spine.sql:45:18)\n(in dbt_packages/dbt_utils/macros/sql/date_spine.sql:2:31)\n(in dbt_packages/dbt_utils/macros/sql/date_spine.sql:6:14)\n(in dbt_internal_packages/dbt-adapters/macros/etc/statement.sql:14:35)\n  --> target/inline_40635c62.sql:3:5","name":"Generic","pid":70209,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:39:39.661212Z"}}
+{"data":{"node_info":{"materialized":"ephemeral","node_checksum":"bdd2c61268e5891d204f48e4e06ce736ff6ca2d5bd6319318f03790abfc4884a","node_finished_at":"","node_name":"inline","node_path":"target/inline_40635c62.sql","node_relation":{"alias":"inline","database":"economics","relation_name":"economics.main.inline","schema":"main"},"node_started_at":"2026-03-15T22:39:39.661532Z","node_status":"executing","resource_type":"model","unique_id":"model.dbt_econ.inline"}},"info":{"category":"","code":"Q031","extra":{},"invocation_id":"019cf3a7-abc9-7143-84b5-a89963f4175b","level":"debug","msg":"Started running model main.inline","name":"NodeExecuting","pid":70209,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:39:39.661553Z"}}
+{"data":{"execution_time":1.0639770030975342,"node_info":{"materialized":"ephemeral","node_checksum":"bdd2c61268e5891d204f48e4e06ce736ff6ca2d5bd6319318f03790abfc4884a","node_finished_at":"2026-03-15T22:39:39.661662Z","node_name":"inline","node_path":"target/inline_40635c62.sql","node_relation":{"alias":"inline","database":"economics","relation_name":"economics.main.inline","schema":"main"},"node_started_at":"2026-03-15T22:39:38.597685Z","node_status":"error","resource_type":"model","unique_id":"model.dbt_econ.inline"},"status":"error"},"info":{"category":"","code":"Q012","extra":{},"invocation_id":"019cf3a7-abc9-7143-84b5-a89963f4175b","level":"info","msg":"    Failed [  1.06s] model main.inline (ephemeral)","name":"LogModelResult","pid":70209,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:39:39.662079Z"}}
+{"data":{"run_result":{"execution_time":1.0639770030975342,"status":"error"},"status":"error","unique_id":"model.dbt_econ.inline"},"info":{"category":"","code":"Z033","extra":{},"invocation_id":"019cf3a7-abc9-7143-84b5-a89963f4175b","level":"debug","msg":"Marking children of model.dbt_econ.inline as skipped","name":"MarkSkippedChildren","pid":70209,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:39:39.662187Z"}}
+{"data":{"node_info":{"materialized":"ephemeral","node_checksum":"bdd2c61268e5891d204f48e4e06ce736ff6ca2d5bd6319318f03790abfc4884a","node_finished_at":"2026-03-15T22:39:39.661662Z","node_name":"inline","node_path":"target/inline_40635c62.sql","node_relation":{"alias":"inline","database":"economics","relation_name":"economics.main.inline","schema":"main"},"node_started_at":"2026-03-15T22:39:38.597685Z","node_status":"error","resource_type":"model","unique_id":"model.dbt_econ.inline"},"run_result":{"execution_time":1.0639770030975342,"status":"error"}},"info":{"category":"","code":"Q025","extra":{},"invocation_id":"019cf3a7-abc9-7143-84b5-a89963f4175b","level":"debug","msg":"Finished running node model.dbt_econ.inline","name":"NodeFinished","pid":70209,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:39:39.662178Z"}}
+{"data":{"artifact_path":"target/manifest.json","artifact_type":"WritableManifest"},"info":{"category":"","code":"P001","extra":{},"invocation_id":"019cf3a7-abc9-7143-84b5-a89963f4175b","level":"info","msg":"Artifact written to target/manifest.json","name":"ArtifactWritten","pid":70209,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:39:39.684676Z"}}
+{"data":{"msg":"New version available 2.0.0-preview.154 (run `dbt system update`)"},"info":{"category":"","code":"","extra":{},"invocation_id":"019cf3a7-abc9-7143-84b5-a89963f4175b","level":"info","msg":"New version available 2.0.0-preview.154 (run `dbt system update`)","name":"Generic","pid":70209,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:39:39.702491Z"}}
+{"data":{"completed_at":"2026-03-15T22:39:39.839840Z","elapsed":1.9044601917266846,"success":false},"info":{"category":"","code":"Q039","extra":{},"invocation_id":"019cf3a7-abc9-7143-84b5-a89963f4175b","level":"info","msg":"\n==================== Execution Summary =====================\nFinished 'show' with 1 warning and 1 error for target 'dev' [1.9s]","name":"CommandCompleted","pid":70209,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:39:39.840090Z"}}
+{"data":{"log_version":3,"version":"=2.0.0-preview.120"},"info":{"category":"","code":"A001","extra":{},"invocation_id":"019cf3a9-df28-7953-ad94-3135274cdcea","level":"info","msg":"Running with dbt-fusion=2.0.0-preview.120","name":"MainReportVersion","pid":70513,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:42:02.158829Z"}}
+{"data":{"args":{"debug":"false","invocation_command":"/home/connor/.local/bin/dbt show --format json --log-format json --show none --defer --inline select * from (\nwith date_range as (\n    select \n        -- We generate the series as DATEs directly\n        generate_series as date_month\n    from generate_series(\n        '1920-01-01'::date, \n        current_date, \n        interval '1 month'\n    )\n)\nSELECT * FROM date_range\n) as __preview_sbq__ limit 1000 --select int_date_spine_month","log_format":"json","quiet":"false","write_json":"true"}},"info":{"category":"","code":"A002","extra":{},"invocation_id":"019cf3a9-df28-7953-ad94-3135274cdcea","level":"debug","msg":"running dbt-fusion with argumets {\"command\":\"show\",\"vars\":\"{}\",\"limit\":\"10\",\"select\":[\"fqn:int_date_spine_month\"],\"resource_types\":[\"model\",\"snapshot\",\"seed\",\"source\",\"analysis\"],\"debug\":false,\"log_format\":\"json\",\"quiet\":false,\"write_json\":true,\"write_catalog\":false}","name":"MainReportArgs","pid":70513,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:42:02.158867Z"}}
+{"data":{"msg":"dbt-fusion 2.0.0-preview.120"},"info":{"category":"","code":"","extra":{},"invocation_id":"019cf3a9-df28-7953-ad94-3135274cdcea","level":"info","msg":"dbt-fusion 2.0.0-preview.120","name":"Generic","pid":70513,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:42:02.159079Z"}}
+{"data":{"msg":"Loading ~/.dbt/profiles.yml"},"info":{"category":"","code":"","extra":{},"invocation_id":"019cf3a9-df28-7953-ad94-3135274cdcea","level":"info","msg":"Loading ~/.dbt/profiles.yml","name":"Generic","pid":70513,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:42:02.162947Z"}}
+{"data":{"artifact_path":"target/semantic_manifest.json","artifact_type":"ARTIFACT_TYPE_SEMANTIC_MANIFEST"},"info":{"category":"","code":"P001","extra":{},"invocation_id":"019cf3a9-df28-7953-ad94-3135274cdcea","level":"info","msg":"Artifact written to target/semantic_manifest.json","name":"ArtifactWritten","pid":70513,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:42:02.534080Z"}}
+{"data":{"node_info":{"materialized":"ephemeral","node_checksum":"afc4575630b54c3c9bbd004ba248652a61782315ebcb12ea8865b7c508098b62","node_finished_at":"","node_name":"inline","node_path":"target/inline_40b3b646.sql","node_relation":{"alias":"inline","database":"economics","relation_name":"economics.main.inline","schema":"main"},"node_started_at":"2026-03-15T22:42:02.821535Z","node_status":"started","resource_type":"model","unique_id":"model.dbt_econ.inline"}},"info":{"category":"","code":"Q024","extra":{},"invocation_id":"019cf3a9-df28-7953-ad94-3135274cdcea","level":"debug","msg":"Began running node model.dbt_econ.inline","name":"NodeStart","pid":70513,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:42:02.821791Z"}}
+{"data":{"node_info":{"materialized":"ephemeral","node_checksum":"afc4575630b54c3c9bbd004ba248652a61782315ebcb12ea8865b7c508098b62","node_finished_at":"","node_name":"inline","node_path":"target/inline_40b3b646.sql","node_relation":{"alias":"inline","database":"economics","relation_name":"economics.main.inline","schema":"main"},"node_started_at":"2026-03-15T22:42:02.821535Z","node_status":"started","resource_type":"model","unique_id":"model.dbt_econ.inline"}},"info":{"category":"","code":"Q011","extra":{},"invocation_id":"019cf3a9-df28-7953-ad94-3135274cdcea","level":"info","msg":"Started model main.inline","name":"LogStartLine","pid":70513,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:42:02.821854Z"}}
+{"data":{"node_info":{"materialized":"ephemeral","node_checksum":"afc4575630b54c3c9bbd004ba248652a61782315ebcb12ea8865b7c508098b62","node_finished_at":"","node_name":"inline","node_path":"target/inline_40b3b646.sql","node_relation":{"alias":"inline","database":"economics","relation_name":"economics.main.inline","schema":"main"},"node_started_at":"2026-03-15T22:42:02.821932Z","node_status":"compiling","resource_type":"model","unique_id":"model.dbt_econ.inline"}},"info":{"category":"","code":"Q030","extra":{},"invocation_id":"019cf3a9-df28-7953-ad94-3135274cdcea","level":"debug","msg":"Started rendering model main.inline","name":"NodeCompiling","pid":70513,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:42:02.821950Z"}}
+{"data":{"node_info":{"unique_id":"model.dbt_econ.inline"}},"info":{"category":"","code":"","extra":{},"invocation_id":"019cf3a9-df28-7953-ad94-3135274cdcea","level":"error","msg":"error: dbt0101: missing ')' at '('\n  --> target/inline_40b3b646.sql:6:25 (target/compiled/inline_40b3b646.sql:6:25)","name":"Generic","pid":70513,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:42:02.902346Z"}}
+{"data":{"node_info":{"materialized":"ephemeral","node_checksum":"afc4575630b54c3c9bbd004ba248652a61782315ebcb12ea8865b7c508098b62","node_finished_at":"","node_name":"inline","node_path":"target/inline_40b3b646.sql","node_relation":{"alias":"inline","database":"economics","relation_name":"economics.main.inline","schema":"main"},"node_started_at":"2026-03-15T22:42:02.902542Z","node_status":"executing","resource_type":"model","unique_id":"model.dbt_econ.inline"}},"info":{"category":"","code":"Q031","extra":{},"invocation_id":"019cf3a9-df28-7953-ad94-3135274cdcea","level":"debug","msg":"Started running model main.inline","name":"NodeExecuting","pid":70513,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:42:02.902556Z"}}
+{"data":{"execution_time":0.08106277883052826,"node_info":{"materialized":"ephemeral","node_checksum":"afc4575630b54c3c9bbd004ba248652a61782315ebcb12ea8865b7c508098b62","node_finished_at":"2026-03-15T22:42:02.902598Z","node_name":"inline","node_path":"target/inline_40b3b646.sql","node_relation":{"alias":"inline","database":"economics","relation_name":"economics.main.inline","schema":"main"},"node_started_at":"2026-03-15T22:42:02.821535Z","node_status":"error","resource_type":"model","unique_id":"model.dbt_econ.inline"},"status":"error"},"info":{"category":"","code":"Q012","extra":{},"invocation_id":"019cf3a9-df28-7953-ad94-3135274cdcea","level":"info","msg":"    Failed [  0.08s] model main.inline (ephemeral)","name":"LogModelResult","pid":70513,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:42:02.902690Z"}}
+{"data":{"run_result":{"execution_time":0.08106277883052826,"status":"error"},"status":"error","unique_id":"model.dbt_econ.inline"},"info":{"category":"","code":"Z033","extra":{},"invocation_id":"019cf3a9-df28-7953-ad94-3135274cdcea","level":"debug","msg":"Marking children of model.dbt_econ.inline as skipped","name":"MarkSkippedChildren","pid":70513,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:42:02.902717Z"}}
+{"data":{"node_info":{"materialized":"ephemeral","node_checksum":"afc4575630b54c3c9bbd004ba248652a61782315ebcb12ea8865b7c508098b62","node_finished_at":"2026-03-15T22:42:02.902598Z","node_name":"inline","node_path":"target/inline_40b3b646.sql","node_relation":{"alias":"inline","database":"economics","relation_name":"economics.main.inline","schema":"main"},"node_started_at":"2026-03-15T22:42:02.821535Z","node_status":"error","resource_type":"model","unique_id":"model.dbt_econ.inline"},"run_result":{"execution_time":0.08106277883052826,"status":"error"}},"info":{"category":"","code":"Q025","extra":{},"invocation_id":"019cf3a9-df28-7953-ad94-3135274cdcea","level":"debug","msg":"Finished running node model.dbt_econ.inline","name":"NodeFinished","pid":70513,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:42:02.902714Z"}}
+{"data":{"artifact_path":"target/manifest.json","artifact_type":"WritableManifest"},"info":{"category":"","code":"P001","extra":{},"invocation_id":"019cf3a9-df28-7953-ad94-3135274cdcea","level":"info","msg":"Artifact written to target/manifest.json","name":"ArtifactWritten","pid":70513,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:42:02.915549Z"}}
+{"data":{"msg":"New version available 2.0.0-preview.154 (run `dbt system update`)"},"info":{"category":"","code":"","extra":{},"invocation_id":"019cf3a9-df28-7953-ad94-3135274cdcea","level":"info","msg":"New version available 2.0.0-preview.154 (run `dbt system update`)","name":"Generic","pid":70513,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:42:02.927610Z"}}
+{"data":{"completed_at":"2026-03-15T22:42:03.070875Z","elapsed":0.9122225642204285,"success":false},"info":{"category":"","code":"Q039","extra":{},"invocation_id":"019cf3a9-df28-7953-ad94-3135274cdcea","level":"info","msg":"\n==================== Execution Summary =====================\nFinished 'show' with 1 error for target 'dev' [912ms]","name":"CommandCompleted","pid":70513,"thread":"tokio-runtime-worker","ts":"2026-03-15T22:42:03.071152Z"}}
+[0m15:44:46.661588 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7039999408f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x703999d630b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70399908ff20>]}
+
+
+============================== 15:44:46.668421 | 474bbd60-73e7-4335-971e-d76bb9e18900 ==============================
+[0m15:44:46.668421 [info ] [MainThread]: Running with dbt=1.11.7
+[0m15:44:46.669621 [debug] [MainThread]: running dbt with arguments {'cache_selected_only': 'False', 'indirect_selection': 'eager', 'static_parser': 'True', 'target_path': 'None', 'debug': 'False', 'invocation_command': 'dbt compile --select int_date_spin_month', 'warn_error': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'fail_fast': 'False', 'log_format': 'default', 'no_print': 'None', 'log_cache_events': 'False', 'quiet': 'False', 'write_json': 'True', 'use_colors': 'True', 'empty': 'False', 'version_check': 'True', 'profiles_dir': '/home/connor/.dbt', 'printer_width': '80', 'introspect': 'True', 'log_path': '/home/connor/projects/economics_project/dbt_econ/logs', 'send_anonymous_usage_stats': 'True', 'partial_parse': 'True', 'use_experimental_parser': 'False'}
+[0m15:44:47.096566 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '474bbd60-73e7-4335-971e-d76bb9e18900', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7039997e6b70>]}
+[0m15:44:47.211865 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '474bbd60-73e7-4335-971e-d76bb9e18900', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70399bae3230>]}
+[0m15:44:47.215539 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m15:44:47.353887 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m15:44:47.577460 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m15:44:47.578703 [debug] [MainThread]: Partial parsing: updated file: dbt_econ://models/intermediate/int_date_spine_month.yml
+[0m15:44:47.580016 [debug] [MainThread]: Partial parsing: updated file: dbt_econ://models/intermediate/int_date_spine_month.sql
+[0m15:44:48.331974 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '474bbd60-73e7-4335-971e-d76bb9e18900', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70380617aae0>]}
+[0m15:44:48.626288 [debug] [MainThread]: Wrote artifact WritableManifest to /home/connor/projects/economics_project/dbt_econ/target/manifest.json
+[0m15:44:48.630276 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/connor/projects/economics_project/dbt_econ/target/semantic_manifest.json
+[0m15:44:48.661484 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '474bbd60-73e7-4335-971e-d76bb9e18900', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70380647d490>]}
+[0m15:44:48.662527 [info ] [MainThread]: Found 5 models, 8 data tests, 8 sources, 590 macros
+[0m15:44:48.663614 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '474bbd60-73e7-4335-971e-d76bb9e18900', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x703804816990>]}
+[0m15:44:48.664876 [warn ] [MainThread]: The selection criterion 'int_date_spin_month' does not match any enabled nodes
+[0m15:44:48.668251 [warn ] [MainThread]: Nothing to do. Try checking your model configs and model specification args
+[0m15:44:48.669405 [debug] [MainThread]: Command end result
+[0m15:44:48.710805 [debug] [MainThread]: Wrote artifact WritableManifest to /home/connor/projects/economics_project/dbt_econ/target/manifest.json
+[0m15:44:48.714170 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/connor/projects/economics_project/dbt_econ/target/semantic_manifest.json
+[0m15:44:48.721825 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/connor/projects/economics_project/dbt_econ/target/run_results.json
+[0m15:44:48.724169 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 2.155996, "process_in_blocks": "0", "process_kernel_time": 0.54248, "process_mem_max_rss": "146768", "process_out_blocks": "4000", "process_user_time": 4.396104}
+[0m15:44:48.725105 [debug] [MainThread]: Command `dbt compile` succeeded at 15:44:48.724930 after 2.16 seconds
+[0m15:44:48.725725 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70399963e7b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7038047513d0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x703998ff7d40>]}
+[0m15:44:48.726325 [debug] [MainThread]: Flushing usage events
+[0m15:44:49.171646 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:45:29.856927 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bb372f41be0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bb375256e10>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bb373186930>]}
+
+
+============================== 15:45:29.863284 | 60d2f4c6-3538-4b72-a8a7-f4f4fa38c292 ==============================
+[0m15:45:29.863284 [info ] [MainThread]: Running with dbt=1.11.7
+[0m15:45:29.864303 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'fail_fast': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'write_json': 'True', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'warn_error': 'None', 'profiles_dir': '/home/connor/.dbt', 'debug': 'False', 'quiet': 'False', 'use_colors': 'True', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'empty': 'False', 'log_path': '/home/connor/projects/economics_project/dbt_econ/logs', 'use_experimental_parser': 'False', 'invocation_command': 'dbt compile --select int_date_spine_month', 'introspect': 'True', 'target_path': 'None', 'version_check': 'True', 'log_format': 'default', 'static_parser': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m15:45:30.243259 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '60d2f4c6-3538-4b72-a8a7-f4f4fa38c292', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bb372d4b560>]}
+[0m15:45:30.363501 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '60d2f4c6-3538-4b72-a8a7-f4f4fa38c292', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bb374fd8dd0>]}
+[0m15:45:30.366732 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m15:45:30.472520 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m15:45:30.661372 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 2 files changed.
+[0m15:45:30.662966 [debug] [MainThread]: Partial parsing: updated file: dbt_econ://models/intermediate/int_date_spine_month.yml
+[0m15:45:30.663849 [debug] [MainThread]: Partial parsing: updated file: dbt_econ://models/intermediate/int_date_spine_month.sql
+[0m15:45:31.403721 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '60d2f4c6-3538-4b72-a8a7-f4f4fa38c292', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bb1df7b0950>]}
+[0m15:45:31.698126 [debug] [MainThread]: Wrote artifact WritableManifest to /home/connor/projects/economics_project/dbt_econ/target/manifest.json
+[0m15:45:31.702937 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/connor/projects/economics_project/dbt_econ/target/semantic_manifest.json
+[0m15:45:31.727196 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '60d2f4c6-3538-4b72-a8a7-f4f4fa38c292', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bb3766e8110>]}
+[0m15:45:31.728254 [info ] [MainThread]: Found 5 models, 8 data tests, 8 sources, 590 macros
+[0m15:45:31.729049 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '60d2f4c6-3538-4b72-a8a7-f4f4fa38c292', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bb376758b30>]}
+[0m15:45:31.732921 [info ] [MainThread]: 
+[0m15:45:31.733729 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m15:45:31.734234 [info ] [MainThread]: 
+[0m15:45:31.735137 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m15:45:31.745363 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_economics_main'
+[0m15:45:31.811456 [debug] [ThreadPool]: Using duckdb connection "list_economics_main"
+[0m15:45:31.812394 [debug] [ThreadPool]: On list_economics_main: BEGIN
+[0m15:45:31.813060 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:45:31.839065 [debug] [ThreadPool]: SQL status: OK in 0.026 seconds
+[0m15:45:31.840301 [debug] [ThreadPool]: Using duckdb connection "list_economics_main"
+[0m15:45:31.841158 [debug] [ThreadPool]: On list_economics_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "list_economics_main"} */
+select
+      'economics' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'economics'
+  
+[0m15:45:31.854079 [debug] [ThreadPool]: SQL status: OK in 0.012 seconds
+[0m15:45:31.857202 [debug] [ThreadPool]: On list_economics_main: ROLLBACK
+[0m15:45:31.860978 [debug] [ThreadPool]: Failed to rollback 'list_economics_main'
+[0m15:45:31.861866 [debug] [ThreadPool]: On list_economics_main: Close
+[0m15:45:31.865366 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '60d2f4c6-3538-4b72-a8a7-f4f4fa38c292', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bb1df72b1a0>]}
+[0m15:45:31.871738 [debug] [Thread-1 (]: Began running node model.dbt_econ.int_date_spine_month
+[0m15:45:31.872724 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_economics_main, now model.dbt_econ.int_date_spine_month)
+[0m15:45:31.873763 [debug] [Thread-1 (]: Began compiling node model.dbt_econ.int_date_spine_month
+[0m15:45:31.891827 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_econ.int_date_spine_month"
+[0m15:45:31.894084 [debug] [Thread-1 (]: Began executing node model.dbt_econ.int_date_spine_month
+[0m15:45:31.896904 [debug] [Thread-1 (]: Finished running node model.dbt_econ.int_date_spine_month
+[0m15:45:31.901733 [debug] [Thread-1 (]: Began running node test.dbt_econ.not_null_int_date_spine_month_date_month.e72a0e7f35
+[0m15:45:31.903363 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_econ.int_date_spine_month, now test.dbt_econ.not_null_int_date_spine_month_date_month.e72a0e7f35)
+[0m15:45:31.904057 [debug] [Thread-1 (]: Began compiling node test.dbt_econ.not_null_int_date_spine_month_date_month.e72a0e7f35
+[0m15:45:31.924906 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_econ.not_null_int_date_spine_month_date_month.e72a0e7f35"
+[0m15:45:31.927114 [debug] [Thread-1 (]: Began executing node test.dbt_econ.not_null_int_date_spine_month_date_month.e72a0e7f35
+[0m15:45:31.929421 [debug] [Thread-1 (]: Finished running node test.dbt_econ.not_null_int_date_spine_month_date_month.e72a0e7f35
+[0m15:45:31.930676 [debug] [Thread-1 (]: Began running node test.dbt_econ.unique_int_date_spine_month_date_month.c4a69b89e7
+[0m15:45:31.932307 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_econ.not_null_int_date_spine_month_date_month.e72a0e7f35, now test.dbt_econ.unique_int_date_spine_month_date_month.c4a69b89e7)
+[0m15:45:31.933590 [debug] [Thread-1 (]: Began compiling node test.dbt_econ.unique_int_date_spine_month_date_month.c4a69b89e7
+[0m15:45:31.949230 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_econ.unique_int_date_spine_month_date_month.c4a69b89e7"
+[0m15:45:31.950475 [debug] [Thread-1 (]: Began executing node test.dbt_econ.unique_int_date_spine_month_date_month.c4a69b89e7
+[0m15:45:31.951646 [debug] [Thread-1 (]: Finished running node test.dbt_econ.unique_int_date_spine_month_date_month.c4a69b89e7
+[0m15:45:31.954260 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:45:31.954945 [debug] [MainThread]: Connection 'test.dbt_econ.unique_int_date_spine_month_date_month.c4a69b89e7' was properly closed.
+[0m15:45:31.956104 [debug] [MainThread]: Command end result
+[0m15:45:32.011506 [debug] [MainThread]: Wrote artifact WritableManifest to /home/connor/projects/economics_project/dbt_econ/target/manifest.json
+[0m15:45:32.015022 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/connor/projects/economics_project/dbt_econ/target/semantic_manifest.json
+[0m15:45:32.027035 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/connor/projects/economics_project/dbt_econ/target/run_results.json
+[0m15:45:32.028621 [debug] [MainThread]: Excluded node 'not_null_int_date_spine_month_date_month' from results
+[0m15:45:32.029797 [debug] [MainThread]: Excluded node 'unique_int_date_spine_month_date_month' from results
+[0m15:45:32.030993 [info ] [MainThread]: Compiled node 'int_date_spine_month' is:
+
+
+select 
+    -- Cast the generated value to a DATE
+    cast(range as date) as date_month
+from range(
+    '1920-01-01'::date, 
+    current_date + interval '1 month', 
+    interval '1 month'
+)
+[0m15:45:32.032884 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 2.2781901, "process_in_blocks": "0", "process_kernel_time": 0.521516, "process_mem_max_rss": "154956", "process_out_blocks": "4040", "process_user_time": 4.577311}
+[0m15:45:32.033826 [debug] [MainThread]: Command `dbt compile` succeeded at 15:45:32.033602 after 2.28 seconds
+[0m15:45:32.034528 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bb3733b26f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bb372d30a70>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7bb37347c410>]}
+[0m15:45:32.035269 [debug] [MainThread]: Flushing usage events
+[0m15:45:32.479758 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:45:40.352939 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70bee8c24fe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70beeaa4af60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70bee8c75d00>]}
+
+
+============================== 15:45:40.359555 | 5f981c28-f8e2-416d-a017-a16622c3c8e3 ==============================
+[0m15:45:40.359555 [info ] [MainThread]: Running with dbt=1.11.7
+[0m15:45:40.360869 [debug] [MainThread]: running dbt with arguments {'debug': 'False', 'no_print': 'None', 'send_anonymous_usage_stats': 'True', 'empty': 'False', 'fail_fast': 'False', 'printer_width': '80', 'use_colors': 'True', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'log_format': 'default', 'cache_selected_only': 'False', 'static_parser': 'True', 'introspect': 'True', 'log_path': '/home/connor/projects/economics_project/dbt_econ/logs', 'write_json': 'True', 'use_experimental_parser': 'False', 'invocation_command': 'dbt run --select int_date_spine_month', 'profiles_dir': '/home/connor/.dbt', 'version_check': 'True', 'target_path': 'None', 'warn_error': 'None', 'quiet': 'False', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'partial_parse': 'True'}
+[0m15:45:40.739838 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '5f981c28-f8e2-416d-a017-a16622c3c8e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70bee7ccf6e0>]}
+[0m15:45:40.853139 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '5f981c28-f8e2-416d-a017-a16622c3c8e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70bee8b1f8f0>]}
+[0m15:45:40.856164 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m15:45:40.974119 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m15:45:41.149104 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m15:45:41.149917 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m15:45:41.150392 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m15:45:41.221135 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '5f981c28-f8e2-416d-a017-a16622c3c8e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70bd554e0800>]}
+[0m15:45:41.385556 [debug] [MainThread]: Wrote artifact WritableManifest to /home/connor/projects/economics_project/dbt_econ/target/manifest.json
+[0m15:45:41.389500 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/connor/projects/economics_project/dbt_econ/target/semantic_manifest.json
+[0m15:45:41.411447 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '5f981c28-f8e2-416d-a017-a16622c3c8e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70bd55507800>]}
+[0m15:45:41.412552 [info ] [MainThread]: Found 5 models, 8 data tests, 8 sources, 590 macros
+[0m15:45:41.413273 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5f981c28-f8e2-416d-a017-a16622c3c8e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70bee7c63590>]}
+[0m15:45:41.415920 [info ] [MainThread]: 
+[0m15:45:41.416654 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m15:45:41.417138 [info ] [MainThread]: 
+[0m15:45:41.417908 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m15:45:41.419989 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_economics'
+[0m15:45:41.493087 [debug] [ThreadPool]: Using duckdb connection "list_economics"
+[0m15:45:41.494848 [debug] [ThreadPool]: On list_economics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "list_economics"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"economics"'
+    
+  
+  
+[0m15:45:41.495887 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:45:41.531029 [debug] [ThreadPool]: SQL status: OK in 0.035 seconds
+[0m15:45:41.534356 [debug] [ThreadPool]: On list_economics: Close
+[0m15:45:41.536679 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_economics, now create_economics_main)
+[0m15:45:41.537816 [debug] [ThreadPool]: Creating schema "database: "economics"
+schema: "main"
+"
+[0m15:45:41.550145 [debug] [ThreadPool]: Using duckdb connection "create_economics_main"
+[0m15:45:41.551184 [debug] [ThreadPool]: On create_economics_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "create_economics_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='economics'
+        and type='sqlite'
+    
+  
+[0m15:45:41.551725 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:45:41.555338 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m15:45:41.557720 [debug] [ThreadPool]: Using duckdb connection "create_economics_main"
+[0m15:45:41.558326 [debug] [ThreadPool]: On create_economics_main: BEGIN
+[0m15:45:41.559915 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m15:45:41.560426 [debug] [ThreadPool]: Using duckdb connection "create_economics_main"
+[0m15:45:41.560817 [debug] [ThreadPool]: On create_economics_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "create_economics_main"} */
+
+    
+    
+        create schema if not exists "economics"."main"
+    
+[0m15:45:41.561983 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m15:45:41.563757 [debug] [ThreadPool]: On create_economics_main: COMMIT
+[0m15:45:41.564407 [debug] [ThreadPool]: Using duckdb connection "create_economics_main"
+[0m15:45:41.564927 [debug] [ThreadPool]: On create_economics_main: COMMIT
+[0m15:45:41.566820 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m15:45:41.567467 [debug] [ThreadPool]: On create_economics_main: Close
+[0m15:45:41.577817 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_economics_main, now list_economics_main)
+[0m15:45:41.587796 [debug] [ThreadPool]: Using duckdb connection "list_economics_main"
+[0m15:45:41.588557 [debug] [ThreadPool]: On list_economics_main: BEGIN
+[0m15:45:41.589069 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m15:45:41.590457 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m15:45:41.591366 [debug] [ThreadPool]: Using duckdb connection "list_economics_main"
+[0m15:45:41.592342 [debug] [ThreadPool]: On list_economics_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "list_economics_main"} */
+select
+      'economics' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'economics'
+  
+[0m15:45:41.599819 [debug] [ThreadPool]: SQL status: OK in 0.007 seconds
+[0m15:45:41.602226 [debug] [ThreadPool]: On list_economics_main: ROLLBACK
+[0m15:45:41.604038 [debug] [ThreadPool]: Failed to rollback 'list_economics_main'
+[0m15:45:41.604580 [debug] [ThreadPool]: On list_economics_main: Close
+[0m15:45:41.607592 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '5f981c28-f8e2-416d-a017-a16622c3c8e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70bd550d58b0>]}
+[0m15:45:41.608571 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:45:41.609215 [debug] [MainThread]: On master: BEGIN
+[0m15:45:41.609666 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:45:41.611422 [debug] [MainThread]: SQL status: OK in 0.002 seconds
+[0m15:45:41.611962 [debug] [MainThread]: On master: COMMIT
+[0m15:45:41.612414 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:45:41.612845 [debug] [MainThread]: On master: COMMIT
+[0m15:45:41.614983 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m15:45:41.615967 [debug] [MainThread]: On master: Close
+[0m15:45:41.621201 [debug] [Thread-1 (]: Began running node model.dbt_econ.int_date_spine_month
+[0m15:45:41.622191 [info ] [Thread-1 (]: 1 of 1 START sql view model main.int_date_spine_month .......................... [RUN]
+[0m15:45:41.623218 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_economics_main, now model.dbt_econ.int_date_spine_month)
+[0m15:45:41.623899 [debug] [Thread-1 (]: Began compiling node model.dbt_econ.int_date_spine_month
+[0m15:45:41.634965 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_econ.int_date_spine_month"
+[0m15:45:41.636325 [debug] [Thread-1 (]: Began executing node model.dbt_econ.int_date_spine_month
+[0m15:45:41.695959 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_econ.int_date_spine_month"
+[0m15:45:41.699015 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.int_date_spine_month"
+[0m15:45:41.700265 [debug] [Thread-1 (]: On model.dbt_econ.int_date_spine_month: BEGIN
+[0m15:45:41.701093 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:45:41.703061 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m15:45:41.703851 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.int_date_spine_month"
+[0m15:45:41.704409 [debug] [Thread-1 (]: On model.dbt_econ.int_date_spine_month: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "model.dbt_econ.int_date_spine_month"} */
+
+  
+  create view "economics"."main"."int_date_spine_month__dbt_tmp" as (
+    
+
+select 
+    -- Cast the generated value to a DATE
+    cast(range as date) as date_month
+from range(
+    '1920-01-01'::date, 
+    current_date + interval '1 month', 
+    interval '1 month'
+)
+  );
+
+[0m15:45:41.708228 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m15:45:41.720961 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.int_date_spine_month"
+[0m15:45:41.721826 [debug] [Thread-1 (]: On model.dbt_econ.int_date_spine_month: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "model.dbt_econ.int_date_spine_month"} */
+alter view "economics"."main"."int_date_spine_month" rename to "int_date_spine_month__dbt_backup"
+[0m15:45:41.723826 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m15:45:41.728215 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.int_date_spine_month"
+[0m15:45:41.728875 [debug] [Thread-1 (]: On model.dbt_econ.int_date_spine_month: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "model.dbt_econ.int_date_spine_month"} */
+alter view "economics"."main"."int_date_spine_month__dbt_tmp" rename to "int_date_spine_month"
+[0m15:45:41.730281 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m15:45:41.748718 [debug] [Thread-1 (]: On model.dbt_econ.int_date_spine_month: COMMIT
+[0m15:45:41.749939 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.int_date_spine_month"
+[0m15:45:41.750667 [debug] [Thread-1 (]: On model.dbt_econ.int_date_spine_month: COMMIT
+[0m15:45:41.758328 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m15:45:41.772596 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.int_date_spine_month"
+[0m15:45:41.773669 [debug] [Thread-1 (]: On model.dbt_econ.int_date_spine_month: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "model.dbt_econ.int_date_spine_month"} */
+
+      drop view if exists "economics"."main"."int_date_spine_month__dbt_backup" cascade
+    
+[0m15:45:41.781086 [debug] [Thread-1 (]: SQL status: OK in 0.007 seconds
+[0m15:45:41.786391 [debug] [Thread-1 (]: On model.dbt_econ.int_date_spine_month: Close
+[0m15:45:41.790006 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '5f981c28-f8e2-416d-a017-a16622c3c8e3', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70bd5438fc50>]}
+[0m15:45:41.791324 [info ] [Thread-1 (]: 1 of 1 OK created sql view model main.int_date_spine_month ..................... [[32mOK[0m in 0.16s]
+[0m15:45:41.792487 [debug] [Thread-1 (]: Finished running node model.dbt_econ.int_date_spine_month
+[0m15:45:41.796374 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:45:41.797109 [debug] [MainThread]: On master: BEGIN
+[0m15:45:41.797634 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:45:41.799822 [debug] [MainThread]: SQL status: OK in 0.002 seconds
+[0m15:45:41.800863 [debug] [MainThread]: On master: COMMIT
+[0m15:45:41.801537 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:45:41.802060 [debug] [MainThread]: On master: COMMIT
+[0m15:45:41.803507 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m15:45:41.804260 [debug] [MainThread]: On master: Close
+[0m15:45:41.805224 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:45:41.805813 [debug] [MainThread]: Connection 'model.dbt_econ.int_date_spine_month' was properly closed.
+[0m15:45:41.806585 [info ] [MainThread]: 
+[0m15:45:41.807210 [info ] [MainThread]: Finished running 1 view model in 0 hours 0 minutes and 0.39 seconds (0.39s).
+[0m15:45:41.808379 [debug] [MainThread]: Command end result
+[0m15:45:41.865555 [debug] [MainThread]: Wrote artifact WritableManifest to /home/connor/projects/economics_project/dbt_econ/target/manifest.json
+[0m15:45:41.871641 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/connor/projects/economics_project/dbt_econ/target/semantic_manifest.json
+[0m15:45:41.882452 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/connor/projects/economics_project/dbt_econ/target/run_results.json
+[0m15:45:41.883913 [info ] [MainThread]: 
+[0m15:45:41.886124 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:45:41.887116 [info ] [MainThread]: 
+[0m15:45:41.888079 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m15:45:41.889881 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.6278123, "process_in_blocks": "144", "process_kernel_time": 0.468956, "process_mem_max_rss": "153784", "process_out_blocks": "2728", "process_user_time": 3.728009}
+[0m15:45:41.890844 [debug] [MainThread]: Command `dbt run` succeeded at 15:45:41.890606 after 1.63 seconds
+[0m15:45:41.891741 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70bee8c24fe0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70bee7c4a570>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x70bee8cd0170>]}
+[0m15:45:41.892940 [debug] [MainThread]: Flushing usage events
+[0m15:45:42.591638 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m15:45:51.839915 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x729585126720>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72958311a060>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7295843af950>]}
+
+
+============================== 15:45:51.845211 | 6577ccf0-c00f-42cd-8ca7-3b5b1f8d4388 ==============================
+[0m15:45:51.845211 [info ] [MainThread]: Running with dbt=1.11.7
+[0m15:45:51.846340 [debug] [MainThread]: running dbt with arguments {'version_check': 'True', 'cache_selected_only': 'False', 'fail_fast': 'False', 'static_parser': 'True', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'quiet': 'False', 'printer_width': '80', 'invocation_command': 'dbt test --select int_date_spine_month', 'write_json': 'True', 'log_path': '/home/connor/projects/economics_project/dbt_econ/logs', 'introspect': 'True', 'send_anonymous_usage_stats': 'True', 'debug': 'False', 'target_path': 'None', 'empty': 'None', 'log_format': 'default', 'use_colors': 'True', 'use_experimental_parser': 'False', 'partial_parse': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'profiles_dir': '/home/connor/.dbt', 'no_print': 'None', 'warn_error': 'None'}
+[0m15:45:52.228158 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '6577ccf0-c00f-42cd-8ca7-3b5b1f8d4388', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x729582453a10>]}
+[0m15:45:52.346326 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '6577ccf0-c00f-42cd-8ca7-3b5b1f8d4388', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7295850eb380>]}
+[0m15:45:52.349065 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m15:45:52.471579 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m15:45:52.645828 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m15:45:52.646873 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m15:45:52.647497 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m15:45:52.720642 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '6577ccf0-c00f-42cd-8ca7-3b5b1f8d4388', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7293efd0ff50>]}
+[0m15:45:52.875955 [debug] [MainThread]: Wrote artifact WritableManifest to /home/connor/projects/economics_project/dbt_econ/target/manifest.json
+[0m15:45:52.879177 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/connor/projects/economics_project/dbt_econ/target/semantic_manifest.json
+[0m15:45:52.920510 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '6577ccf0-c00f-42cd-8ca7-3b5b1f8d4388', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7293ef63bc20>]}
+[0m15:45:52.921361 [info ] [MainThread]: Found 5 models, 8 data tests, 8 sources, 590 macros
+[0m15:45:52.922173 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6577ccf0-c00f-42cd-8ca7-3b5b1f8d4388', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x729582db3d10>]}
+[0m15:45:52.925855 [info ] [MainThread]: 
+[0m15:45:52.926637 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m15:45:52.927123 [info ] [MainThread]: 
+[0m15:45:52.927914 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m15:45:52.935356 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_economics_main'
+[0m15:45:52.995522 [debug] [ThreadPool]: Using duckdb connection "list_economics_main"
+[0m15:45:52.996401 [debug] [ThreadPool]: On list_economics_main: BEGIN
+[0m15:45:52.996970 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m15:45:53.020875 [debug] [ThreadPool]: SQL status: OK in 0.024 seconds
+[0m15:45:53.021940 [debug] [ThreadPool]: Using duckdb connection "list_economics_main"
+[0m15:45:53.022805 [debug] [ThreadPool]: On list_economics_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "list_economics_main"} */
+select
+      'economics' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'economics'
+  
+[0m15:45:53.030104 [debug] [ThreadPool]: SQL status: OK in 0.006 seconds
+[0m15:45:53.032693 [debug] [ThreadPool]: On list_economics_main: ROLLBACK
+[0m15:45:53.034216 [debug] [ThreadPool]: Failed to rollback 'list_economics_main'
+[0m15:45:53.035079 [debug] [ThreadPool]: On list_economics_main: Close
+[0m15:45:53.037759 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '6577ccf0-c00f-42cd-8ca7-3b5b1f8d4388', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7293ef80b590>]}
+[0m15:45:53.038820 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:45:53.039444 [debug] [MainThread]: On master: BEGIN
+[0m15:45:53.039857 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m15:45:53.041299 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m15:45:53.041805 [debug] [MainThread]: On master: COMMIT
+[0m15:45:53.042249 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:45:53.042734 [debug] [MainThread]: On master: COMMIT
+[0m15:45:53.043938 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m15:45:53.044410 [debug] [MainThread]: On master: Close
+[0m15:45:53.049120 [debug] [Thread-1 (]: Began running node test.dbt_econ.not_null_int_date_spine_month_date_month.e72a0e7f35
+[0m15:45:53.049805 [info ] [Thread-1 (]: 1 of 2 START test not_null_int_date_spine_month_date_month ..................... [RUN]
+[0m15:45:53.050697 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_economics_main, now test.dbt_econ.not_null_int_date_spine_month_date_month.e72a0e7f35)
+[0m15:45:53.051439 [debug] [Thread-1 (]: Began compiling node test.dbt_econ.not_null_int_date_spine_month_date_month.e72a0e7f35
+[0m15:45:53.085752 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_econ.not_null_int_date_spine_month_date_month.e72a0e7f35"
+[0m15:45:53.087446 [debug] [Thread-1 (]: Began executing node test.dbt_econ.not_null_int_date_spine_month_date_month.e72a0e7f35
+[0m15:45:53.116731 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_econ.not_null_int_date_spine_month_date_month.e72a0e7f35"
+[0m15:45:53.118604 [debug] [Thread-1 (]: Using duckdb connection "test.dbt_econ.not_null_int_date_spine_month_date_month.e72a0e7f35"
+[0m15:45:53.119229 [debug] [Thread-1 (]: On test.dbt_econ.not_null_int_date_spine_month_date_month.e72a0e7f35: BEGIN
+[0m15:45:53.119671 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:45:53.121654 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m15:45:53.122679 [debug] [Thread-1 (]: Using duckdb connection "test.dbt_econ.not_null_int_date_spine_month_date_month.e72a0e7f35"
+[0m15:45:53.123612 [debug] [Thread-1 (]: On test.dbt_econ.not_null_int_date_spine_month_date_month.e72a0e7f35: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "test.dbt_econ.not_null_int_date_spine_month_date_month.e72a0e7f35"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select date_month
+from "economics"."main"."int_date_spine_month"
+where date_month is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:45:53.134916 [debug] [Thread-1 (]: SQL status: OK in 0.010 seconds
+[0m15:45:53.143212 [debug] [Thread-1 (]: On test.dbt_econ.not_null_int_date_spine_month_date_month.e72a0e7f35: ROLLBACK
+[0m15:45:53.144784 [debug] [Thread-1 (]: Failed to rollback 'test.dbt_econ.not_null_int_date_spine_month_date_month.e72a0e7f35'
+[0m15:45:53.145576 [debug] [Thread-1 (]: On test.dbt_econ.not_null_int_date_spine_month_date_month.e72a0e7f35: Close
+[0m15:45:53.146933 [info ] [Thread-1 (]: 1 of 2 PASS not_null_int_date_spine_month_date_month ........................... [[32mPASS[0m in 0.10s]
+[0m15:45:53.148003 [debug] [Thread-1 (]: Finished running node test.dbt_econ.not_null_int_date_spine_month_date_month.e72a0e7f35
+[0m15:45:53.148680 [debug] [Thread-1 (]: Began running node test.dbt_econ.unique_int_date_spine_month_date_month.c4a69b89e7
+[0m15:45:53.149230 [info ] [Thread-1 (]: 2 of 2 START test unique_int_date_spine_month_date_month ....................... [RUN]
+[0m15:45:53.150100 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_econ.not_null_int_date_spine_month_date_month.e72a0e7f35, now test.dbt_econ.unique_int_date_spine_month_date_month.c4a69b89e7)
+[0m15:45:53.150811 [debug] [Thread-1 (]: Began compiling node test.dbt_econ.unique_int_date_spine_month_date_month.c4a69b89e7
+[0m15:45:53.162738 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_econ.unique_int_date_spine_month_date_month.c4a69b89e7"
+[0m15:45:53.164363 [debug] [Thread-1 (]: Began executing node test.dbt_econ.unique_int_date_spine_month_date_month.c4a69b89e7
+[0m15:45:53.167981 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_econ.unique_int_date_spine_month_date_month.c4a69b89e7"
+[0m15:45:53.169307 [debug] [Thread-1 (]: Using duckdb connection "test.dbt_econ.unique_int_date_spine_month_date_month.c4a69b89e7"
+[0m15:45:53.170056 [debug] [Thread-1 (]: On test.dbt_econ.unique_int_date_spine_month_date_month.c4a69b89e7: BEGIN
+[0m15:45:53.170962 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m15:45:53.174177 [debug] [Thread-1 (]: SQL status: OK in 0.003 seconds
+[0m15:45:53.175560 [debug] [Thread-1 (]: Using duckdb connection "test.dbt_econ.unique_int_date_spine_month_date_month.c4a69b89e7"
+[0m15:45:53.177113 [debug] [Thread-1 (]: On test.dbt_econ.unique_int_date_spine_month_date_month.c4a69b89e7: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "test.dbt_econ.unique_int_date_spine_month_date_month.c4a69b89e7"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    date_month as unique_field,
+    count(*) as n_records
+
+from "economics"."main"."int_date_spine_month"
+where date_month is not null
+group by date_month
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m15:45:53.189228 [debug] [Thread-1 (]: SQL status: OK in 0.011 seconds
+[0m15:45:53.194158 [debug] [Thread-1 (]: On test.dbt_econ.unique_int_date_spine_month_date_month.c4a69b89e7: ROLLBACK
+[0m15:45:53.196716 [debug] [Thread-1 (]: Failed to rollback 'test.dbt_econ.unique_int_date_spine_month_date_month.c4a69b89e7'
+[0m15:45:53.197598 [debug] [Thread-1 (]: On test.dbt_econ.unique_int_date_spine_month_date_month.c4a69b89e7: Close
+[0m15:45:53.199279 [info ] [Thread-1 (]: 2 of 2 PASS unique_int_date_spine_month_date_month ............................. [[32mPASS[0m in 0.05s]
+[0m15:45:53.201390 [debug] [Thread-1 (]: Finished running node test.dbt_econ.unique_int_date_spine_month_date_month.c4a69b89e7
+[0m15:45:53.205094 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:45:53.206844 [debug] [MainThread]: On master: BEGIN
+[0m15:45:53.207997 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m15:45:53.210434 [debug] [MainThread]: SQL status: OK in 0.002 seconds
+[0m15:45:53.211776 [debug] [MainThread]: On master: COMMIT
+[0m15:45:53.212708 [debug] [MainThread]: Using duckdb connection "master"
+[0m15:45:53.213211 [debug] [MainThread]: On master: COMMIT
+[0m15:45:53.215402 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m15:45:53.216685 [debug] [MainThread]: On master: Close
+[0m15:45:53.218251 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m15:45:53.219551 [debug] [MainThread]: Connection 'test.dbt_econ.unique_int_date_spine_month_date_month.c4a69b89e7' was properly closed.
+[0m15:45:53.220499 [info ] [MainThread]: 
+[0m15:45:53.221744 [info ] [MainThread]: Finished running 2 data tests in 0 hours 0 minutes and 0.29 seconds (0.29s).
+[0m15:45:53.224207 [debug] [MainThread]: Command end result
+[0m15:45:53.285872 [debug] [MainThread]: Wrote artifact WritableManifest to /home/connor/projects/economics_project/dbt_econ/target/manifest.json
+[0m15:45:53.291098 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/connor/projects/economics_project/dbt_econ/target/semantic_manifest.json
+[0m15:45:53.302344 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/connor/projects/economics_project/dbt_econ/target/run_results.json
+[0m15:45:53.303214 [info ] [MainThread]: 
+[0m15:45:53.304077 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m15:45:53.304847 [info ] [MainThread]: 
+[0m15:45:53.305769 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m15:45:53.307925 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 1.5676018, "process_in_blocks": "2112", "process_kernel_time": 0.550728, "process_mem_max_rss": "158308", "process_out_blocks": "2736", "process_user_time": 3.642046}
+[0m15:45:53.308808 [debug] [MainThread]: Command `dbt test` succeeded at 15:45:53.308620 after 1.57 seconds
+[0m15:45:53.309406 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7295834d9df0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7293efc24170>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7295834af290>]}
+[0m15:45:53.310039 [debug] [MainThread]: Flushing usage events
+[0m15:45:53.756678 [debug] [MainThread]: An error was encountered while trying to flush usage events
