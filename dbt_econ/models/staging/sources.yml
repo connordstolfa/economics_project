@@ -23,3 +23,5 @@ sources:
     description: 'Raw data for real_income_per_capita (Series ID: RPI)'
   - name: real_median_household_income
     description: 'Raw data for real_median_household_income (Series ID: MEHOINUSA672N)'
+  - name: recession_indicators
+    description: 'Raw data for recession_indicator (Series ID: USREC)'

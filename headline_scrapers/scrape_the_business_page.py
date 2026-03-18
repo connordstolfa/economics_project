@@ -1,8 +1,6 @@
-import json
 import os
 import requests
 from dotenv import load_dotenv
-import time
 
 load_dotenv()
 
@@ -38,5 +36,4 @@ def get_latest_econ_articles(api_key):
         return []
 
 if __name__ == "__main__":
-    # print(scrape_econ_news()) 
-    print(get_latest_econ_articles(times_api_key))
+    get_latest_econ_articles(times_api_key)
