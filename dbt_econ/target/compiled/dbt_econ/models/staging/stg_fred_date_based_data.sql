@@ -10,7 +10,7 @@ with unified_data as (
         select
             'unemployment_rate' as indicator_name,
             'UNRATE' as fred_series_id, -- Extra metadata!
-            date,
+            date::date as date,
             value
         from "economics"."raw"."unemployment_rate"
      union all 
@@ -18,7 +18,7 @@ with unified_data as (
         select
             'consumer_price_index' as indicator_name,
             'CPIAUCSL' as fred_series_id, -- Extra metadata!
-            date,
+            date::date as date,
             value
         from "economics"."raw"."consumer_price_index"
      union all 
@@ -26,7 +26,7 @@ with unified_data as (
         select
             'core_consumer_price_index' as indicator_name,
             'CPILFESL' as fred_series_id, -- Extra metadata!
-            date,
+            date::date as date,
             value
         from "economics"."raw"."core_consumer_price_index"
      union all 
@@ -34,7 +34,7 @@ with unified_data as (
         select
             'personal_consumption_expenditures_index' as indicator_name,
             'PCEPI' as fred_series_id, -- Extra metadata!
-            date,
+            date::date as date,
             value
         from "economics"."raw"."personal_consumption_expenditures_index"
      union all 
@@ -42,7 +42,7 @@ with unified_data as (
         select
             'real_gdp' as indicator_name,
             'GDPC1' as fred_series_id, -- Extra metadata!
-            date,
+            date::date as date,
             value
         from "economics"."raw"."real_gdp"
      union all 
@@ -50,7 +50,7 @@ with unified_data as (
         select
             'real_gdp_per_capita' as indicator_name,
             'A939RX0Q048SBEA' as fred_series_id, -- Extra metadata!
-            date,
+            date::date as date,
             value
         from "economics"."raw"."real_gdp_per_capita"
      union all 
@@ -58,7 +58,7 @@ with unified_data as (
         select
             'real_income_per_capita' as indicator_name,
             'RPI' as fred_series_id, -- Extra metadata!
-            date,
+            date::date as date,
             value
         from "economics"."raw"."real_income_per_capita"
      union all 
@@ -66,7 +66,7 @@ with unified_data as (
         select
             'real_median_household_income' as indicator_name,
             'MEHOINUSA672N' as fred_series_id, -- Extra metadata!
-            date,
+            date::date as date,
             value
         from "economics"."raw"."real_median_household_income"
      union all 
@@ -74,7 +74,7 @@ with unified_data as (
         select
             'recession_indicators' as indicator_name,
             'USREC' as fred_series_id, -- Extra metadata!
-            date,
+            date::date as date,
             value
         from "economics"."raw"."recession_indicators"
     

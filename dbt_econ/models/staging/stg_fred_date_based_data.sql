@@ -12,7 +12,7 @@ with unified_data as (
         select
             '{{ ind.table_name }}' as indicator_name,
             '{{ ind.series_id }}' as fred_series_id, -- Extra metadata!
-            date,
+            date::date as date,
             value
         from {{ source('fred_raw', ind.table_name) }}
     {% if not loop.last %} union all {% endif %}
