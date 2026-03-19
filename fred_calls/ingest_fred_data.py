@@ -26,18 +26,6 @@ def insert_fred_data(
 
 db_path = "/home/connor/projects/economics_project/fred_data/economics.db"
 
-series_to_pull = {
-    "UNRATE": 'unemployment_rate',
-    "CPIAUCSL": "consumer_price_index",
-    "CPILFESL": "core_consumer_price_index",
-    "PCEPI": "personal_consumption_expenditures_index",
-    "GDPC1": "real_gdp",
-    "A939RX0Q048SBEA": "real_gdp_per_capita",
-    "RPI": "real_income_per_capita",
-    # "MAHOINUSA672N": "real_mean_household_income",
-    "MEHOINUSA672N": "real_median_household_income",
-}
-
 def load_fred_config():
     with open('/home/connor/projects/economics_project/config/fred_series.json', 'r') as fred_series:
         return json.load(fred_series)

@@ -11,8 +11,7 @@
 
 -- Jinja will loop through each raw FRED table.
 -- List of indicators. Each indicator is stored in a dict with its name and table name.
-
-
+-- FRED indicators are stored in a variable called 'fred_indicators' in dbt_project.yml. dbt_project.yml is generated from a Python script that will update the provided indicators if a new one is added to the file fred_series.json
 
 
 with unified_data as (
@@ -79,6 +78,14 @@ with unified_data as (
             date,
             value
         from "economics"."raw"."real_median_household_income"
+     union all 
+    
+        select
+            'recession_indicators' as indicator_name,
+            'USREC' as fred_series_id, -- Extra metadata!
+            date,
+            value
+        from "economics"."raw"."recession_indicators"
     
     
 )

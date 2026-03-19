@@ -1,0 +1,22 @@
+version: 2
+models:
+  - name: int_inflation_measures
+    description: A table pulling in the three major inflation indicies, the consumer price index, the core consumer price index, and the personal consumption expenditures index.
+    columns:
+      - name: date
+        description: The date of the recorded observation.
+        tests:
+          - unique
+          - not_null
+      - name: consumer_price_index_value
+        description: The value of the CPI.
+      - name: consumer_price_index_inflation_rate
+        description: The one year inflation rate of the CPI.
+      - name: core_consumer_price_index_value
+        description: The value of the CORE CPI. Core CPI excludes food and energy prices, as they are extremely volatile.
+      - name: core_consumer_price_index_inflation_rate
+        description: The one year inflation rate of Core CPI. Core CPI excludes food and energy prices, as they are extremely volatile.
+      - name: personal_consumption_expenditures_index_value
+        description: The value of the Personal Consumption Expendatures Index, sometimes refered to as the PCE. The PCE is the Fed's preferred measure of inflation and is most often used to set policy.
+      - name: personal_consumption_expenditures_index_inflation_rate
+        description: The one year inflation rate of the PCE.

@@ -38,5 +38,10 @@
         "name": "real_median_household_income",
         "table_name": "real_median_household_income",
         "series_id": "MEHOINUSA672N"
+    },
+    {
+        "name": "recession_indicator",
+        "table_name": "recession_indicators",
+        "series_id": "USREC"
     }
 ]
