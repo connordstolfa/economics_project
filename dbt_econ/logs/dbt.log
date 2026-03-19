@@ -8447,3 +8447,606 @@ alter table "economics"."main"."int_inflation_measures__dbt_tmp" rename to "int_
 [0m11:19:53.336060 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79887855b440>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7986e18bf6b0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x79887509c710>]}
 [0m11:19:53.336501 [debug] [MainThread]: Flushing usage events
 [0m11:19:53.677228 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:28:21.994179 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x729709ecf230>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72970a476690>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72970c4f3260>]}
+
+
+============================== 11:28:21.997796 | daacc9c4-fc4f-4cc4-83ea-d1ce6a3b0294 ==============================
+[0m11:28:21.997796 [info ] [MainThread]: Running with dbt=1.11.7
+[0m11:28:21.998398 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'profiles_dir': '/home/connor/.dbt', 'log_path': '/home/connor/projects/economics_project/dbt_econ/logs', 'version_check': 'True', 'fail_fast': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'False', 'quiet': 'False', 'no_print': 'None', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'static_parser': 'True', 'introspect': 'True', 'log_format': 'default', 'target_path': 'None', 'invocation_command': 'dbt compile --select int_inflation_measures', 'send_anonymous_usage_stats': 'True'}
+[0m11:28:22.238555 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': 'daacc9c4-fc4f-4cc4-83ea-d1ce6a3b0294', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72970965bd70>]}
+[0m11:28:22.299895 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': 'daacc9c4-fc4f-4cc4-83ea-d1ce6a3b0294', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x729576dd08f0>]}
+[0m11:28:22.301583 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m11:28:22.367373 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m11:28:22.481442 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:28:22.481930 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m11:28:22.482238 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:28:22.529559 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': 'daacc9c4-fc4f-4cc4-83ea-d1ce6a3b0294', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x729576dc3080>]}
+[0m11:28:22.615063 [debug] [MainThread]: Wrote artifact WritableManifest to /home/connor/projects/economics_project/dbt_econ/target/manifest.json
+[0m11:28:22.617224 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/connor/projects/economics_project/dbt_econ/target/semantic_manifest.json
+[0m11:28:22.630411 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': 'daacc9c4-fc4f-4cc4-83ea-d1ce6a3b0294', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x729576864e30>]}
+[0m11:28:22.631032 [info ] [MainThread]: Found 7 models, 10 data tests, 9 sources, 590 macros
+[0m11:28:22.631430 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'daacc9c4-fc4f-4cc4-83ea-d1ce6a3b0294', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x729576d1c2c0>]}
+[0m11:28:22.633076 [info ] [MainThread]: 
+[0m11:28:22.633507 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m11:28:22.633830 [info ] [MainThread]: 
+[0m11:28:22.634339 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m11:28:22.639579 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_economics_main'
+[0m11:28:22.675369 [debug] [ThreadPool]: Using duckdb connection "list_economics_main"
+[0m11:28:22.675929 [debug] [ThreadPool]: On list_economics_main: BEGIN
+[0m11:28:22.676308 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:28:22.691342 [debug] [ThreadPool]: SQL status: OK in 0.015 seconds
+[0m11:28:22.691893 [debug] [ThreadPool]: Using duckdb connection "list_economics_main"
+[0m11:28:22.692235 [debug] [ThreadPool]: On list_economics_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "list_economics_main"} */
+select
+      'economics' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'economics'
+  
+[0m11:28:22.696746 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m11:28:22.698220 [debug] [ThreadPool]: On list_economics_main: ROLLBACK
+[0m11:28:22.699251 [debug] [ThreadPool]: Failed to rollback 'list_economics_main'
+[0m11:28:22.699573 [debug] [ThreadPool]: On list_economics_main: Close
+[0m11:28:22.701104 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': 'daacc9c4-fc4f-4cc4-83ea-d1ce6a3b0294', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x729709727260>]}
+[0m11:28:22.704299 [debug] [Thread-1 (]: Began running node model.dbt_econ.int_inflation_measures
+[0m11:28:22.704766 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_economics_main, now model.dbt_econ.int_inflation_measures)
+[0m11:28:22.705121 [debug] [Thread-1 (]: Began compiling node model.dbt_econ.int_inflation_measures
+[0m11:28:22.714936 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_econ.int_inflation_measures"
+[0m11:28:22.715721 [debug] [Thread-1 (]: Began executing node model.dbt_econ.int_inflation_measures
+[0m11:28:22.716518 [debug] [Thread-1 (]: Finished running node model.dbt_econ.int_inflation_measures
+[0m11:28:22.718081 [debug] [Thread-1 (]: Began running node test.dbt_econ.not_null_int_inflation_measures_date.a1631f7015
+[0m11:28:22.718530 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly model.dbt_econ.int_inflation_measures, now test.dbt_econ.not_null_int_inflation_measures_date.a1631f7015)
+[0m11:28:22.718882 [debug] [Thread-1 (]: Began compiling node test.dbt_econ.not_null_int_inflation_measures_date.a1631f7015
+[0m11:28:22.730447 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_econ.not_null_int_inflation_measures_date.a1631f7015"
+[0m11:28:22.731545 [debug] [Thread-1 (]: Began executing node test.dbt_econ.not_null_int_inflation_measures_date.a1631f7015
+[0m11:28:22.732298 [debug] [Thread-1 (]: Finished running node test.dbt_econ.not_null_int_inflation_measures_date.a1631f7015
+[0m11:28:22.732664 [debug] [Thread-1 (]: Began running node test.dbt_econ.unique_int_inflation_measures_date.18cfdac5fd
+[0m11:28:22.733243 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_econ.not_null_int_inflation_measures_date.a1631f7015, now test.dbt_econ.unique_int_inflation_measures_date.18cfdac5fd)
+[0m11:28:22.733636 [debug] [Thread-1 (]: Began compiling node test.dbt_econ.unique_int_inflation_measures_date.18cfdac5fd
+[0m11:28:22.739141 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_econ.unique_int_inflation_measures_date.18cfdac5fd"
+[0m11:28:22.739784 [debug] [Thread-1 (]: Began executing node test.dbt_econ.unique_int_inflation_measures_date.18cfdac5fd
+[0m11:28:22.740462 [debug] [Thread-1 (]: Finished running node test.dbt_econ.unique_int_inflation_measures_date.18cfdac5fd
+[0m11:28:22.742504 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:28:22.743018 [debug] [MainThread]: Connection 'test.dbt_econ.unique_int_inflation_measures_date.18cfdac5fd' was properly closed.
+[0m11:28:22.743792 [debug] [MainThread]: Command end result
+[0m11:28:22.771432 [debug] [MainThread]: Wrote artifact WritableManifest to /home/connor/projects/economics_project/dbt_econ/target/manifest.json
+[0m11:28:22.773696 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/connor/projects/economics_project/dbt_econ/target/semantic_manifest.json
+[0m11:28:22.780404 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/connor/projects/economics_project/dbt_econ/target/run_results.json
+[0m11:28:22.780870 [debug] [MainThread]: Excluded node 'not_null_int_inflation_measures_date' from results
+[0m11:28:22.781149 [debug] [MainThread]: Excluded node 'unique_int_inflation_measures_date' from results
+[0m11:28:22.781488 [info ] [MainThread]: Compiled node 'int_inflation_measures' is:
+
+
+-- Looping through different inflation indicators with Jina, rather than a massive join.
+-- Dictionary structure is table_name: intended_alias.
+
+
+with base as (
+    select
+        *
+        , (
+            (value - lag(value, 12) over (partition by indicator_name order by date)) 
+            / 
+            lag(value, 12) over (partition by indicator_name order by date)
+        ) as inflation_rate
+    from "economics"."main"."stg_fred_date_based_data"
+    where
+        indicator_name in ('consumer_price_index', 'core_consumer_price_index', 'personal_consumption_expenditures_index')
+)
+
+, 
+    consumer_price_index_cte as (
+        select
+            date
+            , value as consumer_price_index_value
+            , inflation_rate as consumer_price_index_inflation_rate
+        from base
+        where
+            indicator_name = 'consumer_price_index'
+    )
+    ,
+
+    core_consumer_price_index_cte as (
+        select
+            date
+            , value as core_consumer_price_index_value
+            , inflation_rate as core_consumer_price_index_inflation_rate
+        from base
+        where
+            indicator_name = 'core_consumer_price_index'
+    )
+    ,
+
+    personal_consumption_expenditures_index_cte as (
+        select
+            date
+            , value as personal_consumption_expenditures_index_value
+            , inflation_rate as personal_consumption_expenditures_index_inflation_rate
+        from base
+        where
+            indicator_name = 'personal_consumption_expenditures_index'
+    )
+    
+
+
+select
+    spine.date_month as date
+    
+        , consumer_price_index_value
+        , consumer_price_index_inflation_rate
+    
+        , core_consumer_price_index_value
+        , core_consumer_price_index_inflation_rate
+    
+        , personal_consumption_expenditures_index_value
+        , personal_consumption_expenditures_index_inflation_rate
+    
+from "economics"."main"."int_date_spine_month" as spine
+
+    left join consumer_price_index_cte
+        on spine.date_month::date = consumer_price_index_cte.date::date
+
+    left join core_consumer_price_index_cte
+        on spine.date_month::date = core_consumer_price_index_cte.date::date
+
+    left join personal_consumption_expenditures_index_cte
+        on spine.date_month::date = personal_consumption_expenditures_index_cte.date::date
+
+[0m11:28:22.782583 [debug] [MainThread]: Resource report: {"command_name": "compile", "command_success": true, "command_wall_clock_time": 0.84844214, "process_in_blocks": "336", "process_kernel_time": 0.243568, "process_mem_max_rss": "152396", "process_out_blocks": "2800", "process_user_time": 2.076318}
+[0m11:28:22.783143 [debug] [MainThread]: Command `dbt compile` succeeded at 11:28:22.783027 after 0.85 seconds
+[0m11:28:22.783539 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72970a78d970>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x729576f0eae0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x72970a58f6b0>]}
+[0m11:28:22.783942 [debug] [MainThread]: Flushing usage events
+[0m11:28:23.108208 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:28:30.127732 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x741ae7916ba0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x741ae5c7a3c0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x741ae59affb0>]}
+
+
+============================== 11:28:30.131165 | 17805d03-21bf-486b-8f60-ef1e97549cd0 ==============================
+[0m11:28:30.131165 [info ] [MainThread]: Running with dbt=1.11.7
+[0m11:28:30.131872 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'log_cache_events': 'False', 'write_json': 'True', 'partial_parse': 'True', 'cache_selected_only': 'False', 'profiles_dir': '/home/connor/.dbt', 'fail_fast': 'False', 'warn_error': 'None', 'log_path': '/home/connor/projects/economics_project/dbt_econ/logs', 'version_check': 'True', 'debug': 'False', 'use_colors': 'True', 'use_experimental_parser': 'False', 'no_print': 'None', 'quiet': 'False', 'empty': 'False', 'log_format': 'default', 'static_parser': 'True', 'invocation_command': 'dbt run --select int_inflation_measures', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'target_path': 'None', 'introspect': 'True', 'send_anonymous_usage_stats': 'True'}
+[0m11:28:30.373297 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '17805d03-21bf-486b-8f60-ef1e97549cd0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x741ae51775c0>]}
+[0m11:28:30.434825 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '17805d03-21bf-486b-8f60-ef1e97549cd0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x741ae4c22a20>]}
+[0m11:28:30.436516 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m11:28:30.503762 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m11:28:30.613214 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:28:30.613785 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m11:28:30.614114 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:28:30.661968 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '17805d03-21bf-486b-8f60-ef1e97549cd0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x74195250f290>]}
+[0m11:28:30.783523 [debug] [MainThread]: Wrote artifact WritableManifest to /home/connor/projects/economics_project/dbt_econ/target/manifest.json
+[0m11:28:30.786223 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/connor/projects/economics_project/dbt_econ/target/semantic_manifest.json
+[0m11:28:30.801644 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '17805d03-21bf-486b-8f60-ef1e97549cd0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x741951f7b500>]}
+[0m11:28:30.802318 [info ] [MainThread]: Found 7 models, 10 data tests, 9 sources, 590 macros
+[0m11:28:30.802763 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '17805d03-21bf-486b-8f60-ef1e97549cd0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x741ae5d055b0>]}
+[0m11:28:30.804479 [info ] [MainThread]: 
+[0m11:28:30.804910 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m11:28:30.805238 [info ] [MainThread]: 
+[0m11:28:30.805750 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m11:28:30.807095 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_economics'
+[0m11:28:30.844151 [debug] [ThreadPool]: Using duckdb connection "list_economics"
+[0m11:28:30.844676 [debug] [ThreadPool]: On list_economics: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "list_economics"} */
+
+    
+    select schema_name
+    from system.information_schema.schemata
+    
+    where lower(catalog_name) = '"economics"'
+    
+  
+  
+[0m11:28:30.845052 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:28:30.861310 [debug] [ThreadPool]: SQL status: OK in 0.016 seconds
+[0m11:28:30.862849 [debug] [ThreadPool]: On list_economics: Close
+[0m11:28:30.863741 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly list_economics, now create_economics_main)
+[0m11:28:30.864290 [debug] [ThreadPool]: Creating schema "database: "economics"
+schema: "main"
+"
+[0m11:28:30.871035 [debug] [ThreadPool]: Using duckdb connection "create_economics_main"
+[0m11:28:30.871581 [debug] [ThreadPool]: On create_economics_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "create_economics_main"} */
+
+    
+        select type from duckdb_databases()
+        where lower(database_name)='economics'
+        and type='sqlite'
+    
+  
+[0m11:28:30.872371 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m11:28:30.874122 [debug] [ThreadPool]: SQL status: OK in 0.002 seconds
+[0m11:28:30.875510 [debug] [ThreadPool]: Using duckdb connection "create_economics_main"
+[0m11:28:30.875863 [debug] [ThreadPool]: On create_economics_main: BEGIN
+[0m11:28:30.876760 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m11:28:30.877092 [debug] [ThreadPool]: Using duckdb connection "create_economics_main"
+[0m11:28:30.877356 [debug] [ThreadPool]: On create_economics_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "create_economics_main"} */
+
+    
+    
+        create schema if not exists "economics"."main"
+    
+[0m11:28:30.878025 [debug] [ThreadPool]: SQL status: OK in 0.000 seconds
+[0m11:28:30.878828 [debug] [ThreadPool]: On create_economics_main: COMMIT
+[0m11:28:30.879157 [debug] [ThreadPool]: Using duckdb connection "create_economics_main"
+[0m11:28:30.879426 [debug] [ThreadPool]: On create_economics_main: COMMIT
+[0m11:28:30.880221 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m11:28:30.880567 [debug] [ThreadPool]: On create_economics_main: Close
+[0m11:28:30.886399 [debug] [ThreadPool]: Re-using an available connection from the pool (formerly create_economics_main, now list_economics_main)
+[0m11:28:30.891975 [debug] [ThreadPool]: Using duckdb connection "list_economics_main"
+[0m11:28:30.892647 [debug] [ThreadPool]: On list_economics_main: BEGIN
+[0m11:28:30.892962 [debug] [ThreadPool]: Opening a new connection, currently in state closed
+[0m11:28:30.893874 [debug] [ThreadPool]: SQL status: OK in 0.001 seconds
+[0m11:28:30.894216 [debug] [ThreadPool]: Using duckdb connection "list_economics_main"
+[0m11:28:30.894514 [debug] [ThreadPool]: On list_economics_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "list_economics_main"} */
+select
+      'economics' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'economics'
+  
+[0m11:28:30.898203 [debug] [ThreadPool]: SQL status: OK in 0.003 seconds
+[0m11:28:30.899609 [debug] [ThreadPool]: On list_economics_main: ROLLBACK
+[0m11:28:30.900724 [debug] [ThreadPool]: Failed to rollback 'list_economics_main'
+[0m11:28:30.901078 [debug] [ThreadPool]: On list_economics_main: Close
+[0m11:28:30.902691 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '17805d03-21bf-486b-8f60-ef1e97549cd0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x741952430470>]}
+[0m11:28:30.903249 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:28:30.903600 [debug] [MainThread]: On master: BEGIN
+[0m11:28:30.903903 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:28:30.904847 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m11:28:30.905174 [debug] [MainThread]: On master: COMMIT
+[0m11:28:30.905442 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:28:30.905695 [debug] [MainThread]: On master: COMMIT
+[0m11:28:30.906347 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m11:28:30.906643 [debug] [MainThread]: On master: Close
+[0m11:28:30.909872 [debug] [Thread-1 (]: Began running node model.dbt_econ.int_inflation_measures
+[0m11:28:30.910443 [info ] [Thread-1 (]: 1 of 1 START sql table model main.int_inflation_measures ....................... [RUN]
+[0m11:28:30.910935 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_economics_main, now model.dbt_econ.int_inflation_measures)
+[0m11:28:30.911270 [debug] [Thread-1 (]: Began compiling node model.dbt_econ.int_inflation_measures
+[0m11:28:30.921390 [debug] [Thread-1 (]: Writing injected SQL for node "model.dbt_econ.int_inflation_measures"
+[0m11:28:30.922246 [debug] [Thread-1 (]: Began executing node model.dbt_econ.int_inflation_measures
+[0m11:28:30.956411 [debug] [Thread-1 (]: Writing runtime sql for node "model.dbt_econ.int_inflation_measures"
+[0m11:28:30.957610 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.int_inflation_measures"
+[0m11:28:30.958104 [debug] [Thread-1 (]: On model.dbt_econ.int_inflation_measures: BEGIN
+[0m11:28:30.958484 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:28:30.959788 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m11:28:30.960189 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.int_inflation_measures"
+[0m11:28:30.960571 [debug] [Thread-1 (]: On model.dbt_econ.int_inflation_measures: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "model.dbt_econ.int_inflation_measures"} */
+
+  
+    
+    
+
+    create  table
+      "economics"."main"."int_inflation_measures__dbt_tmp"
+  
+    as (
+      
+
+-- Looping through different inflation indicators with Jina, rather than a massive join.
+-- Dictionary structure is table_name: intended_alias.
+
+
+with base as (
+    select
+        *
+        , (
+            (value - lag(value, 12) over (partition by indicator_name order by date)) 
+            / 
+            lag(value, 12) over (partition by indicator_name order by date)
+        ) as inflation_rate
+    from "economics"."main"."stg_fred_date_based_data"
+    where
+        indicator_name in ('consumer_price_index', 'core_consumer_price_index', 'personal_consumption_expenditures_index')
+)
+
+, 
+    consumer_price_index_cte as (
+        select
+            date
+            , value as consumer_price_index_value
+            , inflation_rate as consumer_price_index_inflation_rate
+        from base
+        where
+            indicator_name = 'consumer_price_index'
+    )
+    ,
+
+    core_consumer_price_index_cte as (
+        select
+            date
+            , value as core_consumer_price_index_value
+            , inflation_rate as core_consumer_price_index_inflation_rate
+        from base
+        where
+            indicator_name = 'core_consumer_price_index'
+    )
+    ,
+
+    personal_consumption_expenditures_index_cte as (
+        select
+            date
+            , value as personal_consumption_expenditures_index_value
+            , inflation_rate as personal_consumption_expenditures_index_inflation_rate
+        from base
+        where
+            indicator_name = 'personal_consumption_expenditures_index'
+    )
+    
+
+
+select
+    spine.date_month as date
+    
+        , consumer_price_index_value
+        , consumer_price_index_inflation_rate
+    
+        , core_consumer_price_index_value
+        , core_consumer_price_index_inflation_rate
+    
+        , personal_consumption_expenditures_index_value
+        , personal_consumption_expenditures_index_inflation_rate
+    
+from "economics"."main"."int_date_spine_month" as spine
+
+    left join consumer_price_index_cte
+        on spine.date_month::date = consumer_price_index_cte.date::date
+
+    left join core_consumer_price_index_cte
+        on spine.date_month::date = core_consumer_price_index_cte.date::date
+
+    left join personal_consumption_expenditures_index_cte
+        on spine.date_month::date = personal_consumption_expenditures_index_cte.date::date
+
+    );
+  
+  
+[0m11:28:30.978016 [debug] [Thread-1 (]: SQL status: OK in 0.017 seconds
+[0m11:28:30.984029 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.int_inflation_measures"
+[0m11:28:30.984582 [debug] [Thread-1 (]: On model.dbt_econ.int_inflation_measures: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "model.dbt_econ.int_inflation_measures"} */
+
+    SELECT index_name
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'int_inflation_measures'
+  
+[0m11:28:30.986051 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m11:28:30.987363 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.int_inflation_measures"
+[0m11:28:30.987759 [debug] [Thread-1 (]: On model.dbt_econ.int_inflation_measures: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "model.dbt_econ.int_inflation_measures"} */
+
+    SELECT COUNT(*) as remaining_indexes
+    FROM duckdb_indexes()
+    WHERE schema_name = 'main'
+      AND table_name = 'int_inflation_measures'
+  
+[0m11:28:30.989982 [debug] [Thread-1 (]: SQL status: OK in 0.002 seconds
+[0m11:28:30.997753 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.int_inflation_measures"
+[0m11:28:30.998225 [debug] [Thread-1 (]: On model.dbt_econ.int_inflation_measures: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "model.dbt_econ.int_inflation_measures"} */
+alter table "economics"."main"."int_inflation_measures" rename to "int_inflation_measures__dbt_backup"
+[0m11:28:30.999281 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m11:28:31.001845 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.int_inflation_measures"
+[0m11:28:31.002218 [debug] [Thread-1 (]: On model.dbt_econ.int_inflation_measures: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "model.dbt_econ.int_inflation_measures"} */
+alter table "economics"."main"."int_inflation_measures__dbt_tmp" rename to "int_inflation_measures"
+[0m11:28:31.003344 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m11:28:31.017412 [debug] [Thread-1 (]: On model.dbt_econ.int_inflation_measures: COMMIT
+[0m11:28:31.017863 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.int_inflation_measures"
+[0m11:28:31.018183 [debug] [Thread-1 (]: On model.dbt_econ.int_inflation_measures: COMMIT
+[0m11:28:31.026311 [debug] [Thread-1 (]: SQL status: OK in 0.008 seconds
+[0m11:28:31.032136 [debug] [Thread-1 (]: Using duckdb connection "model.dbt_econ.int_inflation_measures"
+[0m11:28:31.032581 [debug] [Thread-1 (]: On model.dbt_econ.int_inflation_measures: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "model.dbt_econ.int_inflation_measures"} */
+
+      drop table if exists "economics"."main"."int_inflation_measures__dbt_backup" cascade
+    
+[0m11:28:31.037935 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m11:28:31.041200 [debug] [Thread-1 (]: On model.dbt_econ.int_inflation_measures: Close
+[0m11:28:31.043168 [debug] [Thread-1 (]: Sending event: {'category': 'dbt', 'action': 'run_model', 'label': '17805d03-21bf-486b-8f60-ef1e97549cd0', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x741ae5ca5a30>]}
+[0m11:28:31.043954 [info ] [Thread-1 (]: 1 of 1 OK created sql table model main.int_inflation_measures .................. [[32mOK[0m in 0.13s]
+[0m11:28:31.044621 [debug] [Thread-1 (]: Finished running node model.dbt_econ.int_inflation_measures
+[0m11:28:31.047003 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:28:31.047905 [debug] [MainThread]: On master: BEGIN
+[0m11:28:31.048341 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m11:28:31.049316 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m11:28:31.049660 [debug] [MainThread]: On master: COMMIT
+[0m11:28:31.049940 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:28:31.050239 [debug] [MainThread]: On master: COMMIT
+[0m11:28:31.050914 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m11:28:31.051266 [debug] [MainThread]: On master: Close
+[0m11:28:31.051809 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:28:31.052225 [debug] [MainThread]: Connection 'model.dbt_econ.int_inflation_measures' was properly closed.
+[0m11:28:31.052591 [info ] [MainThread]: 
+[0m11:28:31.053131 [info ] [MainThread]: Finished running 1 table model in 0 hours 0 minutes and 0.25 seconds (0.25s).
+[0m11:28:31.054127 [debug] [MainThread]: Command end result
+[0m11:28:31.172731 [debug] [MainThread]: Wrote artifact WritableManifest to /home/connor/projects/economics_project/dbt_econ/target/manifest.json
+[0m11:28:31.175304 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/connor/projects/economics_project/dbt_econ/target/semantic_manifest.json
+[0m11:28:31.181076 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/connor/projects/economics_project/dbt_econ/target/run_results.json
+[0m11:28:31.181562 [info ] [MainThread]: 
+[0m11:28:31.182006 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m11:28:31.182400 [info ] [MainThread]: 
+[0m11:28:31.182777 [info ] [MainThread]: Done. PASS=1 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=1
+[0m11:28:31.183800 [debug] [MainThread]: Resource report: {"command_name": "run", "command_success": true, "command_wall_clock_time": 1.114519, "process_in_blocks": "0", "process_kernel_time": 0.264595, "process_mem_max_rss": "162560", "process_out_blocks": "2944", "process_user_time": 2.425456}
+[0m11:28:31.184397 [debug] [MainThread]: Command `dbt run` succeeded at 11:28:31.184291 after 1.12 seconds
+[0m11:28:31.184785 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x741ae615b740>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x741ae6aa1940>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x7419521c52e0>]}
+[0m11:28:31.185306 [debug] [MainThread]: Flushing usage events
+[0m11:28:31.580175 [debug] [MainThread]: An error was encountered while trying to flush usage events
+[0m11:28:38.856917 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'start', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75c375f77e60>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75c376d61430>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75c376f4dfa0>]}
+
+
+============================== 11:28:38.860304 | 93a91d63-d5a6-400d-8968-2d02e18f7dff ==============================
+[0m11:28:38.860304 [info ] [MainThread]: Running with dbt=1.11.7
+[0m11:28:38.861067 [debug] [MainThread]: running dbt with arguments {'printer_width': '80', 'indirect_selection': 'eager', 'write_json': 'True', 'log_cache_events': 'False', 'partial_parse': 'True', 'cache_selected_only': 'False', 'warn_error': 'None', 'debug': 'False', 'version_check': 'True', 'log_path': '/home/connor/projects/economics_project/dbt_econ/logs', 'fail_fast': 'False', 'profiles_dir': '/home/connor/.dbt', 'use_colors': 'True', 'use_experimental_parser': 'False', 'empty': 'None', 'quiet': 'False', 'no_print': 'None', 'log_format': 'default', 'static_parser': 'True', 'warn_error_options': 'WarnErrorOptionsV2(error=[], warn=[], silence=[])', 'introspect': 'True', 'target_path': 'None', 'invocation_command': 'dbt test --select int_inflation_measures', 'send_anonymous_usage_stats': 'True'}
+[0m11:28:39.096740 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'project_id', 'label': '93a91d63-d5a6-400d-8968-2d02e18f7dff', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75c375dc9340>]}
+[0m11:28:39.158551 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'adapter_info', 'label': '93a91d63-d5a6-400d-8968-2d02e18f7dff', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75c375f27e90>]}
+[0m11:28:39.160343 [info ] [MainThread]: Registered adapter: duckdb=1.10.1
+[0m11:28:39.226096 [debug] [MainThread]: checksum: b80718358155fc17c3559352095564dd56ada1cc1a1c0ef2e62c857e71583775, vars: {}, profile: , target: , version: 1.11.7
+[0m11:28:39.331993 [debug] [MainThread]: Partial parsing enabled: 0 files deleted, 0 files added, 0 files changed.
+[0m11:28:39.332451 [debug] [MainThread]: Nothing changed, skipping partial parsing.
+[0m11:28:39.332737 [debug] [MainThread]: Partial parsing enabled, no changes found, skipping parsing
+[0m11:28:39.379032 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'load_project', 'label': '93a91d63-d5a6-400d-8968-2d02e18f7dff', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75c1e351d070>]}
+[0m11:28:39.464548 [debug] [MainThread]: Wrote artifact WritableManifest to /home/connor/projects/economics_project/dbt_econ/target/manifest.json
+[0m11:28:39.468255 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/connor/projects/economics_project/dbt_econ/target/semantic_manifest.json
+[0m11:28:39.495514 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'resource_counts', 'label': '93a91d63-d5a6-400d-8968-2d02e18f7dff', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75c1e2f55520>]}
+[0m11:28:39.496129 [info ] [MainThread]: Found 7 models, 10 data tests, 9 sources, 590 macros
+[0m11:28:39.496561 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '93a91d63-d5a6-400d-8968-2d02e18f7dff', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75c1e322f380>]}
+[0m11:28:39.498216 [info ] [MainThread]: 
+[0m11:28:39.498660 [info ] [MainThread]: Concurrency: 1 threads (target='dev')
+[0m11:28:39.498995 [info ] [MainThread]: 
+[0m11:28:39.499495 [debug] [MainThread]: Acquiring new duckdb connection 'master'
+[0m11:28:39.504623 [debug] [ThreadPool]: Acquiring new duckdb connection 'list_economics_main'
+[0m11:28:39.541059 [debug] [ThreadPool]: Using duckdb connection "list_economics_main"
+[0m11:28:39.541555 [debug] [ThreadPool]: On list_economics_main: BEGIN
+[0m11:28:39.541872 [debug] [ThreadPool]: Opening a new connection, currently in state init
+[0m11:28:39.557048 [debug] [ThreadPool]: SQL status: OK in 0.015 seconds
+[0m11:28:39.557716 [debug] [ThreadPool]: Using duckdb connection "list_economics_main"
+[0m11:28:39.558150 [debug] [ThreadPool]: On list_economics_main: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "connection_name": "list_economics_main"} */
+select
+      'economics' as database,
+      table_name as name,
+      table_schema as schema,
+      CASE table_type
+        WHEN 'BASE TABLE' THEN 'table'
+        WHEN 'VIEW' THEN 'view'
+        WHEN 'LOCAL TEMPORARY' THEN 'table'
+        END as type
+    from system.information_schema.tables
+    where lower(table_schema) = 'main'
+    and lower(table_catalog) = 'economics'
+  
+[0m11:28:39.562740 [debug] [ThreadPool]: SQL status: OK in 0.004 seconds
+[0m11:28:39.564646 [debug] [ThreadPool]: On list_economics_main: ROLLBACK
+[0m11:28:39.565776 [debug] [ThreadPool]: Failed to rollback 'list_economics_main'
+[0m11:28:39.566118 [debug] [ThreadPool]: On list_economics_main: Close
+[0m11:28:39.567573 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'runnable_timing', 'label': '93a91d63-d5a6-400d-8968-2d02e18f7dff', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75c1e308b200>]}
+[0m11:28:39.568079 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:28:39.568388 [debug] [MainThread]: On master: BEGIN
+[0m11:28:39.568663 [debug] [MainThread]: Opening a new connection, currently in state init
+[0m11:28:39.569672 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m11:28:39.570017 [debug] [MainThread]: On master: COMMIT
+[0m11:28:39.570340 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:28:39.570626 [debug] [MainThread]: On master: COMMIT
+[0m11:28:39.571381 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m11:28:39.571721 [debug] [MainThread]: On master: Close
+[0m11:28:39.574966 [debug] [Thread-1 (]: Began running node test.dbt_econ.not_null_int_inflation_measures_date.a1631f7015
+[0m11:28:39.575418 [info ] [Thread-1 (]: 1 of 2 START test not_null_int_inflation_measures_date ......................... [RUN]
+[0m11:28:39.575942 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly list_economics_main, now test.dbt_econ.not_null_int_inflation_measures_date.a1631f7015)
+[0m11:28:39.576295 [debug] [Thread-1 (]: Began compiling node test.dbt_econ.not_null_int_inflation_measures_date.a1631f7015
+[0m11:28:39.593886 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_econ.not_null_int_inflation_measures_date.a1631f7015"
+[0m11:28:39.594758 [debug] [Thread-1 (]: Began executing node test.dbt_econ.not_null_int_inflation_measures_date.a1631f7015
+[0m11:28:39.614445 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_econ.not_null_int_inflation_measures_date.a1631f7015"
+[0m11:28:39.615606 [debug] [Thread-1 (]: Using duckdb connection "test.dbt_econ.not_null_int_inflation_measures_date.a1631f7015"
+[0m11:28:39.616092 [debug] [Thread-1 (]: On test.dbt_econ.not_null_int_inflation_measures_date.a1631f7015: BEGIN
+[0m11:28:39.616437 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:28:39.617446 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m11:28:39.617801 [debug] [Thread-1 (]: Using duckdb connection "test.dbt_econ.not_null_int_inflation_measures_date.a1631f7015"
+[0m11:28:39.618115 [debug] [Thread-1 (]: On test.dbt_econ.not_null_int_inflation_measures_date.a1631f7015: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "test.dbt_econ.not_null_int_inflation_measures_date.a1631f7015"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+
+
+select date
+from "economics"."main"."int_inflation_measures"
+where date is null
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:28:39.623273 [debug] [Thread-1 (]: SQL status: OK in 0.005 seconds
+[0m11:28:39.628667 [debug] [Thread-1 (]: On test.dbt_econ.not_null_int_inflation_measures_date.a1631f7015: ROLLBACK
+[0m11:28:39.629627 [debug] [Thread-1 (]: Failed to rollback 'test.dbt_econ.not_null_int_inflation_measures_date.a1631f7015'
+[0m11:28:39.630021 [debug] [Thread-1 (]: On test.dbt_econ.not_null_int_inflation_measures_date.a1631f7015: Close
+[0m11:28:39.630701 [info ] [Thread-1 (]: 1 of 2 PASS not_null_int_inflation_measures_date ............................... [[32mPASS[0m in 0.05s]
+[0m11:28:39.631297 [debug] [Thread-1 (]: Finished running node test.dbt_econ.not_null_int_inflation_measures_date.a1631f7015
+[0m11:28:39.631674 [debug] [Thread-1 (]: Began running node test.dbt_econ.unique_int_inflation_measures_date.18cfdac5fd
+[0m11:28:39.632210 [info ] [Thread-1 (]: 2 of 2 START test unique_int_inflation_measures_date ........................... [RUN]
+[0m11:28:39.632696 [debug] [Thread-1 (]: Re-using an available connection from the pool (formerly test.dbt_econ.not_null_int_inflation_measures_date.a1631f7015, now test.dbt_econ.unique_int_inflation_measures_date.18cfdac5fd)
+[0m11:28:39.633047 [debug] [Thread-1 (]: Began compiling node test.dbt_econ.unique_int_inflation_measures_date.18cfdac5fd
+[0m11:28:39.639026 [debug] [Thread-1 (]: Writing injected SQL for node "test.dbt_econ.unique_int_inflation_measures_date.18cfdac5fd"
+[0m11:28:39.639772 [debug] [Thread-1 (]: Began executing node test.dbt_econ.unique_int_inflation_measures_date.18cfdac5fd
+[0m11:28:39.642141 [debug] [Thread-1 (]: Writing runtime sql for node "test.dbt_econ.unique_int_inflation_measures_date.18cfdac5fd"
+[0m11:28:39.643110 [debug] [Thread-1 (]: Using duckdb connection "test.dbt_econ.unique_int_inflation_measures_date.18cfdac5fd"
+[0m11:28:39.643764 [debug] [Thread-1 (]: On test.dbt_econ.unique_int_inflation_measures_date.18cfdac5fd: BEGIN
+[0m11:28:39.644624 [debug] [Thread-1 (]: Opening a new connection, currently in state closed
+[0m11:28:39.645808 [debug] [Thread-1 (]: SQL status: OK in 0.001 seconds
+[0m11:28:39.646203 [debug] [Thread-1 (]: Using duckdb connection "test.dbt_econ.unique_int_inflation_measures_date.18cfdac5fd"
+[0m11:28:39.646527 [debug] [Thread-1 (]: On test.dbt_econ.unique_int_inflation_measures_date.18cfdac5fd: /* {"app": "dbt", "dbt_version": "1.11.7", "profile_name": "dbt_econ", "target_name": "dev", "node_id": "test.dbt_econ.unique_int_inflation_measures_date.18cfdac5fd"} */
+
+    
+    select
+      count(*) as failures,
+      count(*) != 0 as should_warn,
+      count(*) != 0 as should_error
+    from (
+      
+    
+  
+    
+    
+
+select
+    date as unique_field,
+    count(*) as n_records
+
+from "economics"."main"."int_inflation_measures"
+where date is not null
+group by date
+having count(*) > 1
+
+
+
+  
+  
+      
+    ) dbt_internal_test
+[0m11:28:39.657424 [debug] [Thread-1 (]: SQL status: OK in 0.010 seconds
+[0m11:28:39.659360 [debug] [Thread-1 (]: On test.dbt_econ.unique_int_inflation_measures_date.18cfdac5fd: ROLLBACK
+[0m11:28:39.660288 [debug] [Thread-1 (]: Failed to rollback 'test.dbt_econ.unique_int_inflation_measures_date.18cfdac5fd'
+[0m11:28:39.660661 [debug] [Thread-1 (]: On test.dbt_econ.unique_int_inflation_measures_date.18cfdac5fd: Close
+[0m11:28:39.661290 [info ] [Thread-1 (]: 2 of 2 PASS unique_int_inflation_measures_date ................................. [[32mPASS[0m in 0.03s]
+[0m11:28:39.661835 [debug] [Thread-1 (]: Finished running node test.dbt_econ.unique_int_inflation_measures_date.18cfdac5fd
+[0m11:28:39.664777 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:28:39.665517 [debug] [MainThread]: On master: BEGIN
+[0m11:28:39.665971 [debug] [MainThread]: Opening a new connection, currently in state closed
+[0m11:28:39.666900 [debug] [MainThread]: SQL status: OK in 0.001 seconds
+[0m11:28:39.667259 [debug] [MainThread]: On master: COMMIT
+[0m11:28:39.667561 [debug] [MainThread]: Using duckdb connection "master"
+[0m11:28:39.667822 [debug] [MainThread]: On master: COMMIT
+[0m11:28:39.668499 [debug] [MainThread]: SQL status: OK in 0.000 seconds
+[0m11:28:39.668811 [debug] [MainThread]: On master: Close
+[0m11:28:39.669216 [debug] [MainThread]: Connection 'master' was properly closed.
+[0m11:28:39.669524 [debug] [MainThread]: Connection 'test.dbt_econ.unique_int_inflation_measures_date.18cfdac5fd' was properly closed.
+[0m11:28:39.669867 [info ] [MainThread]: 
+[0m11:28:39.670221 [info ] [MainThread]: Finished running 2 data tests in 0 hours 0 minutes and 0.17 seconds (0.17s).
+[0m11:28:39.670977 [debug] [MainThread]: Command end result
+[0m11:28:39.774319 [debug] [MainThread]: Wrote artifact WritableManifest to /home/connor/projects/economics_project/dbt_econ/target/manifest.json
+[0m11:28:39.776402 [debug] [MainThread]: Wrote artifact SemanticManifest to /home/connor/projects/economics_project/dbt_econ/target/semantic_manifest.json
+[0m11:28:39.783411 [debug] [MainThread]: Wrote artifact RunExecutionResult to /home/connor/projects/economics_project/dbt_econ/target/run_results.json
+[0m11:28:39.783941 [info ] [MainThread]: 
+[0m11:28:39.784380 [info ] [MainThread]: [32mCompleted successfully[0m
+[0m11:28:39.784726 [info ] [MainThread]: 
+[0m11:28:39.785107 [info ] [MainThread]: Done. PASS=2 WARN=0 ERROR=0 SKIP=0 NO-OP=0 TOTAL=2
+[0m11:28:39.786015 [debug] [MainThread]: Resource report: {"command_name": "test", "command_success": true, "command_wall_clock_time": 0.98507965, "process_in_blocks": "1752", "process_kernel_time": 0.261281, "process_mem_max_rss": "158868", "process_out_blocks": "2808", "process_user_time": 2.194761}
+[0m11:28:39.786516 [debug] [MainThread]: Command `dbt test` succeeded at 11:28:39.786412 after 0.99 seconds
+[0m11:28:39.786961 [debug] [MainThread]: Sending event: {'category': 'dbt', 'action': 'invocation', 'label': 'end', 'context': [<snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75c376beb3e0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75c3763169f0>, <snowplow_tracker.self_describing_json.SelfDescribingJson object at 0x75c1e2572cc0>]}
+[0m11:28:39.787360 [debug] [MainThread]: Flushing usage events
+[0m11:28:40.117454 [debug] [MainThread]: An error was encountered while trying to flush usage events

@@ -29,7 +29,7 @@ with base as (
     {{ measure }}_cte as (
         select
             date
-            , value as {{ measure }}_index_value
+            , value as {{ measure }}_value
             , inflation_rate as {{ measure }}_inflation_rate
         from base
         where
@@ -39,9 +39,9 @@ with base as (
 {% endfor %}
 
 select
-    spine.date_month
+    spine.date_month as date
     {% for measure in inflation_measures %}
-        , {{ measure }}_index_value
+        , {{ measure }}_value
         , {{ measure }}_inflation_rate
     {% endfor %}
 from {{ ref('int_date_spine_month') }} as spine
