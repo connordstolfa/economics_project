@@ -16,4 +16,4 @@ select
     , ub.value / 100 as unemployment_rate
 from {{ ref('int_date_spine_month') }} as spine
 left join unemp_base as ub
-    on spine.date_month = ub.date
+    on spine.date_month::date = ub.date::date
