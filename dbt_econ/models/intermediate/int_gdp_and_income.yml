@@ -1,0 +1,18 @@
+version: 2
+models:
+  - name: int_gdp_and_income
+    description: Model combining GDP and income data from FRED. GDP and income are not reported every month. When data has not been reported for a given monht, the last non-null data is pulled. This table only reports "real" values, which are values adjusted for inflation by the Fed.
+    columns:
+      - name: date
+        description: Th edate for which data is being reported.
+        tests:
+          - unique
+          - not_null
+      - name: real_gdp_value
+        description: The value of the US real GDP for a given month.
+      - name: real_gdp_per_capita_value
+        description: Real GDP per capita for a given month.
+      - name: real_income_per_capita_value
+        description: Real income per capita for a given month.
+      - name: real_median_household_income_value
+        description: Real median household income for a given month.

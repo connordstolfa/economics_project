@@ -1,0 +1,14 @@
+version: 2
+models:
+  - name: int_unemployment
+    description: This table shows the unemployment rate over time, as reported by the FED. Pulled using their FRED API.
+    columns:
+      - name: date
+        description: The date of the recorded observation.
+        tests:
+          - unique
+          - not_null
+      - name: indicator_name
+        description: Constant value indicating the value is associated with the unemployment rate.
+      - name: unemployment_rate
+        description: The unemployment rate for a given month in decimal form. This can report no value if the government didn't publish data in a given month (IE October 2025).

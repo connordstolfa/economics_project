@@ -1,0 +1,10 @@
+version: 2
+models:
+  - name: fct_economic_indicators
+    description: A wide containing all pulled FRED economic data. Adding a new series will automatically add columns to this table.
+    columns:
+      - name: date
+        description: Date of the recorded data observation.
+        tests:
+          - unique
+          - not_null
