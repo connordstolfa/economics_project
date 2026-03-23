@@ -1,6 +1,0 @@
-
-target/
-dbt_packages/
-logs/
-dbt_internal_packages/
-dbt_econ/logs/dbt.log
