@@ -1,6 +1,35 @@
-.env
-fred_env/
+# --- Databases (The Big Ones) ---
+# We definitely don't want to upload the actual DuckDB files
+*.db
+*.duckdb
+*.wal
+
+# --- Python & FastAPI ---
 __pycache__/
-*.pyc
-fred_data/*.db
-fred_data/
+*.py[cod]
+*$py.class
+.env
+.venv/
+env/
+venv/
+.pytest_cache/
+.history/
+
+# --- dbt (Crucial: ignores the massive build files) ---
+# Using the folder prefix since your dbt project is in dbt_econ/
+dbt_econ/target/
+dbt_econ/dbt_packages/
+dbt_econ/logs/
+dbt_econ/dbt_modules/
+
+# --- Operating System / IDE ---
+.DS_Store
+.vscode/
+.idea/
+*.swp
+
+.vscode/
+dbt_econ/dbt_packages/
+
+fred_calls/fred_env/
+fred_env/
