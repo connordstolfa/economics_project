@@ -17,4 +17,4 @@ def test_api_fetch(table_name):
     else:
         print(f"❌Error fetching data from {table_name}: {response.status_code}: {response.text}")
 
-test_api_fetch("int_inflation_measures")
+test_api_fetch("fct_economic_indicators")
