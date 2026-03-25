@@ -28,3 +28,5 @@ def get_data(table_name: str):
         "selected_table": table_name,
         "data": data,
     }
+
+# Use this for testing: uvicorn app.backend.main:app --reload
