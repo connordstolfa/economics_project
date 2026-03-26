@@ -1,0 +1,1 @@
+{{ test_not_null(column_name="date", model=get_where_subquery(ref('int_gdp_and_income'))) }}

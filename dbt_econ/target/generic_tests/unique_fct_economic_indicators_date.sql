@@ -1,0 +1,1 @@
+{{ test_unique(column_name="date", model=get_where_subquery(ref('fct_economic_indicators'))) }}
