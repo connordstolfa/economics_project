@@ -6,7 +6,7 @@ load_dotenv()
 
 times_api_key = os.getenv("TIMES_API_KEY")
 
-def get_latest_econ_articles(api_key):
+def get_latest_econ_articles(api_key=times_api_key):
     # Times endpoint for the business section.
     # Hitting the Times News Wire API.
     endpoint = f"https://api.nytimes.com/svc/news/v3/content/nyt/business.json"
@@ -36,4 +36,4 @@ def get_latest_econ_articles(api_key):
         return []
 
 if __name__ == "__main__":
-    get_latest_econ_articles(times_api_key)
+    print(get_latest_econ_articles(times_api_key))

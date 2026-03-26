@@ -5,8 +5,6 @@ import plotly.express as px
 
 # Use for launching streamlit: streamlit run app/frontend/homepage.py
 
-# st.markdown("<style>section[data-testid='stSidebar'] {width: 250px !important;}</style>", unsafe_allow_html=True)
-
 st.set_page_config(page_title="econ_dash", layout="wide")
 
 # 1. Sidebar Setup
@@ -22,7 +20,7 @@ target_table = st.sidebar.selectbox(
 
 st.title(f"Your Economic Indicators")
 
-# 2. Fetch Data
+# Populate with data from DBT.
 try:
     response = requests.get(f"{API_BASE_URL}/{target_table}")
     response.raise_for_status()
@@ -86,3 +84,6 @@ try:
 
 except Exception as e:
     st.error(f"Connection Error: {e}")
+
+# Populate with data from headlines API.
+
