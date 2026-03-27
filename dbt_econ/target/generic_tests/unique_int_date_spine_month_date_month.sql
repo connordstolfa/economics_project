@@ -1,1 +1,0 @@
-{{ test_unique(column_name="date_month", model=get_where_subquery(ref('int_date_spine_month'))) }}

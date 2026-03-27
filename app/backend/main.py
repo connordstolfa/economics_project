@@ -36,8 +36,6 @@ def get_data(table_name: str):
         "data": data,
     }
 
-
-
 # Use this for testing: uvicorn app.backend.main:app --reload
 
 # print(read_headlines())
