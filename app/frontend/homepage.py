@@ -18,13 +18,19 @@ target_table = st.sidebar.selectbox(
     index=0
 )
 
-st.title(f"Your Economic Indicators")
+# st.title(f"Your Economic Indicators")
 
 # Populate with data from DBT.
 try:
-    response = requests.get(f"{API_BASE_URL}/{target_table}")
-    response.raise_for_status()
-    df = pd.DataFrame(response.json()["data"])
+    # Grab recent headlines from the Times (static call first)
+    headline_response = requests.get(f"{API_BASE_URL}/headlines")
+    headline_response.raise_for_status()
+    headline_list = list(headline_response.json())
+
+    # Grab the data from the selected table.
+    table_response = requests.get(f"{API_BASE_URL}/{target_table}")
+    table_response.raise_for_status()
+    df = pd.DataFrame(table_response.json()["data"])
     df['date'] = pd.to_datetime(df['date']).dt.date
     df = df.sort_values('date')
 
@@ -45,7 +51,7 @@ try:
 
     st.sidebar.markdown("---") # Visual divider
 
-    st.sidebar.markdown ("### Date Range")
+    st.sidebar.markdown("### Date Range")
     col_1, col_2 = st.sidebar.columns(2) # Creating 2 side by side columns.
 
     # --- NEW: DATE FILTER ---
@@ -72,8 +78,15 @@ try:
     mask = (df['date'] >= start_date) & (df['date'] <= end_date)
     filtered_df = df.loc[mask]
 
+    st.sidebar.markdown("### Latest Headlines")
+
+    for article in headline_list:
+        st.sidebar.subheader(article["headline"])
+        st.sidebar.caption(article["summary"])
+        st.sidebar.markdown("---")
+
     # 4. Main Display
-    st.title(f"📊 {target_table.replace('_', ' ').title()}")
+    st.title(f"📊 Your Economic Indicators")
     
     if not filtered_df.empty:
         selected_metric = st.selectbox("Select Metric to Visualize", options=numeric_cols)
@@ -86,4 +99,3 @@ except Exception as e:
     st.error(f"Connection Error: {e}")
 
 # Populate with data from headlines API.
-
