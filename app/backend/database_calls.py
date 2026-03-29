@@ -24,9 +24,6 @@ def get_indicator_data(
         df = df.astype(object).where(pd.notnull(df), None)
         return df.to_dict(orient="records")
 
-def get_econ_headlines():
-    pass
-
 if __name__ == '__main__':
     
     print(get_indicator_data("int_inflation_measures"))
