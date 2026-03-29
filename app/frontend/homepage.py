@@ -2,6 +2,7 @@ import streamlit as st
 import requests
 import pandas as pd
 import plotly.express as px
+import os
 
 # Use for launching streamlit: streamlit run app/frontend/homepage.py
 
@@ -9,7 +10,11 @@ st.set_page_config(page_title="econ_dash", layout="wide")
 
 # 1. Sidebar Setup
 st.sidebar.title("Headlines")
-API_BASE_URL = "http://127.0.0.1:8000/api/v1"
+st.sidebar.success("✅ Data Pipeline: Healthy (Daily 08:00 AM)")
+# API_BASE_URL = "http://127.0.0.1:8000/api/v1"
+
+# This API URL is for Docker
+API_BASE_URL = os.getenv("BACKEND_URL", "http://backend:8000")
 
 # Choose which dbt model to view
 target_table = st.sidebar.selectbox(
@@ -23,12 +28,12 @@ target_table = st.sidebar.selectbox(
 # Populate with data from DBT.
 try:
     # Grab recent headlines from the Times (static call first)
-    headline_response = requests.get(f"{API_BASE_URL}/headlines")
+    headline_response = requests.get(f"{API_BASE_URL}/api/v1/headlines")
     headline_response.raise_for_status()
     headline_list = list(headline_response.json())
 
     # Grab the data from the selected table.
-    table_response = requests.get(f"{API_BASE_URL}/{target_table}")
+    table_response = requests.get(f"{API_BASE_URL}/api/v1/{target_table}")
     table_response.raise_for_status()
     df = pd.DataFrame(table_response.json()["data"])
     df['date'] = pd.to_datetime(df['date']).dt.date

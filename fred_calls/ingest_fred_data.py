@@ -29,8 +29,3 @@ db_path = "/home/connor/projects/economics_project/fred_data/economics.db"
 def load_fred_config():
     with open('/home/connor/projects/economics_project/config/fred_series.json', 'r') as fred_series:
         return json.load(fred_series)
-
-series_to_pull = load_fred_config()
-
-insert_fred_data(series_to_pull, db_path)
-# print(series_to_pull)

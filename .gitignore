@@ -1,7 +1,7 @@
 # --- Databases (The Big Ones) ---
 # We definitely don't want to upload the actual DuckDB files
 *.db
-*.duckdb
+# *.duckdb # Removed from .gitignore so that pre-populated data can be shown if the project is loaded on a different machine.
 *.wal
 
 # --- Python & FastAPI ---
